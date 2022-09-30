@@ -1,0 +1,26 @@
+@charset "UTF-8";
+/* On définit un défilement doux (plus agréable à regarder) */
+@media (prefers-reduced-motion: no-preference) {
+  :root {
+    scroll-behavior: smooth; } }
+
+/* On définit le corps de notre page*/
+body {
+    margin: 0;
+    /* Paramètres de police */
+    font-family: -apple-system, BlinkMacSystemFont, San Francisco, Segoe UI, Roboto, Helvetica Neue, sans-serif; /* On définit la police d'écriture*/
+    font-size: 0.875rem;; /* La taille de celle-ci*/
+    font-weight: 400;
+    line-height: 1.4285714;
+    /* Paramètres de couleur */
+    color: #f8fafc !important; /* On rajoute l'attribut !important car autrement ce n'est pas pris en compte */
+    background-color: #1a2234 !important; /* On rajoute l'attribut !important car autrement ce n'est pas pris en compte */
+    -webkit-text-size-adjust: 100%;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0); 
+    }
+
+.navbar {
+    background-color: #1D273B !important;
+}
+
+    
