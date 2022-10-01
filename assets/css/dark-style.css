@@ -1,0 +1,16 @@
+@charset "UTF-8";
+/* On définit le corps de notre page*/
+body {
+    /* Paramètres de couleur */
+    color: #f8fafc !important; /* On rajoute l'attribut !important car autrement ce n'est pas pris en compte */
+    background-color: #1a2234 !important; /* On rajoute l'attribut !important car autrement ce n'est pas pris en compte */
+}
+
+.navbar{
+    background-color: #1D273B !important;
+}
+
+.nav-link {
+    color: #f8fafc !important;
+}
+    

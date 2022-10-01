@@ -13,14 +13,14 @@ body {
     font-weight: 400;
     line-height: 1.4285714;
     /* Paramètres de couleur */
-    color: #f8fafc !important; /* On rajoute l'attribut !important car autrement ce n'est pas pris en compte */
-    background-color: #1a2234 !important; /* On rajoute l'attribut !important car autrement ce n'est pas pris en compte */
+    color: #1D273B !important; /* On rajoute l'attribut !important car autrement ce n'est pas pris en compte */
+    background-color: #f1f5f9 !important; /* On rajoute l'attribut !important car autrement ce n'est pas pris en compte */
     -webkit-text-size-adjust: 100%;
     -webkit-tap-highlight-color: rgba(0, 0, 0, 0); 
     }
 
-.navbar {
-    background-color: #1D273B !important;
+.navbar{
+    background-color: #FFFFFF !important;
 }
 
     
