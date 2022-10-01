@@ -31,17 +31,20 @@
             <span class="visually-hidden">Chargement...</span>
         </div>
     </div>
-    <!-- On rajoute le nom du site -->
-    <div class="top-header py-4">
-        <div class="container">
-            <h1>Nom du site</h1>
-        </div>
-        
-    </div>
-  
     <!-- On crée la barre de naviagtion  -->
-    <nav class="navbar sticky-top navbar-expand-lg navbar-expand-md">
+    <nav class="navbar sticky-top navbar-expand-lg navbar-expand-md shadow">
         <div class="container">
+            <img class="navbar-brand" src="assets/img/favicon.png" alt="Logo de notre page web" height="36">
+            <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#navbar-content">
+                <div class="hamburger-toggle">
+                    <div class="hamburger">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </div>
+            </button>
+            <div class="collapse navbar-collapse" id="navbar-content">
             <ul class="navbar-nav w-100">
                 <li class="nav-item">
                     <a href="#" class="nav-link">Lien 1</a>
@@ -61,6 +64,7 @@
             </ul>
             <div class="text-end">
                 <a href="javascript:void()" id="theme-toggler" onclick="toggleTheme()" class="btn btn-warning"></a>
+            </div>
             </div>
         </div>
     </nav>

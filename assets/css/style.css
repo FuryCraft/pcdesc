@@ -2,51 +2,140 @@
 /* On définit un défilement doux (plus agréable à regarder) */
 @media (prefers-reduced-motion: no-preference) {
   :root {
-    scroll-behavior: smooth; } }
+    scroll-behavior: smooth;
+  }
+}
 
 /* On définit le corps de notre page*/
 body {
-    margin: 0;
-    /* Paramètres de police */
-    font-family: -apple-system, BlinkMacSystemFont, San Francisco, Segoe UI, Roboto, Helvetica Neue, sans-serif; /* On définit la police d'écriture*/
-    font-size: 0.875rem;; /* La taille de celle-ci*/
-    font-weight: 400;
-    line-height: 1.4285714;
-    /* Paramètres de couleur */
-    color: #1D273B !important; /* On rajoute l'attribut !important car autrement ce n'est pas pris en compte */
-    background-color: #f1f5f9 !important; /* On rajoute l'attribut !important car autrement ce n'est pas pris en compte */
-    -webkit-text-size-adjust: 100%;
-    -webkit-tap-highlight-color: rgba(0, 0, 0, 0); 
-    }
+  margin: 0;
+  /* Paramètres de police */
+  font-family: -apple-system, BlinkMacSystemFont, San Francisco, Segoe UI,
+    Roboto, Helvetica Neue, sans-serif; /* On définit la police d'écriture*/
+  font-size: 0.875rem; /* La taille de celle-ci*/
+  font-weight: 400;
+  line-height: 1.4285714;
+  /* Paramètres de couleur */
+  color: #1d273b !important; /* On rajoute l'attribut !important car autrement ce n'est pas pris en compte */
+  background-color: #f1f5f9 !important; /* On rajoute l'attribut !important car autrement ce n'est pas pris en compte */
+  -webkit-text-size-adjust: 100%;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
 
-.navbar{
-    background-color: #FFFFFF !important;
+.navbar {
+  background-color: #ffffff !important;
 }
 /* On crée un bloc qui prend toute la page*/
 .preloader-wrapper {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: all .4s ease;
-    background-color: #f1f5f9 !important;
-    z-index: 1031; /* On indique que le preloader se couche à la couche 1031 car la navbar de Bootstrap est par défaut à 1030 ce qui fait qu'elle est affichée durant le chargement*/
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.4s ease;
+  background-color: #f1f5f9 !important;
+  z-index: 1031; /* On indique que le preloader se couche à la couche 1031 car la navbar de Bootstrap est par défaut à 1030 ce qui fait qu'elle est affichée durant le chargement*/
 }
 
 /*On crée une animation de fondu*/
 .fade-out {
-    opacity: 0;
-    visibility: hidden;
+  opacity: 0;
+  visibility: hidden;
 }
 
 .notLoaded {
-    height: 100vh;
-    overflow: hidden;
-    position: fixed;
-    margin: 0px;
-  }
-    
+  height: 100vh;
+  overflow: hidden;
+  position: fixed;
+  margin: 0px;
+}
+
+/* On configure la barre de navigation pour les affichages mobiles*/
+ .navbar-toggler {
+   border: none;
+   padding: 0;
+   outline: none;
+ }
+
+ .navbar-toggler:focus {
+   box-shadow: none;
+ }
+
+ .navbar-toggler .hamburger-toggle {
+   position: relative;
+   display: inline-block;
+   width: 50px;
+   height: 50px;
+   z-index: 11;
+ }
+
+ .navbar-toggler .hamburger-toggle .hamburger {
+   position: absolute;
+   transform: translate(-50%, -50%) rotate(0deg);
+   left: 50%;
+   top: 50%;
+   width: 50%;
+   height: 50%;
+   pointer-events: none;
+ }
+
+ .navbar-toggler .hamburger-toggle .hamburger span {
+   width: 100%;
+   height: 4px;
+   position: absolute;
+   background: #333;
+   border-radius: 2px;
+   z-index: 1;
+   transition: transform 0.2s cubic-bezier(0.77, 0.2, 0.05, 1), background 0.2s cubic-bezier(0.77, 0.2, 0.05, 1), all 0.2s ease-in-out;
+   left: 0px;
+ }
+
+ .navbar-toggler .hamburger-toggle .hamburger span:first-child {
+   top: 10%;
+   transform-origin: 50% 50%;
+   transform: translate(0% -50%) !important;
+ }
+
+ .navbar-toggler .hamburger-toggle .hamburger span:nth-child(2) {
+   top: 50%;
+   transform: translate(0, -50%);
+ }
+
+ .navbar-toggler .hamburger-toggle .hamburger span:last-child {
+   left: 0px;
+   top: auto;
+   bottom: 10%;
+   transform-origin: 50% 50%;
+ }
+
+ .navbar-toggler .hamburger-toggle .hamburger.active span {
+   position: absolute;
+   margin: 0;
+ }
+
+ .navbar-toggler .hamburger-toggle .hamburger.active span:first-child {
+   top: 45%;
+   transform: rotate(45deg);
+ }
+
+ .navbar-toggler .hamburger-toggle .hamburger.active span:nth-child(2) {
+   left: 50%;
+   width: 0px;
+ }
+
+ .navbar-toggler .hamburger-toggle .hamburger.active span:last-child {
+   top: 45%;
+   transform: rotate(-45deg);
+ }
+ @keyframes fadeIn {
+   from {
+     opacity: 0;
+   }
+
+   to {
+     opacity: 1;
+   }
+ }

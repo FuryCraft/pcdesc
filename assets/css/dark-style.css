@@ -17,4 +17,6 @@ body {
 .preloader-wrapper {
     background-color: #1a2234 !important;
 }
-    
+.navbar-toggler .hamburger-toggle .hamburger span {
+    background: #ffc107;
+}
