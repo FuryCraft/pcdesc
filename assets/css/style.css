@@ -22,9 +22,13 @@ body {
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 
-.navbar {
-  background-color: #ffffff !important;
+.notLoaded {
+  height: 100vh;
+  overflow: hidden;
+  position: fixed;
+  margin: 0px;
 }
+
 /* On crée un bloc qui prend toute la page*/
 .preloader-wrapper {
   position: fixed;
@@ -46,13 +50,10 @@ body {
   visibility: hidden;
 }
 
-.notLoaded {
-  height: 100vh;
-  overflow: hidden;
-  position: fixed;
-  margin: 0px;
+/* On définit la couleur de notre barre de navigation*/
+.navbar {
+  background-color: #ffffff !important;
 }
-
 /* On configure la barre de navigation pour les affichages mobiles*/
  .navbar-toggler {
    border: none;
@@ -129,13 +130,4 @@ body {
  .navbar-toggler .hamburger-toggle .hamburger.active span:last-child {
    top: 45%;
    transform: rotate(-45deg);
- }
- @keyframes fadeIn {
-   from {
-     opacity: 0;
-   }
-
-   to {
-     opacity: 1;
-   }
  }

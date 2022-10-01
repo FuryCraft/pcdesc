@@ -6,6 +6,10 @@ body {
     background-color: #1a2234 !important; /* On rajoute l'attribut !important car autrement ce n'est pas pris en compte */
 }
 
+.preloader-wrapper {
+    background-color: #1a2234 !important;
+}
+
 .navbar{
     background-color: #1D273B !important;
 }
@@ -14,9 +18,7 @@ body {
     color: #f8fafc !important;
 }
 
-.preloader-wrapper {
-    background-color: #1a2234 !important;
-}
+
 .navbar-toggler .hamburger-toggle .hamburger span {
     background: #ffc107;
 }
