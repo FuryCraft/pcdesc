@@ -13,4 +13,8 @@ body {
 .nav-link {
     color: #f8fafc !important;
 }
+
+.preloader-wrapper {
+    background-color: #1a2234 !important;
+}
     

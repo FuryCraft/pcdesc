@@ -22,4 +22,31 @@ body {
 .navbar{
     background-color: #FFFFFF !important;
 }
+/* On crée un bloc qui prend toute la page*/
+.preloader-wrapper {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all .4s ease;
+    background-color: #f1f5f9 !important;
+    z-index: 1031; /* On indique que le preloader se couche à la couche 1031 car la navbar de Bootstrap est par défaut à 1030 ce qui fait qu'elle est affichée durant le chargement*/
+}
+
+/*On crée une animation de fondu*/
+.fade-out {
+    opacity: 0;
+    visibility: hidden;
+}
+
+.notLoaded {
+    height: 100vh;
+    overflow: hidden;
+    position: fixed;
+    margin: 0px;
+  }
     
