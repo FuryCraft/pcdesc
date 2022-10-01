@@ -41,7 +41,9 @@ function disableDarkTheme() {
 let mybutton = document.getElementById("goTop");
 
 // When the user scrolls down 20px from the top of the document, show the button
-window.onscroll = function() {scrollFunction()};
+window.onscroll = function () {
+  scrollFunction();
+};
 
 function scrollFunction() {
   if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
@@ -58,10 +60,10 @@ function topFunction() {
 }
 
 // Chargement de la page, ajoute un cercle qui tourne le temps que la page charge
-const preloader = document.querySelector('.preloader-wrapper');
-const loading = document.querySelector('body');
+const preloader = document.querySelector(".preloader-wrapper");
+const loading = document.querySelector("body");
 
-window.addEventListener('load', function() {
-    preloader.classList.add('fade-out'); // On dit de jouer l'animation de fondu
-    loading.classList.remove('notLoaded'); // On dit d'afficher toute la page
-})
+window.addEventListener("load", function () {
+  preloader.classList.add("fade-out"); // On dit de jouer l'animation de fondu
+  loading.classList.remove("notLoaded"); // On dit d'afficher toute la page
+});

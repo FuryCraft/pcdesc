@@ -1,24 +1,23 @@
 @charset "UTF-8";
 /* On définit le corps de notre page*/
 body {
-    /* Paramètres de couleur */
-    color: #f8fafc !important; /* On rajoute l'attribut !important car autrement ce n'est pas pris en compte */
-    background-color: #1a2234 !important; /* On rajoute l'attribut !important car autrement ce n'est pas pris en compte */
+  /* Paramètres de couleur */
+  color: #f8fafc !important; /* On rajoute l'attribut !important car autrement ce n'est pas pris en compte */
+  background-color: #1a2234 !important; /* On rajoute l'attribut !important car autrement ce n'est pas pris en compte */
 }
 
 .preloader-wrapper {
-    background-color: #1a2234 !important;
+  background-color: #1a2234 !important;
 }
 
-.navbar{
-    background-color: #1D273B !important;
+.navbar {
+  background-color: #1d273b !important;
 }
 
 .nav-link {
-    color: #f8fafc !important;
+  color: #f8fafc !important;
 }
 
-
 .navbar-toggler .hamburger-toggle .hamburger span {
-    background: #ffc107;
+  background: #ffc107;
 }

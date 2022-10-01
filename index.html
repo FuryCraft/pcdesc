@@ -1,92 +1,197 @@
 <!DOCTYPE html>
 
 <!-- On définit la langue de notre site et on évite qu'un traducteur essaye de la traduire -->
-<head lang="fr" xml:lang="fr" xmlns="http://www.w3.org/1999/xhtml" translate="no">
-    <meta charset="utf-8"/>
+<head
+	lang="fr"
+	xml:lang="fr"
+	xmlns="http://www.w3.org/1999/xhtml"
+	translate="no">
+	<meta charset="utf-8" />
 
-    <!-- On évite les problèmes d'affichages -->
-    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"/>
-    <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
+	<!-- On évite les problèmes d'affichages -->
+	<meta
+		name="viewport"
+		content="width=device-width, initial-scale=1, viewport-fit=cover" />
+	<meta http-equiv="X-UA-Compatible" content="ie=edge" />
 
-    <!-- On indique que la page est optimisé pour les affichages portrait (mobiles, tablettes)-->
-    <meta name="HandheldFriendly" content="True"/>
-    <meta name="MobileOptimized" content="320"/>
+	<!-- On indique que la page est optimisé pour les affichages portrait (mobiles, tablettes)-->
+	<meta name="HandheldFriendly" content="True" />
+	<meta name="MobileOptimized" content="320" />
 
-    <!-- On indique tout ce qui est SEO (titre, favicon, description)-->
-    <title>Accueil</title>
-    <meta name="description" content="Notre page pour la NSI"/>
-    <link rel="icon" type="image/png" href="assets/img/favicon.png" />
+	<!-- On indique tout ce qui est SEO (titre, favicon, description)-->
+	<title>Accueil</title>
+	<meta name="description" content="Notre page pour la NSI" />
+	<link rel="icon" type="image/png" href="assets/img/favicon.png" />
 
-    <!-- On importe le css et les librairies -->
-    <link rel="stylesheet" href="assets/css/style.css"> <!-- Notre design CSS -->
-    <link rel="stylesheet" href="assets/css/bootstrap.min.css"> <!-- On importe Bootstrap pour un design responsive-->
-    <link rel="stylesheet" href="assets/css/all.min.css"> <!-- On importe FontAwesome pour les icônes -->
+	<!-- On importe le css et les librairies -->
+	<link rel="stylesheet" href="assets/css/style.css" />
+	<!-- Notre design CSS -->
+	<link rel="stylesheet" href="assets/css/bootstrap.min.css" />
+	<!-- On importe Bootstrap pour un design responsive-->
+	<link rel="stylesheet" href="assets/css/all.min.css" />
+	<!-- On importe FontAwesome pour les icônes -->
 
-    <link id="dark-theme-style" rel="stylesheet" />
+	<link id="dark-theme-style" rel="stylesheet" />
 </head>
 <body class="flex-grow-1 d-flex flex-column notLoaded">
-    <!-- On ajoute un preloader -->
-    <div class="preloader-wrapper">
-        <div class="spinner-border text-primary" style="width: 3rem; height: 3rem;">
-            <span class="visually-hidden">Chargement...</span>
-        </div>
-    </div>
-    <!-- On crée la barre de naviagtion  -->
-    <nav class="navbar sticky-top navbar-expand-lg navbar-expand-md shadow">
-        <div class="container">
-            <img class="navbar-brand" src="assets/img/favicon.png" alt="Logo de notre page web" height="36">
-            <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#navbar-content">
-                <div class="hamburger-toggle">
-                    <div class="hamburger">
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                    </div>
-                </div>
-            </button>
-            <div class="collapse navbar-collapse" id="navbar-content">
-            <ul class="navbar-nav w-100">
-                <li class="nav-item">
-                    <a href="#" class="nav-link">Lien 1</a>
-                </li>
-                <li class="nav-item">
-                    <a href="#" class="nav-link">Lien 2</a>
-                </li>
-                <li class="nav-item">
-                    <a href="#" class="nav-link">Lien 3</a>
-                </li>
-                <li class="nav-item">
-                    <a href="#" class="nav-link">Lien 4</a>
-                </li>
-                <li class="nav-item">
-                    <a href="#" class="nav-link">Lien 5</a>
-                </li>
-            </ul>
-            <div class="text-end">
-                <a href="javascript:void()" id="theme-toggler" onclick="toggleTheme()" class="btn btn-warning"></a>
-            </div>
-            </div>
-        </div>
-    </nav>
-    <h1>Titre</h1>
-    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quaerat dolor placeat fuga sapiente ipsa et enim? Dolor, ab error? Nihil inventore natus vel nemo praesentium expedita laudantium cum blanditiis minus?Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quaerat dolor placeat fuga sapiente ipsa et enim? Dolor, ab error? Nihil inventore natus vel nemo praesentium expedita laudantium cum blanditiis minus?Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quaerat dolor placeat fuga sapiente ipsa et enim? Dolor, ab error? Nihil inventore natus vel nemo praesentium expedita laudantium cum blanditiis minus?Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quaerat dolor placeat fuga sapiente ipsa et enim? Dolor, ab error? Nihil inventore natus vel nemo praesentium expedita laudantium cum blanditiis minus?Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quaerat dolor placeat fuga sapiente ipsa et enim? Dolor, ab error? Nihil inventore natus vel nemo praesentium expedita laudantium cum blanditiis minus?Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quaerat dolor placeat fuga sapiente ipsa et enim? Dolor, ab error? Nihil inventore natus vel nemo praesentium expedita laudantium cum blanditiis minus?Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quaerat dolor placeat fuga sapiente ipsa et enim? Dolor, ab error? Nihil inventore natus vel nemo praesentium expedita laudantium cum blanditiis minus?Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quaerat dolor placeat fuga sapiente ipsa et enim? Dolor, ab error? Nihil inventore natus vel nemo praesentium expedita laudantium cum blanditiis minus?Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quaerat dolor placeat fuga sapiente ipsa et enim? Dolor, ab error? Nihil inventore natus vel nemo praesentium expedita laudantium cum blanditiis minus?Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quaerat dolor placeat fuga sapiente ipsa et enim? Dolor, ab error? Nihil inventore natus vel nemo praesentium expedita laudantium cum blanditiis minus?Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quaerat dolor placeat fuga sapiente ipsa et enim? Dolor, ab error? Nihil inventore natus vel nemo praesentium expedita laudantium cum blanditiis minus?Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quaerat dolor placeat fuga sapiente ipsa et enim? Dolor, ab error? Nihil inventore natus vel nemo praesentium expedita laudantium cum blanditiis minus?Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quaerat dolor placeat fuga sapiente ipsa et enim? Dolor, ab error? Nihil inventore natus vel nemo praesentium expedita laudantium cum blanditiis minus?Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quaerat dolor placeat fuga sapiente ipsa et enim? Dolor, ab error? Nihil inventore natus vel nemo praesentium expedita laudantium cum blanditiis minus?Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quaerat dolor placeat fuga sapiente ipsa et enim? Dolor, ab error? Nihil inventore natus vel nemo praesentium expedita laudantium cum blanditiis minus?Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quaerat dolor placeat fuga sapiente ipsa et enim? Dolor, ab error? Nihil inventore natus vel nemo praesentium expedita laudantium cum blanditiis minus?Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quaerat dolor placeat fuga sapiente ipsa et enim? Dolor, ab error? Nihil inventore natus vel nemo praesentium expedita laudantium cum blanditiis minus?Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quaerat dolor placeat fuga sapiente ipsa et enim? Dolor, ab error? Nihil inventore natus vel nemo praesentium expedita laudantium cum blanditiis minus?Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quaerat dolor placeat fuga sapiente ipsa et enim? Dolor, ab error? Nihil inventore natus vel nemo praesentium expedita laudantium cum blanditiis minus?Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quaerat dolor placeat fuga sapiente ipsa et enim? Dolor, ab error? Nihil inventore natus vel nemo praesentium expedita laudantium cum blanditiis minus?Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quaerat dolor placeat fuga sapiente ipsa et enim? Dolor, ab error? Nihil inventore natus vel nemo praesentium expedita laudantium cum blanditiis minus?Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quaerat dolor placeat fuga sapiente ipsa et enim? Dolor, ab error? Nihil inventore natus vel nemo praesentium expedita laudantium cum blanditiis minus?Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quaerat dolor placeat fuga sapiente ipsa et enim? Dolor, ab error? Nihil inventore natus vel nemo praesentium expedita laudantium cum blanditiis minus?Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quaerat dolor placeat fuga sapiente ipsa et enim? Dolor, ab error? Nihil inventore natus vel nemo praesentium expedita laudantium cum blanditiis minus?Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quaerat dolor placeat fuga sapiente ipsa et enim? Dolor, ab error? Nihil inventore natus vel nemo praesentium expedita laudantium cum blanditiis minus?Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quaerat dolor placeat fuga sapiente ipsa et enim? Dolor, ab error? Nihil inventore natus vel nemo praesentium expedita laudantium cum blanditiis minus?Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quaerat dolor placeat fuga sapiente ipsa et enim? Dolor, ab error? Nihil inventore natus vel nemo praesentium expedita laudantium cum blanditiis minus?Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quaerat dolor placeat fuga sapiente ipsa et enim? Dolor, ab error? Nihil inventore natus vel nemo praesentium expedita laudantium cum blanditiis minus?Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quaerat dolor placeat fuga sapiente ipsa et enim? Dolor, ab error? Nihil inventore natus vel nemo praesentium expedita laudantium cum blanditiis minus?Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quaerat dolor placeat fuga sapiente ipsa et enim? Dolor, ab error? Nihil inventore natus vel nemo praesentium expedita laudantium cum blanditiis minus?Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quaerat dolor placeat fuga sapiente ipsa et enim? Dolor, ab error? Nihil inventore natus vel nemo praesentium expedita laudantium cum blanditiis minus?Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quaerat dolor placeat fuga sapiente ipsa et enim? Dolor, ab error? Nihil inventore natus vel nemo praesentium expedita laudantium cum blanditiis minus?Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quaerat dolor placeat fuga sapiente ipsa et enim? Dolor, ab error? Nihil inventore natus vel nemo praesentium expedita laudantium cum blanditiis minus?Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quaerat dolor placeat fuga sapiente ipsa et enim? Dolor, ab error? Nihil inventore natus vel nemo praesentium expedita laudantium cum blanditiis minus?Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quaerat dolor placeat fuga sapiente ipsa et enim? Dolor, ab error? Nihil inventore natus vel nemo praesentium expedita laudantium cum blanditiis minus?Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quaerat dolor placeat fuga sapiente ipsa et enim? Dolor, ab error? Nihil inventore natus vel nemo praesentium expedita laudantium cum blanditiis minus?Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quaerat dolor placeat fuga sapiente ipsa et enim? Dolor, ab error? Nihil inventore natus vel nemo praesentium expedita laudantium cum blanditiis minus?Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quaerat dolor placeat fuga sapiente ipsa et enim? Dolor, ab error? Nihil inventore natus vel nemo praesentium expedita laudantium cum blanditiis minus?Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quaerat dolor placeat fuga sapiente ipsa et enim? Dolor, ab error? Nihil inventore natus vel nemo praesentium expedita laudantium cum blanditiis minus?Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quaerat dolor placeat fuga sapiente ipsa et enim? Dolor, ab error? Nihil inventore natus vel nemo praesentium expedita laudantium cum blanditiis minus?Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quaerat dolor placeat fuga sapiente ipsa et enim? Dolor, ab error? Nihil inventore natus vel nemo praesentium expedita laudantium cum blanditiis minus?Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quaerat dolor placeat fuga sapiente ipsa et enim? Dolor, ab error? Nihil inventore natus vel nemo praesentium expedita laudantium cum blanditiis minus?</p>
-    
-    <div class="container">
-    <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
-        <p class="col-md-4 mb-0 text-muted">© <script>document.write(new Date().getFullYear())</script> NOM DU SITE, Tous droits réservés</p>
-    
-        <a onclick="topFunction()" id="goTop" class="col-md-4 d-flex align-items-center justify-content-center mb-3 mb-md-0 me-md-auto text-decoration-none">
-            <i class="fa-solid fa-angle-up fa-2xl fa-beat"></i>
-        </a>
-    
-        <ul class="nav col-md-4 justify-content-end">
-          <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Lien 1</a></li>
-          <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Lien 2</a></li>
-          <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Lien 3</a></li>
-        </ul>
-      </footer>
-    </div>
-    <script src="assets/js/bootstrap.bundle.js"></script>
-    <script src="assets/js/jquery-3.6.1.min.js"></script>
-    <script src="assets/js/main.js"></script>
+	<!-- On ajoute un preloader -->
+	<div class="preloader-wrapper">
+		<div
+			class="spinner-border text-primary"
+			style="width: 3rem; height: 3rem">
+			<span class="visually-hidden">Chargement...</span>
+		</div>
+	</div>
+	<!-- On crée la barre de naviagtion  -->
+	<nav class="navbar sticky-top navbar-expand-lg navbar-expand-md shadow">
+		<div class="container">
+			<img
+				class="navbar-brand"
+				src="assets/img/favicon.png"
+				alt="Logo de notre page web"
+				height="36" />
+			<button
+				class="navbar-toggler collapsed"
+				type="button"
+				data-bs-toggle="collapse"
+				data-bs-target="#navbar-content">
+				<div class="hamburger-toggle">
+					<div class="hamburger">
+						<span></span>
+						<span></span>
+						<span></span>
+					</div>
+				</div>
+			</button>
+			<div class="collapse navbar-collapse" id="navbar-content">
+				<ul class="navbar-nav w-100">
+					<li class="nav-item">
+						<a href="#" class="nav-link">Lien 1</a>
+					</li>
+					<li class="nav-item">
+						<a href="#" class="nav-link">Lien 2</a>
+					</li>
+					<li class="nav-item">
+						<a href="#" class="nav-link">Lien 3</a>
+					</li>
+					<li class="nav-item">
+						<a href="#" class="nav-link">Lien 4</a>
+					</li>
+					<li class="nav-item">
+						<a href="#" class="nav-link">Lien 5</a>
+					</li>
+				</ul>
+				<div class="text-end">
+					<a
+						href="javascript:void()"
+						id="theme-toggler"
+						onclick="toggleTheme()"
+						class="btn btn-warning"></a>
+				</div>
+			</div>
+		</div>
+	</nav>
+	<div class="px-4 pt-5 my-5 text-center shadow">
+		<h1 class="display-4 fw-bold">Titre</h1>
+		<div class="col-lg-6 mx-auto">
+			<p class="lead mb-4">
+				Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+				Quaerat dolor placeat fuga sapiente ipsa et enim? Dolor, ab
+				error? Nihil inventore natus vel nemo praesentium expedita
+				laudantium cum blanditiis minus?
+			</p>
+			<div class="d-grid gap-2 d-sm-flex justify-content-sm-center mb-5">
+				<button
+					type="button"
+					class="btn btn-primary btn-lg px-4 me-sm-3">
+					Bouton 1
+				</button>
+				<button
+					type="button"
+					class="btn btn-outline-secondary btn-lg px-4">
+					Bouton 2
+				</button>
+			</div>
+		</div>
+		<div class="overflow-hidden" style="max-height: 30vh">
+			<div class="container px-5">
+				<img
+					src="assets/img/favicon.png"
+					class="img-fluid rounded-3 mb-4"
+					alt="Example image"
+					width="700"
+					height="500"
+					loading="lazy" />
+			</div>
+		</div>
+	</div>
+	<div class="container col-xxl-8 px-4 py-5">
+		<div class="row flex-lg-row-reverse align-items-center g-5 py-5">
+			<div class="col-10 col-sm-8 col-lg-6">
+				<img
+					src="assets/img/computer.png"
+					class="d-block mx-lg-auto img-fluid"
+					alt="Bootstrap Themes"
+					width="700"
+					height="500"
+					loading="lazy" />
+			</div>
+			<div class="col-lg-6">
+				<h1 class="display-5 fw-bold lh-1 mb-3">Titre</h1>
+				<p class="lead">
+					Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+					Quaerat dolor placeat fuga sapiente ipsa et enim? Dolor, ab
+					error? Nihil inventore natus vel nemo praesentium expedita
+					laudantium cum blanditiis minus?
+				</p>
+				<div class="d-grid gap-2 d-md-flex justify-content-md-start">
+					<button
+						type="button"
+						class="btn btn-primary btn-lg px-4 me-md-2">
+						Bouton 1
+					</button>
+					<button
+						type="button"
+						class="btn btn-outline-secondary btn-lg px-4">
+						Bouton 2
+					</button>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="container">
+		<footer
+			class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
+			<p class="col-md-4 mb-0 text-muted">
+				©
+				<script>
+					document.write(new Date().getFullYear());
+				</script>
+				NOM DU SITE, Tous droits réservés
+			</p>
+
+			<a
+				onclick="topFunction()"
+				id="goTop"
+				class="col-md-4 d-flex align-items-center justify-content-center mb-3 mb-md-0 me-md-auto text-decoration-none">
+				<i class="fa-solid fa-angle-up fa-2xl fa-beat"></i>
+			</a>
+
+			<ul class="nav col-md-4 justify-content-end">
+				<li class="nav-item">
+					<a href="#" class="nav-link px-2 text-muted">Lien 1</a>
+				</li>
+				<li class="nav-item">
+					<a href="#" class="nav-link px-2 text-muted">Lien 2</a>
+				</li>
+				<li class="nav-item">
+					<a href="#" class="nav-link px-2 text-muted">Lien 3</a>
+				</li>
+			</ul>
+		</footer>
+	</div>
+	<script src="assets/js/bootstrap.bundle.js"></script>
+	<script src="assets/js/jquery-3.6.1.min.js"></script>
+	<script src="assets/js/main.js"></script>
 </body>
