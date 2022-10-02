@@ -6,9 +6,21 @@ body {
 	background-color: #1a2234 !important; /* On rajoute l'attribut !important car autrement ce n'est pas pris en compte */
 }
 
+/* ###################################################################### */
+/* # 																	# */
+/* # 					  	  PRECHARGEMENT								# */
+/* # 																	# */
+/* ###################################################################### */
+
 .preloader-wrapper {
 	background-color: #1a2234 !important;
 }
+
+/* ###################################################################### */
+/* # 																	# */
+/* # 					   BARRE DE NAVIGATION							# */
+/* # 																	# */
+/* ###################################################################### */
 
 .dropdown-menu {
 	background-color: #1d273b !important;
@@ -32,6 +44,12 @@ body {
 .navbar-toggler .hamburger-toggle .hamburger span {
 	background: #ffc107;
 }
+
+/* ###################################################################### */
+/* # 																	# */
+/* # 					   BARRE DE DEFILEMENT							# */
+/* # 																	# */
+/* ###################################################################### */
 
 /* On modifie la barre de défilement pour s'adapter au thème sombre */
 *::-webkit-scrollbar-thumb {

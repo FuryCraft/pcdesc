@@ -1,4 +1,6 @@
 @charset "UTF-8";
+/* On importe une police d'écriture */
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
 /* On définit un défilement doux (plus agréable à regarder) */
 @media (prefers-reduced-motion: no-preference) {
 	:root {
@@ -21,12 +23,11 @@ body {
 	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 
-.notLoaded {
-	height: 100vh;
-	overflow: hidden;
-	position: fixed;
-	margin: 0px;
-}
+/* ###################################################################### */
+/* # 																	# */
+/* # 					  	  PRECHARGEMENT								# */
+/* # 																	# */
+/* ###################################################################### */
 
 /* On crée un bloc qui prend toute la page*/
 .preloader-wrapper {
@@ -43,15 +44,30 @@ body {
 	z-index: 1031; /* On indique que le preloader se couche à la couche 1031 car la navbar de Bootstrap est par défaut à 1030 ce qui fait qu'elle est affichée durant le chargement*/
 }
 
-/*On crée une animation de fondu*/
+/* On cache tout le contenu de la page */
+.notLoaded {
+	height: 100vh;
+	overflow: hidden;
+	position: fixed;
+	margin: 0px;
+}
+
+/* On crée une animation de fondu */
 .fade-out {
 	opacity: 0;
 	visibility: hidden;
 }
 
-/* On définit la couleur de notre barre de navigation*/
+/* ###################################################################### */
+/* # 																	# */
+/* # 					   BARRE DE NAVIGATION							# */
+/* # 																	# */
+/* ###################################################################### */
+
 .navbar {
 	background-color: #ffffff !important;
+	/* On change la police d'écriture uniquement pour la barre de navigation*/
+	font-family: 'Poppins', sans-serif;
 }
 
 /*On ajoute une animation au sous-catégories de la barre de navigation*/
@@ -157,6 +173,12 @@ body {
 .fa-house {
 	color: #0d6efd;
 }
+
+/* ###################################################################### */
+/* # 																	# */
+/* # 					   BARRE DE DEFILEMENT							# */
+/* # 																	# */
+/* ###################################################################### */
 
 /* On modifie la barre de défilement */
 *::-webkit-scrollbar {
