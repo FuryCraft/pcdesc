@@ -10,8 +10,7 @@
 body {
 	margin: 0;
 	/* Paramètres de police */
-	font-family: -apple-system, BlinkMacSystemFont, San Francisco, Segoe UI,
-		Roboto, Helvetica Neue, sans-serif; /* On définit la police d'écriture*/
+	font-family: -apple-system, BlinkMacSystemFont, San Francisco, Segoe UI, Roboto, Helvetica Neue, sans-serif; /* On définit la police d'écriture*/
 	font-size: 0.875rem; /* La taille de celle-ci*/
 	font-weight: 400;
 	line-height: 1.4285714;
@@ -54,6 +53,21 @@ body {
 .navbar {
 	background-color: #ffffff !important;
 }
+
+/*On ajoute une animation au sous-catégories de la barre de navigation*/
+.dropdown-menu.show {
+	-webkit-animation: fadeIn 0.3s alternate;
+	/* Safari 4.0 - 8.0 */
+	animation: fadeIn 0.3s alternate;
+}
+@keyframes fadeIn {
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+	}
+}
 /* On configure la barre de navigation pour les affichages mobiles*/
 .navbar-toggler {
 	border: none;
@@ -90,8 +104,7 @@ body {
 	background: #333;
 	border-radius: 2px;
 	z-index: 1;
-	transition: transform 0.2s cubic-bezier(0.77, 0.2, 0.05, 1),
-		background 0.2s cubic-bezier(0.77, 0.2, 0.05, 1), all 0.2s ease-in-out;
+	transition: transform 0.2s cubic-bezier(0.77, 0.2, 0.05, 1), background 0.2s cubic-bezier(0.77, 0.2, 0.05, 1), all 0.2s ease-in-out;
 	left: 0px;
 }
 
@@ -131,6 +144,18 @@ body {
 .navbar-toggler .hamburger-toggle .hamburger.active span:last-child {
 	top: 45%;
 	transform: rotate(-45deg);
+}
+
+/* On modifie la couleur du lien de la navbar si l'utilisateur se trouve sur cette page */
+.navlink,
+.active {
+	color: #0d6efd;
+}
+
+.navlink,
+.active,
+.fa-house {
+	color: #0d6efd;
 }
 
 /* On modifie la barre de défilement */

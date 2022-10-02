@@ -36,8 +36,15 @@ function disableDarkTheme() {
 	THEME_TOGGLER.innerHTML = `<i class="fa-solid fa-sun"></i>`;
 }
 
+// Barre de naviagtion
+document.addEventListener('click', function (e) {
+	// Hamburger menu
+	if (e.target.classList.contains('hamburger-toggle')) {
+		e.target.children[0].classList.toggle('active');
+	}
+});
+
 // Revenir au haut de la page (code provenant de W3C)
-// Get the button:
 let mybutton = document.getElementById('goTop');
 
 // When the user scrolls down 20px from the top of the document, show the button
@@ -46,10 +53,7 @@ window.onscroll = function () {
 };
 
 function scrollFunction() {
-	if (
-		document.body.scrollTop > 20 ||
-		document.documentElement.scrollTop > 20
-	) {
+	if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
 		mybutton.style.display = 'block';
 	} else {
 		mybutton.style.display = 'none';
