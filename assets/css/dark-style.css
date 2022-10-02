@@ -10,6 +10,17 @@ body {
 	background-color: #1a2234 !important;
 }
 
+.dropdown-menu {
+	background-color: #1d273b !important;
+}
+
+.dropdown-item {
+	color: #f8fafc !important;
+}
+.dropdown-item:hover {
+	background-color: #1d273b !important;
+}
+
 .navbar {
 	background-color: #1d273b !important;
 }
