@@ -18,13 +18,14 @@
 	<link rel="icon" type="image/png" href="assets/img/favicon.png" />
 
 	<!-- On importe le css et les librairies -->
-	<link rel="stylesheet" href="assets/css/style.css" />
 	<!-- Notre design CSS -->
-	<link rel="stylesheet" href="assets/css/bootstrap.min.css" />
+	<link rel="stylesheet" href="assets/css/style.css" />
 	<!-- On importe Bootstrap pour un design responsive-->
-	<link rel="stylesheet" href="assets/css/all.min.css" />
+	<link rel="stylesheet" href="assets/css/bootstrap.min.css" />
 	<!-- On importe FontAwesome pour les icônes -->
-
+	<link rel="stylesheet" href="assets/css/all.min.css" />
+	<!-- On importe AOS pour les animations-->
+	<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 	<!-- Permet de monétiser son site et d'accélérer son chargement -->
 	<script async src="https://arc.io/widget.min.js#7Psp1cwH"></script>
 
@@ -38,12 +39,13 @@
 		</div>
 	</div>
 	<!-- On crée la barre de naviagtion  -->
-	<nav class="navbar sticky-top navbar-expand-lg navbar-expand-md shadow">
+	<nav class="navbar sticky-top navbar-expand-lg navbar-expand-md shadow" data-aos="fade-down">
 		<div class="container">
 			<img class="navbar-brand" src="assets/img/logo.png" alt="Logo de notre PCDesc" height="36" />
 			<button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#navbar-content">
 				<div class="hamburger-toggle">
 					<div class="hamburger">
+						<!-- Représente les 3 barres sur un affichage réduit comme les mobiles-->
 						<span></span>
 						<span></span>
 						<span></span>
@@ -103,15 +105,31 @@
 			</div>
 		</div>
 	</div>
-	<section id="contenu">
+	<section id="contenu" data-aos="fade-up">
 		<div class="container col-xxl-8 px-4 py-5">
 			<div class="row flex-lg-row-reverse align-items-center g-5 py-5">
 				<div class="col-10 col-sm-8 col-lg-6">
-					<img src="assets/img/man-with-computer.png" class="d-block mx-lg-auto img-fluid" alt="Image représentant un homme tenant un pc portable dans ses mains" width="700" height="500" loading="lazy" />
+					<img data-aos="zoom-in-up" src="assets/img/man-with-computer.png" class="d-block mx-lg-auto img-fluid animated-img" alt="Image représentant un homme tenant un pc portable dans ses mains" width="700" height="500" loading="lazy" />
 				</div>
-				<div class="col-lg-6">
+				<div class="col-lg-6" data-aos="fade-up-right">
 					<h1 class="display-5 fw-bold lh-1 mb-3">Qu'est-ce qu'un oridinateur ?</h1>
 					<p class="lead">Un ordinateur est un appareil, une machine qui permet de réaliser, d'exécuter des opérations, des calculs, c'est un calculateur. Une image simple d'un calculateur c'est la calculette : machine qui nous permet d'effectuer des calculs / opérations.</p>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section data-aos="fade-up">
+		<div class="container-fluid bg-warning">
+			<div class="container col-xxl-8 px-4 py-5">
+				<div class="row flex-lg-row-reverse align-items-center g-5 py-5">
+					<div class="col-lg-6" data-aos="fade-up-left">
+						<h1 class="display-5 fw-bold lh-1 mb-3">Qu'y a-t-il à l'intérieur d'un ordinateur ?</h1>
+						<p class="lead">Un ordinateur est composé de plusieurs éléments différents que l'on appelle des <b>composants</b>.</p>
+					</div>
+					<div class="col-10 col-sm-8 col-lg-6">
+						<img data-aos="zoom-in-up" src="assets/img/computer-screen.png" class="d-block mx-lg-auto img-fluid animated-img" alt="Image représentant un homme tenant un pc portable dans ses mains" width="700" height="500" loading="lazy" />
+					</div>
 				</div>
 			</div>
 		</div>
@@ -147,4 +165,8 @@
 	<script src="assets/js/bootstrap.bundle.js"></script>
 	<script src="assets/js/jquery-3.6.1.min.js"></script>
 	<script src="assets/js/main.js"></script>
+	<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+	<script>
+		AOS.init();
+	</script>
 </body>

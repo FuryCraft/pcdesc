@@ -84,7 +84,7 @@ body {
 		opacity: 1;
 	}
 }
-/* On configure la barre de navigation pour les affichages mobiles*/
+/* On configure la barre de navigation pour les affichages mobiles (code provenenat d'une source externe) */
 .navbar-toggler {
 	border: none;
 	padding: 0;
@@ -172,6 +172,17 @@ body {
 .active,
 .fa-house {
 	color: #0d6efd;
+}
+
+/* ###################################################################### */
+/* # 																	# */
+/* # 					   		ANIMATION								# */
+/* # 																	# */
+/* ###################################################################### */
+
+.animated-img {
+	animation: 3s ease-in-out 0s infinite normal none running float;
+	animation-iteration-count: infinite;
 }
 
 /* ###################################################################### */
