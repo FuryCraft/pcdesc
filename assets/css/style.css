@@ -72,16 +72,17 @@ body {
 
 /*On ajoute une animation au sous-catégories de la barre de navigation*/
 .dropdown-menu.show {
-	-webkit-animation: fadeIn 0.3s alternate;
+	-webkit-animation: fadeIn 0.3s alternate; /* On récupère l'animation fadeIn que l'on crée juste en dessous */
 	/* Safari 4.0 - 8.0 */
 	animation: fadeIn 0.3s alternate;
 }
+/* On crée l'animation fadeIn qui fait un fondu intérieur*/
 @keyframes fadeIn {
 	from {
-		opacity: 0;
+		opacity: 0; /* On part d'une opacité de 0 */
 	}
 	to {
-		opacity: 1;
+		opacity: 1; /* On finit par une opacité de 1 (tout est visible) */
 	}
 }
 /* On configure la barre de navigation pour les affichages mobiles (code provenenat d'une source externe) */
@@ -176,13 +177,46 @@ body {
 
 /* ###################################################################### */
 /* # 																	# */
-/* # 					   		ANIMATION								# */
+/* # 					  	 	BOUTTONS								# */
 /* # 																	# */
 /* ###################################################################### */
 
-.animated-img {
-	animation: 3s ease-in-out 0s infinite normal none running float;
-	animation-iteration-count: infinite;
+/* On crée notre propre boutton*/
+.custom-btn {
+	border: none;
+	font-family: 'Poppins', sans-serif;
+	cursor: pointer;
+	padding: 25px 80px;
+	display: inline-block;
+	margin: 15px 30px;
+	position: relative;
+	-webkit-transition: all 0.3s;
+	-moz-transition: all 0.3s;
+	transition: all 0.3s;
+}
+
+/* On recrée le bouton en utilisant la couleur primaire de Bootstrap (le bleu), sert de base*/
+.custom-btn-primary {
+	background: hsl(216, 98%, 52%) !important; /*On utilise la norme HSL uniquement pour une question de praticité pour les ombres plus sombre*/
+	color: #fff;
+	box-shadow: 0 6px hsl(216, 91%, 42%); /* On baisse de 7% et de 10% (juste praticité) */
+	-webkit-transition: none;
+	-moz-transition: none;
+	transition: none;
+}
+/* On crée notre sous boutton (l'ombre)*/
+.custom-btn-2 {
+	border-radius: 20px;
+}
+
+.custom-btn-2:hover {
+	box-shadow: 0 4px hsl(216, 91%, 42%) !important;
+	top: 2px;
+}
+
+.custom-btn-2:active {
+	box-shadow: 0 0 hsl(216, 91%, 42%) !important;
+	top: 6px;
 }
 
 /* ###################################################################### */
