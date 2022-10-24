@@ -166,13 +166,13 @@ body {
 /* On modifie la couleur du lien de la navbar si l'utilisateur se trouve sur cette page */
 .navlink,
 .active {
-	color: #0d6efd;
+	color: #0d6efd !important;
 }
-
+/* On précise aussi de changer les couleurs pour les icônes FontAwesomd*/
 .navlink,
 .active,
-.fa-house {
-	color: #0d6efd;
+.fa {
+	color: #0d6efd !important;
 }
 
 /* ###################################################################### */
