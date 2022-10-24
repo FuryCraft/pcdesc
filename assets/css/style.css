@@ -18,7 +18,7 @@ body {
 	line-height: 1.4285714;
 	/* Paramètres de couleur */
 	color: #1d273b !important; /* On rajoute l'attribut !important car autrement ce n'est pas pris en compte */
-	background-color: #f1f5f9 !important; /* On rajoute l'attribut !important car autrement ce n'est pas pris en compte */
+	background-color: #f8f4fc !important; /* On rajoute l'attribut !important car autrement ce n'est pas pris en compte */
 	-webkit-text-size-adjust: 100%;
 	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
@@ -40,7 +40,7 @@ body {
 	align-items: center;
 	justify-content: center;
 	transition: all 0.4s ease;
-	background-color: #f1f5f9 !important;
+	background-color: #f8f4fc !important;
 	z-index: 1031; /* On indique que le preloader se couche à la couche 1031 car la navbar de Bootstrap est par défaut à 1030 ce qui fait qu'elle est affichée durant le chargement*/
 }
 
@@ -173,6 +173,16 @@ body {
 .active,
 .fa {
 	color: #0d6efd !important;
+}
+
+/* ###################################################################### */
+/* # 																	# */
+/* # 					  	 	CONTENEURS								# */
+/* # 																	# */
+/* ###################################################################### */
+
+#hero {
+	background-color: #ffffff !important;
 }
 
 /* ###################################################################### */
