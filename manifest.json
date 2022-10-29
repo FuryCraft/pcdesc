@@ -475,5 +475,37 @@
 		}
 	],
 	"display_override": ["standalone"],
-	"categories": ["games", "personalization", "productivity", "shopping", "utilities"]
+	"categories": ["games", "personalization", "productivity", "shopping", "utilities"],
+	"shortcuts": [
+		{
+			"name": "RAM",
+			"url": "https://furycraft.github.io/webpage-as-homework/ram.html",
+			"icons": [
+				{
+					"src": "https://furycraft.github.io/webpage-as-homework/assets/img/shortcuts/ram.svg"
+				}
+			],
+			"description": "Découvrez le fonctionnement de la RAM"
+		},
+		{
+			"name": "Processeur",
+			"url": "https://furycraft.github.io/webpage-as-homework/processeur.html",
+			"icons": [
+				{
+					"src": "https://furycraft.github.io/webpage-as-homework/assets/img/shortcuts/cpu.svg"
+				}
+			],
+			"description": "Découvrez le fonctionnement d'un processeur"
+		},
+		{
+			"name": "À propos",
+			"url": "https://furycraft.github.io/webpage-as-homework/a-propos.html",
+			"icons": [
+				{
+					"src": "https://furycraft.github.io/webpage-as-homework/assets/img/shortcuts/about.svg"
+				}
+			],
+			"description": "Découvrez en plus sur nous"
+		}
+	]
 }
