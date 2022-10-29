@@ -471,7 +471,14 @@
 			"sizes": "1920x893",
 			"type": "image/png",
 			"platform": "wide",
-			"label": "Page d'acceuil de PCDesc"
+			"label": "Page d'acceuil de PCDesc (vue d'ordinateur)"
+		},
+		{
+			"src": "https://furycraft.github.io/webpage-as-homework/assets/img/pwa/screenshots/mobiledisplay.png",
+			"sizes": "437x786",
+			"type": "image/png",
+			"platform": "narrow",
+			"label": "Page d'acceuil de PCDesc (vue d'ordinateur)"
 		}
 	],
 	"display_override": ["standalone"],
