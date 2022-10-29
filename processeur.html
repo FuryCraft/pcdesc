@@ -20,6 +20,7 @@
 	<!-- On importe le css et les librairies -->
 	<!-- Notre design CSS -->
 	<link rel="stylesheet" href="assets/css/style.css" />
+	<link id="dark-theme-style" rel="stylesheet" />
 	<!-- On importe Bootstrap pour un design responsive-->
 	<link rel="stylesheet" href="assets/css/bootstrap.min.css" />
 	<!-- On importe FontAwesome pour les icônes -->
@@ -29,7 +30,13 @@
 	<!-- Permet de monétiser son site et d'accélérer son chargement -->
 	<script async src="https://arc.io/widget.min.js#7Psp1cwH"></script>
 
-	<link id="dark-theme-style" rel="stylesheet" />
+	<!-- Progressive Web App -->
+	<link rel="manifest" href="manifest.json" />
+	<script type="module">
+		import 'https://cdn.jsdelivr.net/npm/@pwabuilder/pwaupdate';
+		const el = document.createElement('pwa-update');
+		document.body.appendChild(el);
+	</script>
 </head>
 <body class="flex-grow-1 d-flex flex-column notLoaded">
 	<!-- On ajoute un preloader -->
@@ -58,7 +65,7 @@
 						<a href="index.html" class="nav-link"><i class="fa-solid fa-house"></i></a>
 					</li>
 					<li class="nav-item dropdown">
-						<a class="nav-link dropdown-toggle active" href="#" data-bs-toggle="dropdown" data-bs-auto-close="outside"><i class="fa-solid fa-boxes-stacked"></i> Composants</a>
+						<a id="menudrop" class="nav-link dropdown-toggle active" href="#" data-bs-toggle="dropdown" data-bs-auto-close="outside"><i class="fa-solid fa-boxes-stacked"></i> Composants</a>
 						<ul class="dropdown-menu shadow">
 							<li>
 								<a class="dropdown-item" href="carte-mere.html"><i class="fa-solid fa-chess-board"></i> Carte mère</a>
@@ -67,13 +74,13 @@
 								<a class="dropdown-item" href="processeur.html"><i class="fa-solid fa-microchip"></i> Processeur</a>
 							</li>
 							<li>
-								<a class="dropdown-item" href="carte-mere.html"><i class="fa-solid fa-memory"></i> Ram</a>
+								<a class="dropdown-item" href="ram.html"><i class="fa-solid fa-memory"></i> Ram</a>
 							</li>
 							<li class="dropend">
-								<a href="#" class="dropdown-item dropdown-toggle" data-bs-toggle="dropdown" data-bs-auto-close="outside"><i class="fa-solid fa-hard-drive"></i> Stockage</a>
+								<a id="drop" href="#" class="dropdown-item dropdown-toggle" data-bs-toggle="dropdown" data-bs-auto-close="outside"><i class="fa-solid fa-hard-drive"></i> Stockage</a>
 								<ul class="dropdown-menu shadow">
-									<li><a class="dropdown-item" href="">HDD</a></li>
-									<li><a class="dropdown-item" href="">SDD</a></li>
+									<li><a class="dropdown-item" href="hdd.html">HDD</a></li>
+									<li><a class="dropdown-item" href="sdd.html">SDD</a></li>
 								</ul>
 							</li>
 							<li><hr class="dropdown-divider" /></li>
@@ -108,7 +115,7 @@
 		<div class="container col-xxl-8 px-4 py-5">
 			<div class="row flex-lg-row-reverse align-items-center g-5 py-5">
 				<div class="col-10 col-sm-8 col-lg-6" data-aos="zoom-in-up">
-					<img src="assets/img/man-with-computer.png" class="d-block mx-lg-auto img-fluid" alt="Image représentant un homme tenant un pc portable dans ses mains" width="700" height="500" loading="lazy" />
+					<img src="assets/img/cpu.png" class="d-block mx-lg-auto img-fluid" alt="Image représentant un processeur en 3D" width="350" height="350" loading="lazy" />
 				</div>
 				<div class="col-lg-6" data-aos="fade-up-right">
 					<h1 class="display-5 fw-bold lh-1 mb-3">Qu'est-ce qu'un processeur ?</h1>
@@ -122,12 +129,12 @@
 		<div class="container-fluid bg-warning">
 			<div class="container col-xxl-8 px-4 py-5">
 				<div class="row flex-lg-row-reverse align-items-center g-5 py-5">
-					<div class="col-lg-6" data-aos="fade-up-left">
+					<div class="col-lg-6" data-aos="fade-up">
 						<h1 class="display-5 fw-bold lh-1 mb-3">Les sockets</h1>
 						<p class="lead">Il existe plusieurs types de sockets selon le constructeur de CPU, <b>AMD</b> ou <b>Intel</b> (principaux constructeurs).</p>
 					</div>
 					<div class="col-10 col-sm-8 col-lg-6" data-aos="zoom-in-up">
-						<img src="assets/img/computer-screen.png" class="d-block mx-lg-auto img-fluid" alt="Image représentant un homme tenant un pc portable dans ses mains" width="700" height="500" loading="lazy" />
+						<img src="assets/img/sockets.png" class="d-block mx-lg-auto img-fluid" alt="Image représentant les deux principaux sockets des processeurs" loading="lazy" />
 					</div>
 				</div>
 			</div>
@@ -137,17 +144,87 @@
 		<div class="container-fluid">
 			<div class="container col-xxl-8 px-4 py-5">
 				<div class="row flex-lg-row-reverse align-items-center g-5 py-5">
-					<div class="col-lg-6" data-aos="fade-up-left">
+					<div class="col-lg-6" data-aos="fade-up">
 						<h1 class="display-5 fw-bold lh-1 mb-3">Loi de Moore</h1>
-						<p class="lead">Il existe plusieurs types de sockets selon le constructeur de CPU, <b>AMD</b> ou <b>Intel</b> (principaux constructeurs).</p>
+						<p class="lead">La <b>loi de Moore</b> (qui est en fait une simple extrapolation) implique que les ordinateurs deviennent au fil du temps plus petits et plus rapides grâce à son nombre de <b>transistors</b> qui augmente.</p>
 					</div>
 					<div class="col-10 col-sm-8 col-lg-6" data-aos="zoom-in-up">
-						<img src="assets/img/computer-screen.png" class="d-block mx-lg-auto img-fluid" alt="Image représentant un homme tenant un pc portable dans ses mains" width="700" height="500" loading="lazy" />
+						<img src="assets/img/moore-law.png" class="d-block mx-lg-auto img-fluid" alt="Tableau de la loi de Moore" loading="lazy" />
 					</div>
 				</div>
 			</div>
 		</div>
 	</section>
+	<div class="container-xl">
+		<div class="row row-deck row-cards">
+			<div class="col-12">
+				<div class="card card-md">
+					<div class="card-stamp card-stamp-lg">
+						<div class="card-stamp-icon bg-primary">
+							<i class="icon fa-solid fa-chart-simple"></i>
+						</div>
+					</div>
+					<div class="card-body">
+						<div class="row align-items-center">
+							<div class="col-lg-6 col-xl-4">
+								<div class="card">
+									<div class="card-body">
+										<div id="chart-demo-pie"></div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<script>
+		// @formatter:off
+		document.addEventListener('DOMContentLoaded', function () {
+			window.ApexCharts &&
+				new ApexCharts(document.getElementById('chart-demo-pie'), {
+					chart: {
+						type: 'donut',
+						sparkline: {
+							enabled: true,
+						},
+						animations: {
+							enabled: true,
+						},
+					},
+					fill: {
+						opacity: 1,
+					},
+					series: [50.8, 49.2],
+					labels: ['AMD', 'Intel'],
+					tooltip: {
+						theme: 'dark',
+					},
+					grid: {
+						strokeDashArray: 4,
+					},
+					legend: {
+						show: true,
+						position: 'bottom',
+						offsetY: 12,
+						markers: {
+							width: 10,
+							height: 10,
+							radius: 100,
+						},
+						itemMargin: {
+							horizontal: 8,
+							vertical: 8,
+						},
+					},
+					tooltip: {
+						fillSeriesColor: false,
+					},
+				}).render();
+		});
+		// @formatter:on
+	</script>
 
 	<div class="container">
 		<footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
@@ -159,10 +236,6 @@
 				PCDesc, Tous droits réservés
 			</p>
 
-			<a onclick="topFunction()" id="goTop" class="col-md-4 d-flex align-items-center justify-content-center mb-3 mb-md-0 me-md-auto text-decoration-none">
-				<i class="fa-solid fa-angle-up fa-2xl fa-beat"></i>
-			</a>
-
 			<ul class="nav col-md-4 justify-content-end">
 				<li class="nav-item">
 					<a href="https://github.com/FuryCraft/webpage-as-homework" target="_blank" class="nav-link px-2 text-muted"><i class="fa-brands fa-github"></i> GitHub</a>
@@ -170,6 +243,8 @@
 			</ul>
 		</footer>
 	</div>
+
+	<a id="back-to-top" href="#" class="btn btn-warning btn-lg back-to-top" role="button"><i class="fas fa-chevron-up"></i></a>
 	<script src="assets/js/bootstrap.bundle.js"></script>
 	<script src="assets/js/jquery-3.6.1.min.js"></script>
 	<script src="assets/js/main.js"></script>
@@ -177,4 +252,5 @@
 	<script>
 		AOS.init();
 	</script>
+	<script src="assets/libs/apexcharts/apexcharts.min.js"></script>
 </body>

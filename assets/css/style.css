@@ -7,6 +7,7 @@
 		scroll-behavior: smooth;
 	}
 }
+/* On utilisera l'unité rem dans les éléments inbriqués */
 
 /* On définit le corps de notre page*/
 body {
@@ -167,12 +168,14 @@ body {
 .active {
 	color: #0d6efd !important;
 }
+/* On dit que si la souris est sur l'élément, alors il sera en jaune */
 .nav-link:hover {
 	color: #ffc107 !important;
 }
 .dropdown-item:hover {
 	background-color: #ffc107 !important;
 }
+/* On applique ce modèle au dropdown menu actifs*/
 #menudrop[aria-expanded='true'] {
 	color: #ffc107 !important;
 }
@@ -188,6 +191,35 @@ body {
 
 #hero {
 	background-color: #ffffff !important;
+}
+.card {
+	position: relative;
+	display: flex; /* On dit que c'est un élément flexible*/
+	flex-direction: column; /*https://developer.mozilla.org/fr/docs/Web/CSS/flex-direction*/
+	min-width: 0;
+	background-clip: border-box; /*https://developer.mozilla.org/fr/docs/Web/CSS/background-clip*/
+	border: 1px solid #e6e7e9;
+	border-radius: 4px; /* Taille de la bordure */
+}
+.card-stamp-icon {
+	background: #616876;
+	color: #1a2234, #1d273b;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	border-radius: 100rem;
+	width: calc(13rem * 1); /* Juste envie de jouer avec la fonction calc, aucun avantages ici */
+	height: calc(13rem * 1);
+	position: relative;
+	top: calc(13rem * -0.25);
+	right: calc(13rem * -0.25);
+	font-size: calc(13rem * 0.75);
+	transform: rotate(10deg); /* On dit que l'icône est incliné de 10° */
+}
+.card-stamp-icon .icon {
+	stroke-width: 2;
+	width: calc(13rem * 0.75); /* Juste envie d'utiliser la fonction calc */
+	height: calc(13rem * 0.75);
 }
 
 /* ###################################################################### */
