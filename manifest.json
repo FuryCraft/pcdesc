@@ -11,6 +11,10 @@
 	"theme_color": "#ffffff",
 	"icons": [
 		{
+			"src": "https://furycraft.github.io/webpage-as-homework/assets/img/favicon.png",
+			"sizes": "any"
+		},
+		{
 			"src": "https://furycraft.github.io/webpage-as-homework/assets/img/pwa/windows11/SmallTile.scale-100.png",
 			"sizes": "71x71"
 		},
