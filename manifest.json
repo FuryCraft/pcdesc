@@ -12,7 +12,8 @@
 	"icons": [
 		{
 			"src": "https://furycraft.github.io/webpage-as-homework/assets/img/favicon.png",
-			"sizes": "any"
+			"sizes": "1000x1000",
+			"purpose": "any"
 		},
 		{
 			"src": "https://furycraft.github.io/webpage-as-homework/assets/img/pwa/windows11/SmallTile.scale-100.png",
