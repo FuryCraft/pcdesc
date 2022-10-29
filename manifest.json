@@ -7,11 +7,11 @@
 	"orientation": "any",
 	"scope": "/",
 	"short_name": "PCDesc",
-	"start_url": "/",
+	"start_url": "https://furycraft.github.io/webpage-as-homework/",
 	"theme_color": "#ffffff",
 	"icons": [
 		{
-			"src": "assets/img/favicon.png",
+			"src": "https://furycraft.github.io/webpage-as-homework/assets/img/favicon.png",
 			"type": "image/png"
 		}
 	]
