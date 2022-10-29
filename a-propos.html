@@ -20,6 +20,7 @@
 	<!-- On importe le css et les librairies -->
 	<!-- Notre design CSS -->
 	<link rel="stylesheet" href="assets/css/style.css" />
+	<link id="dark-theme-style" rel="stylesheet" />
 	<!-- On importe Bootstrap pour un design responsive-->
 	<link rel="stylesheet" href="assets/css/bootstrap.min.css" />
 	<!-- On importe FontAwesome pour les icônes -->
@@ -29,7 +30,13 @@
 	<!-- Permet de monétiser son site et d'accélérer son chargement -->
 	<script async src="https://arc.io/widget.min.js#7Psp1cwH"></script>
 
-	<link id="dark-theme-style" rel="stylesheet" />
+	<!-- Progressive Web App -->
+	<link rel="manifest" href="manifest.json" />
+	<script type="module">
+		import 'https://cdn.jsdelivr.net/npm/@pwabuilder/pwaupdate';
+		const el = document.createElement('pwa-update');
+		document.body.appendChild(el);
+	</script>
 </head>
 <body class="flex-grow-1 d-flex flex-column notLoaded">
 	<!-- On ajoute un preloader -->
