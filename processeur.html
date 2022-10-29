@@ -167,9 +167,18 @@
 					<div class="card-body">
 						<div class="row align-items-center">
 							<div class="col-lg-6 col-xl-4">
-								<div class="card">
+								<div class="card border-0">
 									<div class="card-body">
-										<div id="chart-demo-pie"></div>
+										<div id="stats"></div>
+									</div>
+								</div>
+							</div>
+							<div class="col-lg-6 col-xl-8">
+								<div class="card border-0">
+									<div class="card-body">
+										<h3>Part de marché des processeurs en 2021</h3>
+										<p>Nous tenons pour source un article de la revue numérique <b>PhonAndroid</b>.</p>
+										<a href="https://www.phonandroid.com/parts-de-marche-cpu-cest-officiel-amd-est-passe-devant-intel-dans-les-pc-bureau.html" target="_blank" class="btn btn-primary">Consulter l'article</a>
 									</div>
 								</div>
 							</div>
@@ -179,11 +188,12 @@
 			</div>
 		</div>
 	</div>
+	<!-- On crée le graphique grâce à ApexCharts -->
 	<script>
 		// @formatter:off
 		document.addEventListener('DOMContentLoaded', function () {
 			window.ApexCharts &&
-				new ApexCharts(document.getElementById('chart-demo-pie'), {
+				new ApexCharts(document.getElementById('stats'), {
 					chart: {
 						type: 'donut',
 						sparkline: {
@@ -197,6 +207,7 @@
 						opacity: 1,
 					},
 					series: [50.8, 49.2],
+					colors: ['#e0042c', '#046ab4'],
 					labels: ['AMD', 'Intel'],
 					tooltip: {
 						theme: 'dark',
@@ -206,7 +217,7 @@
 					},
 					legend: {
 						show: true,
-						position: 'bottom',
+						position: 'right',
 						offsetY: 12,
 						markers: {
 							width: 10,
