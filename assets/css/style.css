@@ -164,15 +164,20 @@ body {
 }
 
 /* On modifie la couleur du lien de la navbar si l'utilisateur se trouve sur cette page */
-.navlink,
 .active {
 	color: #0d6efd !important;
 }
-/* On précise aussi de changer les couleurs pour les icônes FontAwesome*/
-.navlink,
-.active,
-.fa {
-	color: #0d6efd !important;
+.nav-link:hover {
+	color: #ffc107 !important;
+}
+.dropdown-item:hover {
+	background-color: #ffc107 !important;
+}
+#menudrop[aria-expanded='true'] {
+	color: #ffc107 !important;
+}
+#drop[aria-expanded='true'] {
+	background-color: #ffc107 !important;
 }
 
 /* ###################################################################### */
