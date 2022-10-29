@@ -233,7 +233,12 @@ body {
 	box-shadow: 0 0 hsl(216, 91%, 42%) !important;
 	top: 6px;
 }
-
+.back-to-top {
+	position: fixed;
+	bottom: 25px;
+	right: 25px;
+	display: none;
+}
 /* ###################################################################### */
 /* # 																	# */
 /* # 					   BARRE DE DEFILEMENT							# */
