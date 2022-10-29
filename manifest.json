@@ -1,0 +1,18 @@
+{
+	"background_color": "#ffffff",
+	"description": "Notre page pour la NSI",
+	"dir": "ltr",
+	"display": "standalone",
+	"name": "PCDesc",
+	"orientation": "any",
+	"scope": "/",
+	"short_name": "PCDesc",
+	"start_url": "/",
+	"theme_color": "#ffffff",
+	"icons": [
+		{
+			"src": "assets/img/favicon.png",
+			"type": "image/png"
+		}
+	]
+}
