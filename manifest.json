@@ -465,6 +465,15 @@
 		}
 	],
 	"lang": "fr",
+	"screenshots": [
+		{
+			"src": "https://furycraft.github.io/webpage-as-homework/assets/img/pwa/screenshots/computerdisplay.png",
+			"sizes": "1920x893",
+			"type": "image/png",
+			"platform": "wide",
+			"label": "Page d'acceuil de PCDesc"
+		}
+	],
 	"display_override": ["standalone"],
 	"categories": ["games", "personalization", "productivity", "shopping", "utilities"]
 }
