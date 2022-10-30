@@ -60,7 +60,10 @@ body {
 .card-body {
 	background-color: #1d273b !important;
 }
-
+.modal-content {
+	background-color: #1d273b !important;
+	color: #f8fafc !important;
+}
 /* ###################################################################### */
 /* # 																	# */
 /* # 					   BARRE DE DEFILEMENT							# */

@@ -94,11 +94,66 @@
 					</li>
 				</ul>
 				<div class="text-end">
-					<a href="javascript:void()" id="theme-toggler" onclick="toggleTheme()" class="btn btn-warning"></a>
+					<div class="d-md-flex">
+						<button type="button" class="btn btn-warning me-sm-3" data-bs-toggle="modal" data-bs-target="#download"><i class="fa-solid fa-download"></i></button>
+						<a href="javascript:void()" id="theme-toggler" onclick="toggleTheme()" class="btn btn-warning"></a>
+					</div>
 				</div>
 			</div>
 		</div>
 	</nav>
+	<!-- Modal de téléchargement -->
+	<div class="modal fade modal-blur" id="download" tabindex="-1" aria-labelledby="downloadLabel" aria-hidden="true">
+		<div class="modal-dialog modal-dialog-centered modal-lg">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h1 class="modal-title fs-5" id="exampleModalLabel">Téléchargement</h1>
+					<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fermer"></button>
+				</div>
+				<div class="modal-body">
+					<div class="row">
+						<div class="col">
+							<h3><i class="fa-brands fa-android"></i> Android</h3>
+							<ul>
+								<li><b>Version:</b> 1.0</li>
+								<li><b>Date de publication:</b> prochainement</li>
+								<li><b>Taille:</b> 326 Ko</li>
+							</ul>
+							<div class="d-grid gap-2">
+								<a href="" target="_blank" class="btn btn-outline-warning disabled"><i class="fa-solid fa-download"></i> APK</a>
+							</div>
+						</div>
+						<div class="col">
+							<h3><i class="fa-brands fa-windows"></i> Windows 10/11</h3>
+							<ul>
+								<li><b>Version:</b> 1.0</li>
+								<li><b>Date de publication:</b> prochainement</li>
+								<li><b>Taille:</b> 1,07 Mo</li>
+							</ul>
+							<div class="d-grid gap-2">
+								<a href="" target="_blank" class="btn btn-outline-warning disabled"><i class="fa-solid fa-download"></i> ZIP</a>
+							</div>
+						</div>
+						<div class="col">
+							<h3><i class="fa-solid fa-code"></i> Code source</h3>
+							<ul>
+								<li><b>Version:</b> dernière</li>
+								<li><b>Date de publication:</b> aujourd'hui</li>
+								<li><b>Taille:</b> inconnue</li>
+							</ul>
+							<div class="d-grid gap-2">
+								<a href="https://github.com/FuryCraft/webpage-as-homework/archive/refs/heads/master.zip" target="_blank" class="btn btn-outline-warning"><i class="fa-solid fa-download"></i> ZIP</a>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="modal-footer">
+					<p>Ces applications ne sont pas disponibles sur les stores officiels. Vous devrez accorder certaines autorisations développeurs à votre appareil.</p>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- Contenu de la page -->
 	<div class="px-4 pt-5 my-5 text-center shadow" id="hero">
 		<h1 class="display-4 fw-bold">Bienvenue</h1>
 		<div class="col-lg-6 mx-auto">
