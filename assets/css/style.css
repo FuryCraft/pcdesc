@@ -210,8 +210,7 @@ body.modal-open > :not(.modal) {
 	border-radius: 4px; /* Taille de la bordure */
 }
 .card-stamp-icon {
-	background: #616876;
-	color: #1a2234, #1d273b;
+	color: #ffffff;
 	display: flex;
 	align-items: center;
 	justify-content: center;

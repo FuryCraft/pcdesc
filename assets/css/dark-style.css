@@ -64,6 +64,10 @@ body {
 	background-color: #1d273b !important;
 	color: #f8fafc !important;
 }
+/* On précise que la légende des graphiques doit être en blanc*/
+.apexcharts-legend-text {
+	color: #f8fafc !important;
+}
 /* ###################################################################### */
 /* # 																	# */
 /* # 					   BARRE DE DEFILEMENT							# */
