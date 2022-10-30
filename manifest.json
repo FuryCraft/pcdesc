@@ -1,5 +1,5 @@
 {
-	"background_color": "#ffffff",
+	"background_color": "#f8f4fc",
 	"description": "Notre page pour la NSI",
 	"dir": "ltr",
 	"display": "standalone",
@@ -8,7 +8,7 @@
 	"scope": "/",
 	"short_name": "PCDesc",
 	"start_url": "https://furycraft.github.io/webpage-as-homework/",
-	"theme_color": "#ffffff",
+	"theme_color": "#ffc107",
 	"icons": [
 		{
 			"src": "https://furycraft.github.io/webpage-as-homework/assets/img/favicon.png",
@@ -545,7 +545,9 @@
 			"url": "https://furycraft.github.io/webpage-as-homework/processeur.html",
 			"icons": [
 				{
-					"src": "https://furycraft.github.io/webpage-as-homework/assets/img/shortcuts/cpu.svg"
+					"src": "https://furycraft.github.io/webpage-as-homework/assets/img/shortcuts/cpu.svg",
+					"type": "image/svg+xml",
+					"purpose": "any"
 				}
 			],
 			"description": "Découvrez le fonctionnement d'un processeur"
@@ -555,7 +557,9 @@
 			"url": "https://furycraft.github.io/webpage-as-homework/a-propos.html",
 			"icons": [
 				{
-					"src": "https://furycraft.github.io/webpage-as-homework/assets/img/shortcuts/about.svg"
+					"src": "https://furycraft.github.io/webpage-as-homework/assets/img/shortcuts/about.svg",
+					"type": "image/svg+xml",
+					"purpose": "any"
 				}
 			],
 			"description": "Découvrez en plus sur nous"
