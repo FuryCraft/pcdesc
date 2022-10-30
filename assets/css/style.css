@@ -17,6 +17,11 @@ body {
 	font-size: 0.875rem; /* La taille de celle-ci*/
 	font-weight: 400;
 	line-height: 1.4285714;
+	/* On précise qu'on ne peut rien sélectionner (surlignage en bleu) */
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
 	/* Paramètres de couleur */
 	color: #1d273b !important; /* On rajoute l'attribut !important car autrement ce n'est pas pris en compte */
 	background-color: #f8f4fc !important; /* On rajoute l'attribut !important car autrement ce n'est pas pris en compte */
@@ -208,6 +213,7 @@ body.modal-open > :not(.modal) {
 	background-clip: border-box; /*https://developer.mozilla.org/fr/docs/Web/CSS/background-clip*/
 	border: 1px solid #e6e7e9;
 	border-radius: 4px; /* Taille de la bordure */
+	margin-top: 5px;
 }
 .card-stamp-icon {
 	color: #ffffff;
@@ -228,7 +234,31 @@ body.modal-open > :not(.modal) {
 	width: calc(13rem * 0.75); /* Juste envie d'utiliser la fonction calc */
 	height: calc(13rem * 0.75);
 }
+.avatar {
+	position: relative;
+	width: 2.5rem;
+	height: 2.5rem;
+	font-size: calc(2.5rem / 2.8571428572);
+	font-weight: 500;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	color: #616876;
+	text-align: center;
+	text-transform: uppercase;
+	vertical-align: bottom;
+	border-radius: 4px;
+}
+.bg-green {
+	background-color: #2fb344 !important;
+}
+.bg-fb {
+	background-color: #3b5998 !important;
+}
 
+.bg-tw {
+	background-color: #1da1f2 !important;
+}
 /* ###################################################################### */
 /* # 																	# */
 /* # 					  	 	BOUTTONS								# */
