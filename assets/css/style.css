@@ -13,7 +13,7 @@
 body {
 	margin: 0;
 	/* Paramètres de police */
-	font-family: Inter, -apple-system, BlinkMacSystemFont, San Francisco, Segoe UI, Roboto, Helvetica Neue, sans-serif; /* On définit la police d'écriture*/
+	font-family: Inter, -apple-system, BlinkMacSystemFont, San Francisco, Segoe UI, Roboto, Helvetica Neue, sans-serif; /* On définit la police d'écriture, la même que Tabler (preview.tabler.io)*/
 	font-size: 0.875rem; /* La taille de celle-ci*/
 	font-weight: 400;
 	line-height: 1.4285714;
@@ -30,11 +30,8 @@ body {
 }
 /* On rajoute un flou quand un modal est affichée (https://gist.github.com/webprogramozo/9684826e469e5dc375e98f65559e1509)*/
 body.modal-open > :not(.modal) {
-	-webkit-filter: blur(5px);
-	-moz-filter: blur(5px);
-	-o-filter: blur(5px);
-	-ms-filter: blur(5px);
-	filter: blur(5px);
+	-webkit-backdrop-filter: blur(2px);
+	backdrop-filter: blur(2px);
 }
 
 /* ###################################################################### */
@@ -219,7 +216,7 @@ body.modal-open > :not(.modal) {
 	justify-content: center;
 	color: #616876;
 	text-align: center;
-	text-transform: uppercase;
+	text-transform: uppercase; /* On dit de mettre le texte en majuscule */
 	vertical-align: bottom;
 	border-radius: 4px;
 }
