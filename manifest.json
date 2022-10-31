@@ -535,7 +535,9 @@
 			"url": "https://furycraft.github.io/webpage-as-homework/ram.html",
 			"icons": [
 				{
-					"src": "https://furycraft.github.io/webpage-as-homework/assets/img/pwa/shortcuts/ram.svg"
+					"src": "https://furycraft.github.io/webpage-as-homework/assets/img/pwa/shortcuts/ram.png",
+					"type": "image/png",
+					"purpose": "any"
 				}
 			],
 			"description": "Découvrez le fonctionnement de la RAM"
@@ -545,8 +547,8 @@
 			"url": "https://furycraft.github.io/webpage-as-homework/processeur.html",
 			"icons": [
 				{
-					"src": "https://furycraft.github.io/webpage-as-homework/assets/img/pwa/shortcuts/cpu.svg",
-					"type": "image/svg+xml",
+					"src": "https://furycraft.github.io/webpage-as-homework/assets/img/pwa/shortcuts/cpu.png",
+					"type": "image/png",
 					"purpose": "any"
 				}
 			],
@@ -557,8 +559,8 @@
 			"url": "https://furycraft.github.io/webpage-as-homework/a-propos.html",
 			"icons": [
 				{
-					"src": "https://furycraft.github.io/webpage-as-homework/assets/img/pwa/shortcuts/about.svg",
-					"type": "image/svg+xml",
+					"src": "https://furycraft.github.io/webpage-as-homework/assets/img/pwa/shortcuts/about.png",
+					"type": "image/png",
 					"purpose": "any"
 				}
 			],
