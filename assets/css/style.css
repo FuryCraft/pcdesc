@@ -29,9 +29,9 @@ body {
 	-webkit-tap-highlight-color: rgba(0, 0, 0, 0); /* On définit la couleur quand l'utilisateur mobile touche quelquechose, au lieu du bleu habituel des navigateurs */
 }
 /* On rajoute un flou quand un modal est affichée (https://gist.github.com/webprogramozo/9684826e469e5dc375e98f65559e1509)*/
-body.modal-open > :not(.modal) {
-	-webkit-backdrop-filter: blur(2px);
-	backdrop-filter: blur(2px);
+.modal-blur {
+	-webkit-backdrop-filter: blur(4px);
+	backdrop-filter: blur(4px);
 }
 
 /* ###################################################################### */
