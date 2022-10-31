@@ -13,7 +13,7 @@
 body {
 	margin: 0;
 	/* Paramètres de police */
-	font-family: -apple-system, BlinkMacSystemFont, San Francisco, Segoe UI, Roboto, Helvetica Neue, sans-serif; /* On définit la police d'écriture*/
+	font-family: Inter, -apple-system, BlinkMacSystemFont, San Francisco, Segoe UI, Roboto, Helvetica Neue, sans-serif; /* On définit la police d'écriture*/
 	font-size: 0.875rem; /* La taille de celle-ci*/
 	font-weight: 400;
 	line-height: 1.4285714;
@@ -205,34 +205,8 @@ body.modal-open > :not(.modal) {
 #hero {
 	background-color: #ffffff !important;
 }
-.card {
-	position: relative;
-	display: flex; /* On dit que c'est un élément flexible*/
-	flex-direction: column; /*https://developer.mozilla.org/fr/docs/Web/CSS/flex-direction*/
-	min-width: 0;
-	background-clip: border-box; /*https://developer.mozilla.org/fr/docs/Web/CSS/background-clip*/
-	border: 1px solid #e6e7e9;
-	border-radius: 4px; /* Taille de la bordure */
-	margin-top: 5px;
-}
-.card-stamp-icon {
-	color: #ffffff;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	border-radius: 100rem;
-	width: calc(13rem * 1); /* Juste envie de jouer avec la fonction calc, aucun avantages ici */
-	height: calc(13rem * 1);
-	position: relative;
-	top: calc(13rem * -0.25);
-	right: calc(13rem * -0.25);
-	font-size: calc(13rem * 0.75);
-	transform: rotate(10deg); /* On dit que l'icône est incliné de 10° */
-}
-.card-stamp-icon .icon {
-	stroke-width: 2;
-	width: calc(13rem * 0.75); /* Juste envie d'utiliser la fonction calc */
-	height: calc(13rem * 0.75);
+.card-header {
+	background-color: #f8fafc !important;
 }
 .avatar {
 	position: relative;
@@ -249,6 +223,13 @@ body.modal-open > :not(.modal) {
 	vertical-align: bottom;
 	border-radius: 4px;
 }
+
+/* ###################################################################### */
+/* # 																	# */
+/* # 					  	 	COULEURS								# */
+/* # 																	# */
+/* ###################################################################### */
+
 .bg-green {
 	background-color: #2fb344 !important;
 }
