@@ -98,6 +98,14 @@ $(document).ready(function () {
 		return false;
 	});
 });
+
+/* ###################################################################### */
+/* # 																	# */
+/* # 						   TELECHARGEMENTS							# */
+/* # 																	# */
+/* ###################################################################### */
+
+// On crée une fonction de téléchargement (code provenant de StackOverflow)
 function downloadFile(url, fileName) {
 	fetch(url, { method: 'get', mode: 'no-cors', referrerPolicy: 'no-referrer' })
 		.then((res) => res.blob())
@@ -113,8 +121,18 @@ function downloadFile(url, fileName) {
 		});
 }
 
+// On cherche si il y a un élément correpondant sur la page et on le met sous forme de variable
 let sourcecode = document.getElementById('sourcecode');
+let windowsapp = document.getElementById('windowsapp');
+let androidapp = document.getElementById('androidapp');
 
+// Si l'élème précédent est cliqué, alors on va télécharger le fichier correspondant
 sourcecode.addEventListener('click', function () {
 	downloadFile('https://github.com/FuryCraft/webpage-as-homework/archive/refs/heads/master.zip', 'PCDesc - Codesource.zip');
+});
+windowsapp.addEventListener('click', function () {
+	downloadFile('https://github.com/FuryCraft/webpage-as-homework/releases/download/1.0/PCDesc_Windows-App.zip', 'PCDesc - Windows App.zip');
+});
+androidapp.addEventListener('click', function () {
+	downloadFile('https://github.com/FuryCraft/webpage-as-homework/releases/download/1.0/PCDesc_Android.apk', 'PCDesc - Android.apk');
 });
