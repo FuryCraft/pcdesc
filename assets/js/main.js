@@ -98,3 +98,23 @@ $(document).ready(function () {
 		return false;
 	});
 });
+function downloadFile(url, fileName) {
+	fetch(url, { method: 'get', mode: 'no-cors', referrerPolicy: 'no-referrer' })
+		.then((res) => res.blob())
+		.then((res) => {
+			const aElement = document.createElement('a');
+			aElement.setAttribute('download', fileName);
+			const href = URL.createObjectURL(res);
+			aElement.href = href;
+			// aElement.setAttribute('href', href);
+			aElement.setAttribute('target', '_blank');
+			aElement.click();
+			URL.revokeObjectURL(href);
+		});
+}
+
+let sourcecode = document.getElementById('sourcecode');
+
+sourcecode.addEventListener('click', function () {
+	downloadFile('https://github.com/FuryCraft/webpage-as-homework/archive/refs/heads/master.zip', 'PCDesc - Codesource.zip');
+});
