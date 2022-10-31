@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+
+<!-- On définit la langue de notre site et on évite qu'un traducteur essaye de la traduire -->
+<head lang="fr" xml:lang="fr" xmlns="http://www.w3.org/1999/xhtml" translate="no">
+	<meta charset="utf-8" />
+
+	<!-- On évite les problèmes d'affichages -->
+	<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+	<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+
+	<!-- On indique que la page est optimisé pour les affichages portrait (mobiles, tablettes)-->
+	<meta name="HandheldFriendly" content="True" />
+	<meta name="MobileOptimized" content="320" />
+
+	<!-- On indique tout ce qui est SEO (titre, favicon, description)-->
+	<title>Erreur 404 - PCDesc</title>
+	<meta name="description" content="Notre page pour la NSI" />
+	<link rel="icon" type="image/png" href="assets/img/favicon.png" />
+	<link rel="apple-touch-icon image_src" href="assets/img/pwa/ios/192.png" />
+	<meta name="theme-color" content="#ffc107" />
+
+	<!-- On importe le css et les librairies -->
+	<!-- Notre design CSS -->
+	<link rel="stylesheet" href="assets/css/style.css" />
+	<link id="dark-theme-style" rel="stylesheet" />
+	<!-- On importe Bootstrap pour un design responsive-->
+	<link rel="stylesheet" href="assets/css/bootstrap.min.css" />
+	<!-- On importe FontAwesome pour les icônes -->
+	<link rel="stylesheet" href="assets/css/all.min.css" />
+	<!-- On importe AOS pour les animations-->
+	<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+	<!-- Permet de monétiser son site et d'accélérer son chargement -->
+	<script async src="https://arc.io/widget.min.js#7Psp1cwH"></script>
+
+	<!-- Progressive Web App -->
+	<link rel="manifest" href="manifest.json" />
+	<script type="module">
+		import 'https://cdn.jsdelivr.net/npm/@pwabuilder/pwaupdate';
+		const el = document.createElement('pwa-update');
+		document.body.appendChild(el);
+	</script>
+</head>
+<body class="d-flex align-items-center justify-content-center vh-100 notLoaded">
+	<!-- On ajoute un preloader -->
+	<div class="preloader-wrapper">
+		<div class="spinner-border text-primary" style="width: 3rem; height: 3rem">
+			<span class="visually-hidden">Chargement...</span>
+		</div>
+	</div>
+	<div class="text-center">
+		<h1 class="display-1 fw-bold">404</h1>
+		<p class="fs-3"><span class="text-danger">Opps!</span> Vous êtes tombé sur une page d'erreur.</p>
+		<p class="lead">Il s'emblerait que la page que vous cherchez n'existe pas.</p>
+		<a href="index.html" class="btn btn-primary">Revenir à l'accueil</a>
+	</div>
+
+	<script src="assets/js/bootstrap.bundle.js"></script>
+	<script src="assets/js/jquery-3.6.1.min.js"></script>
+	<script src="assets/js/main.js"></script>
+	<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+	<script>
+		AOS.init();
+	</script>
+	<script src="assets/libs/apexcharts/apexcharts.min.js"></script>
+</body>
