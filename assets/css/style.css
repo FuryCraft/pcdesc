@@ -1,7 +1,7 @@
 @charset "UTF-8";
 /* On importe une police d'écriture */
-@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
-/* On définit un défilement doux (plus agréable à regarder) */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+/* On définit un défilement doux (plus agréable à regarder), même si les animations, sont désactivés sur son appareil */
 @media (prefers-reduced-motion: no-preference) {
 	:root {
 		scroll-behavior: smooth;
@@ -13,8 +13,9 @@
 body {
 	margin: 0;
 	/* Paramètres de police */
-	font-family: Inter, -apple-system, BlinkMacSystemFont, San Francisco, Segoe UI, Roboto, Helvetica Neue, sans-serif; /* On définit la police d'écriture, la même que Tabler (preview.tabler.io)*/
-	font-size: 0.875rem; /* La taille de celle-ci*/
+	font-family: 'Poppins', sans-serif;
+	font-size: 100%; /* La taille de celle-ci*/
+	-webkit-text-size-adjust: 100%;
 	font-weight: 400;
 	line-height: 1.4285714;
 	/* On précise qu'on ne peut rien sélectionner (surlignage en bleu) */
@@ -25,8 +26,9 @@ body {
 	/* Paramètres de couleur */
 	color: #1d273b !important; /* On rajoute l'attribut !important car autrement ce n'est pas pris en compte */
 	background-color: #f8f4fc !important; /* On rajoute l'attribut !important car autrement ce n'est pas pris en compte */
-	-webkit-text-size-adjust: 100%;
-	-webkit-tap-highlight-color: rgba(0, 0, 0, 0); /* On définit la couleur quand l'utilisateur mobile touche quelquechose, au lieu du bleu habituel des navigateurs */
+
+	/* On définit la couleur quand l'utilisateur mobile touche quelquechose, au lieu du bleu habituel des navigateurs */
+	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 /* On rajoute un flou quand un modal est affichée (https://gist.github.com/webprogramozo/9684826e469e5dc375e98f65559e1509)*/
 .modal-blur {
@@ -77,8 +79,7 @@ body {
 
 .navbar {
 	background-color: #ffffff !important;
-	/* On change la police d'écriture uniquement pour la barre de navigation*/
-	font-family: 'Poppins', sans-serif;
+	font-weight: 500;
 }
 
 /*On ajoute une animation au sous-catégories de la barre de navigation*/
