@@ -57,6 +57,9 @@ body {
 	border-color: #243049 !important;
 	background-color: #1d273b !important;
 }
+.card-header {
+	background-color: #1a2234 !important;
+}
 .card-body {
 	background-color: #1d273b !important;
 }
