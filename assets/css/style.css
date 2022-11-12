@@ -179,10 +179,40 @@ body {
 .active {
 	color: #0d6efd !important;
 }
+
+/* On définit nos liens de la navbbar*/
+.nav-link {
+	font-weight: bold;
+	font-size: 14px;
+	text-transform: uppercase;
+	text-decoration: none;
+	position: relative;
+	opacity: 0.75; /* Servira pour une animation */
+}
 /* On dit que si la souris est sur l'élément, alors il sera en jaune */
 .nav-link:hover {
 	color: #ffc107 !important;
+	opacity: 1; /* On augmente l'opacité */
 }
+
+/* On crée l'animation onhover */
+.nav-link::before {
+	transition: 300ms;
+	height: 5px;
+	content: '';
+	position: absolute;
+	background-color: #ffc107;
+}
+
+.nav-link-anim::before {
+	width: 0%; /* On dit que notre barre n'a pas de longueur*/
+	bottom: 1px;
+}
+
+.nav-link-anim:hover::before {
+	width: 100%; /* On dit que notre barre prend toute la longueur */
+}
+
 .dropdown-item:hover {
 	background-color: #ffc107 !important;
 }
@@ -228,6 +258,7 @@ body {
 /* # 																	# */
 /* ###################################################################### */
 
+/* On crée des éléments d'arrière plan pour BootStrap*/
 .bg-green {
 	background-color: #2fb344 !important;
 }
@@ -247,7 +278,6 @@ body {
 /* On crée notre propre boutton*/
 .custom-btn {
 	border: none;
-	font-family: 'Poppins', sans-serif;
 	cursor: pointer;
 	padding: 25px 80px;
 	display: inline-block;
@@ -281,6 +311,7 @@ body {
 	box-shadow: 0 0 hsl(216, 91%, 42%) !important;
 	top: 6px;
 }
+/* Notre bouton pour retourner en haut de la page */
 .back-to-top {
 	position: fixed;
 	bottom: 25px;

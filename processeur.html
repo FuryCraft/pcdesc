@@ -49,8 +49,11 @@
 	</div>
 	<!-- On crée la barre de naviagtion  -->
 	<nav class="navbar sticky-top navbar-expand-lg navbar-expand-md shadow">
+		<!-- On précise que celle-ci est toujours affichée -->
 		<div class="container">
+			<!-- On met notre logo -->
 			<img class="navbar-brand" src="assets/img/logo.png" alt="Logo de notre PCDesc" height="36" />
+			<!-- On crée un bouton qui s'affiche uniquement quand la navbar est en collapse (affichage mobile)-->
 			<button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#navbar-content">
 				<div class="hamburger-toggle">
 					<div class="hamburger">
@@ -61,14 +64,19 @@
 					</div>
 				</div>
 			</button>
+			<!-- On crée les liens de notre navbar-->
 			<div class="collapse navbar-collapse" id="navbar-content">
+				<!-- On dit de prendre 100 de width-->
 				<ul class="navbar-nav w-100">
 					<li class="nav-item">
-						<a href="index.html" class="nav-link"><i class="fa-solid fa-house"></i></a>
+						<a href="index.html" class="nav-link nav-link-anim"><i class="fa-solid fa-house"></i></a>
 					</li>
+					<!-- On crée un dropdown (catégorie)-->
 					<li class="nav-item dropdown">
-						<a id="menudrop" class="nav-link dropdown-toggle active" href="#" data-bs-toggle="dropdown" data-bs-auto-close="outside"><i class="fa-solid fa-boxes-stacked"></i> Composants</a>
+						<!-- On crée le lien qui va ouvrir le dropdown-->
+						<a id="menudrop" class="nav-link nav-link-anim dropdown-toggle active" href="#" data-bs-toggle="dropdown" data-bs-auto-close="outside"><i class="fa-solid fa-boxes-stacked"></i> Composants</a>
 						<ul class="dropdown-menu shadow">
+							<!-- On crée les liens du dropdown -->
 							<li>
 								<a class="dropdown-item" href="carte-mere.html"><i class="fa-solid fa-chess-board"></i> Carte mère</a>
 							</li>
@@ -78,6 +86,7 @@
 							<li>
 								<a class="dropdown-item" href="ram.html"><i class="fa-solid fa-memory"></i> Ram</a>
 							</li>
+							<!-- On recrée un dropdown dans un dropdown-->
 							<li class="dropend">
 								<a id="drop" href="#" class="dropdown-item dropdown-toggle" data-bs-toggle="dropdown" data-bs-auto-close="outside"><i class="fa-solid fa-hard-drive"></i> Stockage</a>
 								<ul class="dropdown-menu shadow">
@@ -89,13 +98,17 @@
 							<li><a class="dropdown-item" href="https://www.systemrequirementslab.com/my-computer-details" target="_blank">Ceux de mon PC</a></li>
 						</ul>
 					</li>
+					<!-- On recrée un autre lien en dehors du dropdown -->
 					<li class="nav-item">
-						<a href="a-propos.html" class="nav-link">À propos</a>
+						<a href="a-propos.html" class="nav-link nav-link-anim">À propos</a>
 					</li>
 				</ul>
+				<!-- On crée des boutons qui s'afficheront à la fin de la navbar (tout à droite) -->
 				<div class="text-end">
 					<div class="d-md-flex">
+						<!-- On crée le bouton qui permet d'ouvrir le modal de téléchargement -->
 						<button type="button" class="btn btn-warning me-sm-3" data-bs-toggle="modal" data-bs-target="#download"><i class="fa-solid fa-download"></i></button>
+						<!-- On crée le bouton qui permet de changer de thème -->
 						<a href="javascript:void()" id="theme-toggler" onclick="toggleTheme()" class="btn btn-warning"></a>
 					</div>
 				</div>
