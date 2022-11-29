@@ -9,6 +9,22 @@
 }
 /* On utilisera l'unité rem dans les éléments inbriqués */
 
+/* ###################################################################### */
+/* # 																	# */
+/* # 					  	  	VARIABLES								# */
+/* # 																	# */
+/* ###################################################################### */
+:root {
+	--pcdesc-background-color: #f8f4fc;
+	--pcdesc-element-background-color: #ffffff;
+	--pcdesc-text-color: #1d273b;
+	--pcdesc-blue-color: #0d6efd;
+	--pcdesc-yellow-color: #ffc107;
+	--pcdesc-green-color: #2fb344;
+	--pcdesc-fb-color: #3b5998;
+	--pcdesc-tw-color: #1da1f2;
+}
+
 /* On définit le corps de notre page*/
 body {
 	margin: 0;
@@ -24,8 +40,8 @@ body {
 	-ms-user-select: none;
 	user-select: none;
 	/* Paramètres de couleur */
-	color: #1d273b !important; /* On rajoute l'attribut !important car autrement ce n'est pas pris en compte */
-	background-color: #f8f4fc !important; /* On rajoute l'attribut !important car autrement ce n'est pas pris en compte */
+	color: var(--pcdesc-text-color) !important; /* On rajoute l'attribut !important car autrement ce n'est pas pris en compte */
+	background-color: var(--pcdesc-background-color) !important; /* On rajoute l'attribut !important car autrement ce n'est pas pris en compte */
 
 	/* On définit la couleur quand l'utilisateur mobile touche quelquechose, au lieu du bleu habituel des navigateurs */
 	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
@@ -53,7 +69,7 @@ body {
 	align-items: center;
 	justify-content: center;
 	transition: all 0.4s ease;
-	background-color: #f8f4fc !important;
+	background-color: var(--pcdesc-background-color) !important;
 	z-index: 1031; /* On indique que le preloader se couche à la couche 1031 car la navbar de Bootstrap est par défaut à 1030 ce qui fait qu'elle est affichée durant le chargement*/
 }
 
@@ -78,7 +94,7 @@ body {
 /* ###################################################################### */
 
 .navbar {
-	background-color: #ffffff !important;
+	background-color: var(--pcdesc-element-background-color) !important;
 	font-weight: 500;
 }
 
@@ -177,7 +193,7 @@ body {
 
 /* On modifie la couleur du lien de la navbar si l'utilisateur se trouve sur cette page */
 .active {
-	color: #0d6efd !important;
+	color: var(--pcdesc-blue-color) !important;
 }
 
 /* On définit nos liens de la navbbar*/
@@ -191,7 +207,7 @@ body {
 }
 /* On dit que si la souris est sur l'élément, alors il sera en jaune */
 .nav-link:hover {
-	color: #ffc107 !important;
+	color: var(--pcdesc-yellow-color) !important;
 	opacity: 1; /* On augmente l'opacité */
 }
 
@@ -201,7 +217,7 @@ body {
 	height: 5px;
 	content: '';
 	position: absolute;
-	background-color: #ffc107;
+	background-color: var(--pcdesc-yellow-color);
 }
 
 .nav-link-anim::before {
@@ -214,14 +230,14 @@ body {
 }
 
 .dropdown-item:hover {
-	background-color: #ffc107 !important;
+	background-color: var(--pcdesc-yellow-color) !important;
 }
 /* On applique ce modèle au dropdown menu actifs*/
 #menudrop[aria-expanded='true'] {
-	color: #ffc107 !important;
+	color: var(--pcdesc-yellow-color) !important;
 }
 #drop[aria-expanded='true'] {
-	background-color: #ffc107 !important;
+	background-color: var(--pcdesc-yellow-color) !important;
 }
 
 /* ###################################################################### */
@@ -231,23 +247,20 @@ body {
 /* ###################################################################### */
 
 #hero {
-	background-color: #ffffff !important;
+	background-color: var(--pcdesc-element-background-color) !important;
 }
 .card-header {
-	background-color: #f8fafc !important;
+	background-color: var(--pcdesc-background-color) !important;
 }
 .avatar {
 	position: relative;
-	width: 2.5rem;
+	width: 2.5rem; /* On utilise l'unité rem pour les éléments imbriqués les uns dans les autres (il y avait un problème de taille sur les mobiles */
 	height: 2.5rem;
-	font-size: calc(2.5rem / 2.8571428572);
 	font-weight: 500;
 	display: inline-flex;
 	align-items: center;
 	justify-content: center;
-	color: #616876;
 	text-align: center;
-	text-transform: uppercase; /* On dit de mettre le texte en majuscule */
 	vertical-align: bottom;
 	border-radius: 4px;
 }
@@ -260,14 +273,14 @@ body {
 
 /* On crée des éléments d'arrière plan pour BootStrap*/
 .bg-green {
-	background-color: #2fb344 !important;
+	background-color: var(--pcdesc-green-color) !important;
 }
 .bg-fb {
-	background-color: #3b5998 !important;
+	background-color: var(--pcdesc-fb-color) !important;
 }
 
 .bg-tw {
-	background-color: #1da1f2 !important;
+	background-color: var(--pcdesc-tw-color) !important;
 }
 /* ###################################################################### */
 /* # 																	# */
@@ -283,6 +296,7 @@ body {
 	display: inline-block;
 	margin: 15px 30px;
 	position: relative;
+	/* On créer une animation pour quand on appuira dessus (effet 3D)*/
 	-webkit-transition: all 0.3s;
 	-moz-transition: all 0.3s;
 	transition: all 0.3s;
@@ -291,7 +305,7 @@ body {
 /* On recrée le bouton en utilisant la couleur primaire de Bootstrap (le bleu), sert de base*/
 .custom-btn-primary {
 	background: hsl(216, 98%, 52%) !important; /*On utilise la norme HSL uniquement pour une question de praticité pour les ombres plus sombre*/
-	color: #fff;
+	color: var(--pcdesc-element-background-color);
 	box-shadow: 0 6px hsl(216, 91%, 42%); /* On baisse de 7% et de 10% (juste praticité) */
 	-webkit-transition: none;
 	-moz-transition: none;
