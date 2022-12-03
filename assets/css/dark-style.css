@@ -1,9 +1,20 @@
 @charset "UTF-8";
+/* ###################################################################### */
+/* # 																	# */
+/* # 					  	  	VARIABLES								# */
+/* # 																	# */
+/* ###################################################################### */
+:root {
+	--pcdesc-background-color: #1a2234;
+	--pcdesc-element-background-color: #1d273b;
+	--pcdesc-text-color: #f8fafc;
+}
+
 /* On définit le corps de notre page*/
 body {
 	/* Paramètres de couleur */
-	color: #f8fafc !important; /* On rajoute l'attribut !important car autrement ce n'est pas pris en compte */
-	background-color: #1a2234 !important; /* On rajoute l'attribut !important car autrement ce n'est pas pris en compte */
+	color: var(--pcdesc-text-color) !important; /* On rajoute l'attribut !important car autrement ce n'est pas pris en compte */
+	background-color: var(--pcdesc-background-color) !important; /* On rajoute l'attribut !important car autrement ce n'est pas pris en compte */
 }
 
 /* ###################################################################### */
@@ -13,7 +24,7 @@ body {
 /* ###################################################################### */
 
 .preloader-wrapper {
-	background-color: #1a2234 !important;
+	background-color: var(--pcdesc-background-color) !important;
 }
 
 /* ###################################################################### */
@@ -23,25 +34,22 @@ body {
 /* ###################################################################### */
 
 .navbar {
-	background-color: #1d273b !important;
+	background-color: var(--pcdesc-element-background-color) !important;
 }
 
 .nav-link {
-	color: #f8fafc !important;
+	color: var(--pcdesc-text-color) !important;
 }
 
-.navbar-toggler .hamburger-toggle .hamburger span {
-	background: #ffc107;
-}
-/* On modifie la couleur du lien de la navbar si l'utilisateur se trouve sur cette page */
+/* On modifie la couleur du lien de la navbar si l'utilisateur se trouve sur cette page (on le remet car autrement ce n'est pas pris en compte)*/
 .active {
 	color: #0d6efd !important;
 }
 .dropdown-menu {
-	background-color: #1d273b !important;
+	background-color: var(--pcdesc-element-background-color) !important;
 }
 .dropdown-item {
-	color: #f8fafc !important;
+	color: var(--pcdesc-text-color) !important;
 }
 
 /* ###################################################################### */
@@ -51,25 +59,25 @@ body {
 /* ###################################################################### */
 
 #hero {
-	background-color: #1d273b !important;
+	background-color: var(--pcdesc-element-background-color) !important;
 }
 .card {
 	border-color: #243049 !important;
-	background-color: #1d273b !important;
+	background-color: var(--pcdesc-element-background-color) !important;
 }
 .card-header {
-	background-color: #1a2234 !important;
+	background-color: var(--pcdesc-background-color) !important;
 }
 .card-body {
-	background-color: #1d273b !important;
+	background-color: var(--pcdesc-element-background-color) !important;
 }
 .modal-content {
-	background-color: #1d273b !important;
-	color: #f8fafc !important;
+	background-color: var(--pcdesc-element-background-color) !important;
+	color: var(--pcdesc-text-color) !important;
 }
 /* On précise que la légende des graphiques doit être en blanc*/
 .apexcharts-legend-text {
-	color: #f8fafc !important;
+	color: var(--pcdesc-text-color) !important;
 }
 /* ###################################################################### */
 /* # 																	# */
