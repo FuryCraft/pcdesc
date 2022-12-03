@@ -248,7 +248,7 @@
 		</div>
 	</section>
 
-	<section id="contenu" data-aos="fade-up">
+	<section data-aos="fade-up">
 		<div class="container col-xxl-8 px-4 py-5">
 			<div class="row flex-lg-row-reverse align-items-center g-5 py-5">
 				<div class="col-10 col-sm-8 col-lg-6" data-aos="zoom-in-up">
@@ -257,6 +257,24 @@
 				<div class="col-lg-6" data-aos="fade-up-right">
 					<h1 class="display-5 fw-bold lh-1 mb-3">Les processeurs multicoeurs</h1>
 					<p class="lead">Aujourd'hui, les processeurs sont devenus <b>multicoeurs</b>, c'est à dire l'idée d'<b>avoir plusieurs processeurs en un seul</b>, commes les processeurs <b>dualcore, quadcore et octocore</b></p>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section data-aos="fade-up">
+		<div class="container col-xxl-8 px-4 py-5">
+			<div class="row flex-lg-row-reverse align-items-center g-5 py-5">
+				<div class="col-lg-6" data-aos="fade-up-right">
+					<h1 class="display-5 fw-bold lh-1 mb-3">Les mémoires volatiles d'un processeur</h1>
+					<p class="lead">Tous les processeurs disposent de deux <b>mémoires volatiles</b>: <b>le registre</b> et <b>la mémoire cache</b>.</p>
+					<ul class="lead">
+						<li>Le registre est intégré au processeur permettant un accès très rapide. Toutefois son prix important limite sa capacité. Elle est utilisée pour retenir par exemple les retenues d’une addition, les résultats d’une comparaison ou la liste des adresses mémoires nécessaires.</li>
+						<li>Les mémoires caches sont également rapides mais chères (il en existe deux : L1 et L2). Elles peuvent être intégrées ou non au processeur. Leur but est de sauvegarder des morceaux de fichiers utilisés : elles servent de cache entre le processeur et la mémoire vive.</li>
+					</ul>
+				</div>
+				<div class="col-10 col-sm-8 col-lg-6" data-aos="zoom-in-up">
+					<img src="assets/img/memory.png" class="d-block mx-lg-auto img-fluid" alt="Image représentant une carte SD en 3D" width="350" height="350" loading="lazy" />
 				</div>
 			</div>
 		</div>
@@ -289,6 +307,90 @@
 					<div class="col-10 col-sm-8 col-lg-6" data-aos="zoom-in-up">
 						<img src="assets/img/moore-law.png" class="d-block mx-lg-auto img-fluid" alt="Tableau de la loi de Moore" loading="lazy" />
 					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section data-aos="fade-up">
+		<div class="container-fluid bg-warning">
+			<div class="container col-xxl-8 px-4 py-5">
+				<div class="row flex-lg-row-reverse align-items-center g-5 py-5">
+					<div class="col-lg-6" data-aos="fade-up">
+						<h1 class="display-5 fw-bold lh-1 mb-3">Pour aller plus loin: l'architecture d'un processeur</h1>
+						<p class="lead">Aujourd'hui, les processeurs qui équipent nos machines sont basées sur <b>l'architecture de Von Neumann</b> (représenté à gauche)</p>
+					</div>
+					<div class="col-10 col-sm-8 col-lg-6" data-aos="zoom-in-up">
+						<img src="assets/img/van-neumann.jpg" class="d-block mx-lg-auto img-fluid" alt="John Von Neumann" loading="lazy" />
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section data-aos="fade-up">
+		<div class="container col-xxl-8 px-4 py-5">
+			<div class="row flex-lg-row-reverse align-items-center g-5 py-5">
+				<div class="col-lg-6" data-aos="fade-up-right">
+					<p class="lead">Du point de vue matériel, son idée est de séparer l'<b>unité de contrôle</b>(CU) chargée de gérer les instructions et l'<b>unité arithmétique et logique</b> (UAL ou ALU) chargée de les exécuter.</p>
+					<ul class="lead">
+						<li>l’ALU est un circuit électronique qui effectue à la fois des opérations arithmétiques et des opérations sur les bits de nombres entiers en binaire;</li>
+						<li>le CU se charge de récupérer en mémoire la prochaine instruction à exécuter, les données sur lesquelles elle doit doit opérer et les envoie à l’ALU.</li>
+					</ul>
+					<p class="lead">Du point de vue philosophique, la révolution de cette architecture est qu’elle considère les instructions comme de simples données pouvant être stockées dans la même mémoire.</p>
+				</div>
+				<div class="col-10 col-sm-8 col-lg-6" data-aos="zoom-in-up">
+					<img src="assets/img/van-neumann-law.png" class="d-block mx-lg-auto img-fluid" alt="Loi de Van Neumann" loading="lazy" />
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section data-aos="fade-up">
+		<div class="container col-xxl-8 px-4 py-5">
+			<div class="row flex-lg-row-reverse align-items-center g-5 py-5">
+				<div class="col-10 col-sm-8 col-lg-6" data-aos="zoom-in-up">
+					<img src="assets/img/van-neumann-law2.png" class="d-block mx-lg-auto img-fluid" alt="Version évoluée de la Loi de Van Nuemann" loading="lazy" />
+				</div>
+				<div class="col-lg-6" data-aos="fade-up-right">
+					<p class="lead">Cette conception <b>s’oppose</b> notamment <b>aux architectures</b> dîtes <b>de Harvard</b> qui ont <b>une mémoire pour les données et une pour les intrusctions</b>, permettant au processeur d’accéder aux deux en même temps (on retrouve cette architecture sur certains microcontrôleurs). <b>L’architecture de Von Neumann est toutefois la plus utilisée</b> et n’a guère connu que deux grandes évolutions en plus de 70 ans :</p>
+					<ul class="lead">
+						<li>Depuis les années 1960, les entrées-sorties ne sont plus gérées par le processeur mais par des bus distincts;</li>
+						<li>Le nombre de processeurs s’est multiplié dans nos ordinateurs et certains sont même multicoeurs, faisant aujourd’hui de la mémoire l’élément central partagé de l’architecture.</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section data-aos="fade-up">
+		<div class="container col-xxl-8 px-4 py-5">
+			<div class="row flex-lg-row-reverse align-items-center g-5 py-5">
+				<div class="col-lg-6" data-aos="fade-up-right">
+					<h1 class="display-5 fw-bold lh-1 mb-3">L'unité de contrôle</h1>
+					<p class="lead">Cette unité est essentiellement composée de trois sous-composants :</p>
+					<ol class="lead">
+						<li>Le <b>registre d’instructions</b>, dénommé <b>IR</b> (Instruction register) qui contient l’instruction courante à décoder et à exécuter;</li>
+						<li>Un second registre, le <b>pointeur d’instruction</b>, dénommé <b>IP</b> (Intruction Pointer) qui indique l’emplacement mémoire de la prochaine instruction à exécuter;</li>
+						<li>Le troisième sous-composant est appelé <b>micro-programme</b> et contrôle les mouvements de données vers l’ALU.</li>
+					</ol>
+				</div>
+				<div class="col-10 col-sm-8 col-lg-6" data-aos="zoom-in-up">
+					<img src="assets/img/control.png" class="d-block mx-lg-auto img-fluid" alt="Image représentant une interface de gestion en 3D" width="350" height="350" loading="lazy" />
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section data-aos="fade-up">
+		<div class="container col-xxl-8 px-4 py-5">
+			<div class="row flex-lg-row-reverse align-items-center g-5 py-5">
+				<div class="col-10 col-sm-8 col-lg-6" data-aos="zoom-in-up">
+					<img src="assets/img/calculator.png" class="d-block mx-lg-auto img-fluid" alt="Image représentant une interface de gestion en 3D" width="350" height="350" loading="lazy" />
+				</div>
+				<div class="col-lg-6" data-aos="fade-up-right">
+					<h1 class="display-5 fw-bold lh-1 mb-3">L'unité arithmétique et logique</h1>
+					<p class="lead">Cette unité est composée de plusieurs registres, dits <b>registres de données</b> et d’un registre spécial appelé <b>accumulateur</b> dans lequel vont s’effectuer tous les calculs. A ces registres s’ajoutent des circuits électroniques pourréaliser des opérations arithmétiques (additions, soustractions, ...), des opérations logiques (et, ou, ...), des comparaisons (égalité, inférieur, supérieur, ...), des opérations sur les bits (décalage, ...) ou des opérations de déplacement (copie de ou vers la mémoire).</p>
 				</div>
 			</div>
 		</div>
@@ -531,23 +633,6 @@
 		});
 		// @formatter:on
 	</script>
-
-	<section data-aos="fade-up">
-		<div class="container-fluid bg-warning">
-			<div class="container col-xxl-8 px-4 py-5">
-				<div class="row flex-lg-row-reverse align-items-center g-5 py-5">
-					<div class="col-lg-6" data-aos="fade-up">
-						<h1 class="display-5 fw-bold lh-1 mb-3">Pour aller plus loin: l'architecture d'un processeur</h1>
-						<p class="lead">Aujourd'hui, les processeurs qui équipent nos machines sont basées sur <b>l'architecture de Von Neumann</b> (représenté à gauche)</p>
-						<a class="btn btn-primary" href="https://fr.wikipedia.org/wiki/Architecture_de_von_Neumann" target="_blank" rel="noopener"><i class="fa-solid fa-chevron-right"></i> En savoir plus</a>
-					</div>
-					<div class="col-10 col-sm-8 col-lg-6" data-aos="zoom-in-up">
-						<img src="assets/img/van-neumann.jpg" class="d-block mx-lg-auto img-fluid" alt="John Von Neumann" loading="lazy" />
-					</div>
-				</div>
-			</div>
-		</div>
-	</section>
 
 	<div class="container">
 		<footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
