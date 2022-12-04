@@ -230,6 +230,7 @@ body {
 	width: 100%; /* On dit que notre barre prend toute la longueur */
 }
 
+.dropdown-item:focus,
 .dropdown-item:hover {
 	background-color: var(--pcdesc-yellow-color) !important;
 }
