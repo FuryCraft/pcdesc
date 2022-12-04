@@ -79,6 +79,10 @@ body {
 .apexcharts-legend-text {
 	color: var(--pcdesc-text-color) !important;
 }
+.list-group-item {
+	background-color: var(--pcdesc-element-background-color) !important;
+	color: var(--pcdesc-text-color) !important;
+}
 /* ###################################################################### */
 /* # 																	# */
 /* # 					   BARRE DE DEFILEMENT							# */
