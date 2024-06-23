@@ -2,376 +2,377 @@
 
 <!-- On définit la langue de notre site et on évite qu'un traducteur essaye de la traduire -->
 <head lang="fr" xml:lang="fr" xmlns="http://www.w3.org/1999/xhtml" translate="no">
-	<meta charset="utf-8" />
+    <meta charset="utf-8" />
 
-	<!-- On évite les problèmes d'affichages -->
-	<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
-	<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <!-- On évite les problèmes d'affichages -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
 
-	<!-- On indique que la page est optimisé pour les affichages portrait (mobiles, tablettes)-->
-	<meta name="HandheldFriendly" content="True" />
-	<meta name="MobileOptimized" content="320" />
+    <!-- On indique que la page est optimisé pour les affichages portrait (mobiles, tablettes)-->
+    <meta name="HandheldFriendly" content="True" />
+    <meta name="MobileOptimized" content="320" />
 
-	<!-- On indique tout ce qui est SEO (titre, favicon, description)-->
-	<title>À propos - PCDesc</title>
-	<meta property="og:title" content="PCDesc - Savoir informatique" />
-	<meta name="description" content="Découvrez en plus sur nous et comment nous avons crée notre site | PCDesc" />
-	<meta property="og:description" content="Découvrez en plus sur nous et comment nous avons crée notre site | PCDesc" />
-	<link rel="icon" type="image/png" href="assets/img/favicon.png" />
-	<link rel="apple-touch-icon image_src" href="assets/img/pwa/ios/192.png" />
-	<meta name="theme-color" content="#ffc107" />
+    <!-- On indique tout ce qui est SEO (titre, favicon, description)-->
+    <title>À propos - PCDesc</title>
+    <meta property="og:title" content="PCDesc - Savoir informatique" />
+    <meta name="description" content="Découvrez en plus sur nous et comment nous avons crée notre site | PCDesc" />
+    <meta property="og:description" content="Découvrez en plus sur nous et comment nous avons crée notre site | PCDesc" />
+    <link rel="icon" type="image/png" href="assets/img/favicon.png" />
+    <link rel="apple-touch-icon image_src" href="assets/img/pwa/ios/192.png" />
+    <meta name="theme-color" content="#ffc107" />
 
-	<!--Canonical-->
-	<link rel="canonical" href="https://furycraft.github.io/webpage-as-homework/a-propos.html" />
-	<meta property="og:url" content="https://furycraft.github.io/webpage-as-homework/a-propos.html" />
+    <!--Canonical-->
+    <link rel="canonical" href="https://furycraft.github.io/webpage-as-homework/a-propos.html" />
+    <meta property="og:url" content="https://furycraft.github.io/webpage-as-homework/a-propos.html" />
 
-	<!--Robots-->
-	<meta name="robots" content="index, follow, all" />
-	<meta name="googlebot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
-	<meta name="bingbot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+    <!--Robots-->
+    <meta name="robots" content="index, follow, all" />
+    <meta name="googlebot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+    <meta name="bingbot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
 
-	<!-- On désactive la traduction du site -->
-	<meta name="google" value="notranslate" />
+    <!-- On désactive la traduction du site -->
+    <meta name="google" value="notranslate" />
 
-	<!-- On importe le css et les librairies -->
-	<!-- Notre design CSS -->
-	<link rel="stylesheet" href="assets/css/style.css" />
-	<link id="dark-theme-style" rel="stylesheet" />
-	<!-- On importe Bootstrap pour un design responsive-->
-	<link rel="stylesheet" href="assets/css/bootstrap.min.css" />
-	<!-- On importe FontAwesome pour les icônes -->
-	<link rel="stylesheet" href="assets/css/all.min.css" />
-	<!-- On importe AOS pour les animations-->
-	<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
-	<!-- Permet de monétiser son site et d'accélérer son chargement -->
-	<script async src="https://arc.io/widget.min.js#7Psp1cwH"></script>
+    <!-- On importe le css et les librairies -->
+    <!-- Notre design CSS -->
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <link id="dark-theme-style" rel="stylesheet" />
+    <!-- On importe Bootstrap pour un design responsive-->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
+    <!-- On importe FontAwesome pour les icônes -->
+    <link rel="stylesheet" href="assets/css/all.min.css" />
+    <!-- On importe AOS pour les animations-->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <!-- Permet de monétiser son site et d'accélérer son chargement -->
+    <script async src="https://arc.io/widget.min.js#7Psp1cwH"></script>
 
-	<!-- Progressive Web App -->
-	<link rel="manifest" href="manifest.json" />
-	<script type="module">
-		import 'https://cdn.jsdelivr.net/npm/@pwabuilder/pwaupdate';
-		const el = document.createElement('pwa-update');
-		document.body.appendChild(el);
-	</script>
+    <!-- Progressive Web App -->
+    <link rel="manifest" href="manifest.json" />
 </head>
 <body class="flex-grow-1 d-flex flex-column notLoaded">
-	<!-- On ajoute un preloader -->
-	<div class="preloader-wrapper">
-		<div class="spinner-border text-primary" style="width: 3rem; height: 3rem">
-			<span class="visually-hidden">Chargement...</span>
-		</div>
-	</div>
-	<!-- On crée la barre de naviagtion  -->
-	<nav class="navbar sticky-top navbar-expand-lg navbar-expand-md shadow">
-		<!-- On précise que celle-ci est toujours affichée -->
-		<div class="container">
-			<!-- On met notre logo -->
-			<img class="navbar-brand" src="assets/img/logo.png" alt="Logo de notre PCDesc" height="36" />
-			<!-- On crée un bouton qui s'affiche uniquement quand la navbar est en collapse (affichage mobile)-->
-			<button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#navbar-content">
-				<div class="hamburger-toggle">
-					<div class="hamburger">
-						<!-- Représente les 3 barres sur un affichage réduit comme les mobiles-->
-						<span></span>
-						<span></span>
-						<span></span>
-					</div>
-				</div>
-			</button>
-			<!-- On crée les liens de notre navbar-->
-			<div class="collapse navbar-collapse" id="navbar-content">
-				<!-- On dit de prendre 100 de width-->
-				<ul class="navbar-nav w-100">
-					<li class="nav-item">
-						<a href="index.html" class="nav-link nav-link-anim"><i class="fa-solid fa-house"></i></a>
-					</li>
-					<!-- On crée un dropdown (catégorie)-->
-					<li class="nav-item dropdown">
-						<!-- On crée le lien qui va ouvrir le dropdown-->
-						<a id="menudrop" class="nav-link nav-link-anim dropdown-toggle" href="#" data-bs-toggle="dropdown" data-bs-auto-close="outside"><i class="fa-solid fa-boxes-stacked"></i> Composants</a>
-						<ul class="dropdown-menu shadow">
-							<!-- On crée les liens du dropdown -->
-							<li>
-								<a class="dropdown-item" href="carte-mere.html"><i class="fa-solid fa-chess-board"></i> Carte mère</a>
-							</li>
-							<li>
-								<a class="dropdown-item" href="processeur.html"><i class="fa-solid fa-microchip"></i> Processeur</a>
-							</li>
-							<li>
-								<a class="dropdown-item" href="carte-graphique.html"><i class="fa-solid fa-rug"></i> Carte graphique</a>
-							</li>
-							<li>
-								<a class="dropdown-item" href="ram.html"><i class="fa-solid fa-memory"></i> Ram</a>
-							</li>
-							<!-- On recrée un dropdown dans un dropdown-->
-							<li class="dropend">
-								<a id="drop" href="#" class="dropdown-item dropdown-toggle" data-bs-toggle="dropdown" data-bs-auto-close="outside"><i class="fa-solid fa-floppy-disk"></i> Stockage</a>
-								<ul class="dropdown-menu shadow">
-									<li>
-										<a class="dropdown-item" href="hdd.html"><i class="fa-solid fa-compact-disc"></i> HDD</a>
-									</li>
-									<li>
-										<a class="dropdown-item" href="ssd.html"><i class="fa-solid fa-hard-drive"></i> SSD</a>
-									</li>
-								</ul>
-							</li>
-							<li><hr class="dropdown-divider" /></li>
-							<li><a class="dropdown-item" href="https://www.systemrequirementslab.com/my-computer-details" target="_blank">Ceux de mon PC</a></li>
-						</ul>
-					</li>
-					<!-- On recrée un autre lien en dehors du dropdown -->
-					<li class="nav-item">
-						<a href="peripheriques.html" class="nav-link nav-link-anim"><i class="fa-brands fa-usb"></i> Périphériques</a>
-					</li>
-					<li class="nav-item">
-						<a href="a-propos.html" class="nav-link nav-link-anim active"><i class="fa-solid fa-circle-info"></i> À propos</a>
-					</li>
-				</ul>
-				<!-- On crée des boutons qui s'afficheront à la fin de la navbar (tout à droite) -->
-				<div class="text-end">
-					<div class="d-md-flex">
-						<!-- On crée le bouton qui permet d'ouvrir le modal de téléchargement -->
-						<button type="button" class="btn btn-warning me-sm-3" data-bs-toggle="modal" data-bs-target="#download"><i class="fa-solid fa-download"></i></button>
-						<!-- On crée le bouton qui permet de changer de thème -->
-						<a href="javascript:void()" id="theme-toggler" onclick="toggleTheme()" class="btn btn-warning"></a>
-					</div>
-				</div>
-			</div>
-		</div>
-	</nav>
-	<!-- Modal de téléchargement -->
-	<div class="modal fade modal-blur" id="download" tabindex="-1" aria-labelledby="downloadLabel" aria-hidden="true">
-		<div class="modal-dialog modal-dialog-centered modal-lg">
-			<div class="modal-content">
-				<div class="modal-header">
-					<h1 class="modal-title fs-5" id="exampleModalLabel">Téléchargement</h1>
-					<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fermer"></button>
-				</div>
-				<div class="modal-body">
-					<div class="row">
-						<div class="col">
-							<h3><i class="fa-brands fa-android"></i> Android</h3>
-							<ul>
-								<li><b>Version:</b> 1.0</li>
-								<li><b>Date de publication:</b> prochainement</li>
-								<li><b>Taille:</b> 0,26Mo</li>
-							</ul>
-							<div class="d-grid gap-2">
-								<a id="androidapp" class="btn btn-outline-warning" data-bs-toggle="modal" data-bs-target="#thanks"><i class="fa-solid fa-download"></i> APK</a>
-							</div>
-						</div>
-						<div class="col">
-							<h3><i class="fa-brands fa-windows"></i> Windows 10/11</h3>
-							<ul>
-								<li><b>Version:</b> 1.0</li>
-								<li><b>Date de publication:</b> prochainement</li>
-								<li><b>Taille:</b> 1,07 Mo</li>
-							</ul>
-							<div class="d-grid gap-2">
-								<a id="windowsapp" class="btn btn-outline-warning" data-bs-toggle="modal" data-bs-target="#thanks"><i class="fa-solid fa-download"></i> ZIP</a>
-							</div>
-						</div>
-						<div class="col">
-							<h3><i class="fa-solid fa-code"></i> Code source</h3>
-							<ul>
-								<li><b>Version:</b> dernière</li>
-								<li><b>Date de publication:</b> aujourd'hui</li>
-								<li><b>Taille:</b> inconnue</li>
-							</ul>
-							<div class="d-grid gap-2">
-								<a id="sourcecode" class="btn btn-outline-warning" data-bs-toggle="modal" data-bs-target="#thanks"><i class="fa-solid fa-download"></i> ZIP</a>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="modal-footer">
-					<p>Ces applications ne sont pas disponibles sur les stores officiels. Vous devrez accorder certaines autorisations développeurs à votre appareil.</p>
-				</div>
-			</div>
-		</div>
-	</div>
-	<!-- Modal de commencement du téléchargement -->
-	<div class="modal fade modal-blur" id="thanks" tabindex="-1" aria-labelledby="thanksLabel" aria-hidden="true">
-		<div class="modal-dialog modal-dialog-centered">
-			<div class="modal-content">
-				<div class="modal-header">
-					<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fermer"></button>
-				</div>
-				<div class="modal-body">
-					<div class="mb-4 text-center">
-						<svg xmlns="http://www.w3.org/2000/svg" class="text-success" width="75" height="75" fill="currentColor" class="bi bi-check-circle" viewBox="0 0 16 16">
-							<path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z" />
-							<path d="M10.97 4.97a.235.235 0 0 0-.02.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-1.071-1.05z" />
-						</svg>
-					</div>
-					<div class="text-center">
-						<h1>Merci !</h1>
-						<p>Le téléchargement devrait commencer d'ici quelques secondes.</p>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-	<!-- Contenu de la page -->
-	<div class="px-4 pt-5 my-5 text-center shadow" id="hero">
-		<h1 class="display-4 fw-bold">À propos</h1>
-		<div class="col-lg-6 mx-auto">
-			<p class="lead mb-4">Découvrez en plus sur nous et comment nous avons créer cette page.</p>
-			<div class="d-grid gap-2 d-sm-flex justify-content-sm-center mb-5">
-				<a href="#contenu" class="btn custom-btn custom-btn-primary custom-btn-2 btn-lg px-4 me-sm-3">Découvrir</a>
-			</div>
-		</div>
-		<div class="overflow-hidden" style="max-height: 30vh">
-			<div class="container px-5">
-				<img src="assets/img/about.png" class="img-fluid rounded-3 mb-4" alt="Icône représentant une carte d'identité coloriée en jaune" loading="lazy" />
-			</div>
-		</div>
-	</div>
-	<section id="contenu" data-aos="fade-up">
-		<div class="container col-xxl-8 px-4 py-5">
-			<div class="row flex-lg-row-reverse align-items-center g-5 py-5">
-				<div class="col-10 col-sm-8 col-lg-6" data-aos="zoom-in-up"><img src="assets/img/man.png" class="d-block mx-lg-auto img-fluid" alt="Image représentant un homme tenant un pc portable dans ses mains loading="lazy" /></div>
-				<div class="col-lg-6" data-aos="fade-up">
-					<h1 class="display-5 fw-bold lh-1 mb-3">Qui sommes nous ?</h1>
-					<p class="lead">Nous sommes deux élèves de premières NSI, et nous avions comme travail de créer une page web avec tous les composants d'un ordinateur.</p>
-				</div>
-			</div>
-		</div>
-	</section>
+    <!-- On ajoute un preloader -->
+    <div class="preloader-wrapper">
+        <div class="spinner-border text-primary" style="width: 3rem; height: 3rem">
+            <span class="visually-hidden">Chargement...</span>
+        </div>
+    </div>
+    <!-- On crée la barre de naviagtion  -->
+    <nav class="navbar sticky-top navbar-expand-lg navbar-expand-md shadow">
+        <!-- On précise que celle-ci est toujours affichée -->
+        <div class="container">
+            <!-- On met notre logo -->
+            <img class="navbar-brand" src="assets/img/logo.png" alt="Logo de notre PCDesc" height="36" />
+            <!-- On crée un bouton qui s'affiche uniquement quand la navbar est en collapse (affichage mobile)-->
+            <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#navbar-content">
+                <div class="hamburger-toggle">
+                    <div class="hamburger">
+                        <!-- Représente les 3 barres sur un affichage réduit comme les mobiles-->
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </div>
+            </button>
+            <!-- On crée les liens de notre navbar-->
+            <div class="collapse navbar-collapse" id="navbar-content">
+                <!-- On dit de prendre 100 de width-->
+                <ul class="navbar-nav w-100">
+                    <li class="nav-item">
+                        <a href="index.html" class="nav-link nav-link-anim"><i class="fa-solid fa-house"></i></a>
+                    </li>
+                    <!-- On crée un dropdown (catégorie)-->
+                    <li class="nav-item dropdown">
+                        <!-- On crée le lien qui va ouvrir le dropdown-->
+                        <a id="menudrop" class="nav-link nav-link-anim dropdown-toggle" href="#" data-bs-toggle="dropdown" data-bs-auto-close="outside"><i class="fa-solid fa-boxes-stacked"></i> Composants</a>
+                        <ul class="dropdown-menu shadow">
+                            <!-- On crée les liens du dropdown -->
+                            <li>
+                                <a class="dropdown-item" href="carte-mere.html"><i class="fa-solid fa-chess-board"></i> Carte mère</a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="processeur.html"><i class="fa-solid fa-microchip"></i> Processeur</a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="carte-graphique.html"><i class="fa-solid fa-rug"></i> Carte graphique</a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="ram.html"><i class="fa-solid fa-memory"></i> Ram</a>
+                            </li>
+                            <!-- On recrée un dropdown dans un dropdown-->
+                            <li class="dropend">
+                                <a id="drop" href="#" class="dropdown-item dropdown-toggle" data-bs-toggle="dropdown" data-bs-auto-close="outside"><i class="fa-solid fa-floppy-disk"></i> Stockage</a>
+                                <ul class="dropdown-menu shadow">
+                                    <li>
+                                        <a class="dropdown-item" href="hdd.html"><i class="fa-solid fa-compact-disc"></i> HDD</a>
+                                    </li>
+                                    <li>
+                                        <a class="dropdown-item" href="ssd.html"><i class="fa-solid fa-hard-drive"></i> SSD</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li><hr class="dropdown-divider" /></li>
+                            <li><a class="dropdown-item" href="https://www.systemrequirementslab.com/my-computer-details" target="_blank">Ceux de mon PC</a></li>
+                        </ul>
+                    </li>
+                    <!-- On recrée un autre lien en dehors du dropdown -->
+                    <li class="nav-item">
+                        <a href="peripheriques.html" class="nav-link nav-link-anim"><i class="fa-brands fa-usb"></i> Périphériques</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="a-propos.html" class="nav-link nav-link-anim active"><i class="fa-solid fa-circle-info"></i> À propos</a>
+                    </li>
+                </ul>
+                <!-- On crée des boutons qui s'afficheront à la fin de la navbar (tout à droite) -->
+                <div class="text-end">
+                    <div class="d-md-flex">
+                        <!-- On crée le bouton qui permet d'ouvrir le modal de téléchargement -->
+                        <button type="button" class="btn btn-warning me-sm-3" data-bs-toggle="modal" data-bs-target="#download"><i class="fa-solid fa-download"></i></button>
+                        <!-- On crée le bouton qui permet de changer de thème -->
+                        <a href="javascript:void()" id="theme-toggler" onclick="toggleTheme()" class="btn btn-warning"></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <!-- Modal de téléchargement -->
+    <div class="modal fade modal-blur" id="download" tabindex="-1" aria-labelledby="downloadLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="exampleModalLabel">Téléchargement</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fermer"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col">
+                            <h3><i class="fa-brands fa-android"></i> Android</h3>
+                            <ul>
+                                <li><b>Version:</b> 1.0</li>
+                                <li><b>Date de publication:</b> prochainement</li>
+                                <li><b>Taille:</b> 0,26Mo</li>
+                            </ul>
+                            <div class="d-grid gap-2">
+                                <a id="androidapp" class="btn btn-outline-warning" data-bs-toggle="modal" data-bs-target="#thanks"><i class="fa-solid fa-download"></i> APK</a>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <h3><i class="fa-brands fa-windows"></i> Windows 10/11</h3>
+                            <ul>
+                                <li><b>Version:</b> 1.0</li>
+                                <li><b>Date de publication:</b> prochainement</li>
+                                <li><b>Taille:</b> 1,07 Mo</li>
+                            </ul>
+                            <div class="d-grid gap-2">
+                                <a id="windowsapp" class="btn btn-outline-warning" data-bs-toggle="modal" data-bs-target="#thanks"><i class="fa-solid fa-download"></i> ZIP</a>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <h3><i class="fa-solid fa-code"></i> Code source</h3>
+                            <ul>
+                                <li><b>Version:</b> dernière</li>
+                                <li><b>Date de publication:</b> aujourd'hui</li>
+                                <li><b>Taille:</b> inconnue</li>
+                            </ul>
+                            <div class="d-grid gap-2">
+                                <a id="sourcecode" class="btn btn-outline-warning" data-bs-toggle="modal" data-bs-target="#thanks"><i class="fa-solid fa-download"></i> ZIP</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <p>Ces applications ne sont pas disponibles sur les stores officiels. Vous devrez accorder certaines autorisations développeurs à votre appareil.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Modal de commencement du téléchargement -->
+    <div class="modal fade modal-blur" id="thanks" tabindex="-1" aria-labelledby="thanksLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fermer"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="mb-4 text-center">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="text-success" width="75" height="75" fill="currentColor" class="bi bi-check-circle" viewBox="0 0 16 16">
+                            <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z" />
+                            <path d="M10.97 4.97a.235.235 0 0 0-.02.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-1.071-1.05z" />
+                        </svg>
+                    </div>
+                    <div class="text-center">
+                        <h1>Merci !</h1>
+                        <p>Le téléchargement devrait commencer d'ici quelques secondes.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Contenu de la page -->
+    <div class="px-4 pt-5 my-5 text-center shadow" id="hero">
+        <h1 class="display-4 fw-bold">À propos</h1>
+        <div class="col-lg-6 mx-auto">
+            <p class="lead mb-4">Découvrez en plus sur nous et comment nous avons créer cette page.</p>
+            <div class="d-grid gap-2 d-sm-flex justify-content-sm-center mb-5">
+                <a href="#contenu" class="btn custom-btn custom-btn-primary custom-btn-2 btn-lg px-4 me-sm-3">Découvrir</a>
+            </div>
+        </div>
+        <div class="overflow-hidden" style="max-height: 30vh">
+            <div class="container px-5">
+                <img src="assets/img/about.png" class="img-fluid rounded-3 mb-4" alt="Icône représentant une carte d'identité coloriée en jaune" loading="lazy" />
+            </div>
+        </div>
+    </div>
+    <section id="contenu" data-aos="fade-up">
+        <div class="container col-xxl-8 px-4 py-5">
+            <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
+                <div class="col-10 col-sm-8 col-lg-6" data-aos="zoom-in-up"><img src="assets/img/man.png" class="d-block mx-lg-auto img-fluid" alt="Image représentant un homme tenant un pc portable dans ses mains loading="lazy" /></div>
+                <div class="col-lg-6" data-aos="fade-up">
+                    <h1 class="display-5 fw-bold lh-1 mb-3">Qui sommes nous ?</h1>
+                    <p class="lead">Nous sommes deux élèves de premières NSI, et nous avions comme travail de créer une page web avec tous les composants d'un ordinateur.</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
-	<section data-aos="fade-up">
-		<div class="container-fluid bg-warning">
-			<div class="container col-xxl-8 px-4 py-5">
-				<div class="row flex-lg-row-reverse align-items-center g-5 py-5">
-					<div class="col-lg-6" data-aos="fade-up">
-						<h1 class="display-5 fw-bold lh-1 mb-3">Comment avons nous créer cette page ?</h1>
-						<p class="lead">Nous avons utilisé plusieurs librairies disponibles gratuitement sur le web.</p>
-					</div>
-					<div class="col-10 col-sm-8 col-lg-6" data-aos="zoom-in-up">
-						<img src="assets/img/web-design.png" class="d-block mx-lg-auto img-fluid" alt="Image représentant un CMS (une interface permettant de créer un site web facilement)" loading="lazy" />
-					</div>
-				</div>
-			</div>
-		</div>
-	</section>
+    <section data-aos="fade-up">
+        <div class="container-fluid bg-warning">
+            <div class="container col-xxl-8 px-4 py-5">
+                <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
+                    <div class="col-lg-6" data-aos="fade-up">
+                        <h1 class="display-5 fw-bold lh-1 mb-3">Comment avons nous créer cette page ?</h1>
+                        <p class="lead">Nous avons utilisé plusieurs librairies disponibles gratuitement sur le web.</p>
+                    </div>
+                    <div class="col-10 col-sm-8 col-lg-6" data-aos="zoom-in-up">
+                        <img src="assets/img/web-design.png" class="d-block mx-lg-auto img-fluid" alt="Image représentant un CMS (une interface permettant de créer un site web facilement)" loading="lazy" />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-	<section data-aos="fade-up">
-		<div class="container col-xxl-8 px-4 py-5">
-			<div class="row flex-lg-row-reverse align-items-center g-5 py-5">
-				<div class="col-10 col-sm-8 col-lg-6" data-aos="zoom-in-up">
-					<img src="assets/img/libs/bootstrap.png" class="d-block mx-lg-auto img-fluid" alt="Logo de Bootstrap" width="350" height="350" loading="lazy" />
-				</div>
-				<div class="col-lg-6" data-aos="fade-up-right">
-					<h1 class="display-5 fw-bold lh-1 mb-3">Bootstrap</h1>
-					<p class="lead"><b>Bootstrap</b> nous permet d'avoir un design dit responsive, c'est à dire un design qui s'adapte parfaitement à n'import quel format d'écran, que ce soit sur un ordinateur ou sur un télephone.</p>
-					<a href="https://getbootstrap.com/" target="_blank" rel="noopener" class="btn btn-lg bd-btn-lg btn-primary d-flex align-items-center justify-content-center fw-semibold">Utiliser Bootstrap</a>
-				</div>
-			</div>
-		</div>
-	</section>
+    <section data-aos="fade-up">
+        <div class="container col-xxl-8 px-4 py-5">
+            <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
+                <div class="col-10 col-sm-8 col-lg-6" data-aos="zoom-in-up">
+                    <img src="assets/img/libs/bootstrap.png" class="d-block mx-lg-auto img-fluid" alt="Logo de Bootstrap" width="350" height="350" loading="lazy" />
+                </div>
+                <div class="col-lg-6" data-aos="fade-up-right">
+                    <h1 class="display-5 fw-bold lh-1 mb-3">Bootstrap</h1>
+                    <p class="lead"><b>Bootstrap</b> nous permet d'avoir un design dit responsive, c'est à dire un design qui s'adapte parfaitement à n'import quel format d'écran, que ce soit sur un ordinateur ou sur un télephone.</p>
+                    <a href="https://getbootstrap.com/" target="_blank" rel="noopener" class="btn btn-lg bd-btn-lg btn-primary d-flex align-items-center justify-content-center fw-semibold">Utiliser Bootstrap</a>
+                </div>
+            </div>
+        </div>
+    </section>
 
-	<section data-aos="fade-up">
-		<div class="container col-xxl-8 px-4 py-5">
-			<div class="row flex-lg-row-reverse align-items-center g-5 py-5">
-				<div class="col-lg-6" data-aos="fade-up-right">
-					<h1 class="display-5 fw-bold lh-1 mb-3">FontAwesome</h1>
-					<p class="lead"><b>FontAwesome</b> est une <b>bibliothèque d'icônes</b>, cela nous permet de vous fournir de belles icônes sur les boutons ou encore dans la bare de navigation et même sur le pied de page.</p>
-					<a href="https://fontawesome.com/start" target="_blank" rel="noopener" class="btn btn-lg bd-btn-lg btn-primary d-flex align-items-center justify-content-center fw-semibold">Utiliser FontAwesome</a>
-				</div>
-				<div class="col-10 col-sm-8 col-lg-6" data-aos="zoom-in-up">
-					<img src="assets/img/libs/fontawesome.png" class="d-block mx-lg-auto img-fluid" alt="Logo de FontAwesome" width="350" height="350" loading="lazy" />
-				</div>
-			</div>
-		</div>
-	</section>
+    <section data-aos="fade-up">
+        <div class="container col-xxl-8 px-4 py-5">
+            <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
+                <div class="col-lg-6" data-aos="fade-up-right">
+                    <h1 class="display-5 fw-bold lh-1 mb-3">FontAwesome</h1>
+                    <p class="lead"><b>FontAwesome</b> est une <b>bibliothèque d'icônes</b>, cela nous permet de vous fournir de belles icônes sur les boutons ou encore dans la bare de navigation et même sur le pied de page.</p>
+                    <a href="https://fontawesome.com/start" target="_blank" rel="noopener" class="btn btn-lg bd-btn-lg btn-primary d-flex align-items-center justify-content-center fw-semibold">Utiliser FontAwesome</a>
+                </div>
+                <div class="col-10 col-sm-8 col-lg-6" data-aos="zoom-in-up">
+                    <img src="assets/img/libs/fontawesome.png" class="d-block mx-lg-auto img-fluid" alt="Logo de FontAwesome" width="350" height="350" loading="lazy" />
+                </div>
+            </div>
+        </div>
+    </section>
 
-	<section data-aos="fade-up">
-		<div class="container col-xxl-8 px-4 py-5">
-			<div class="row flex-lg-row-reverse align-items-center g-5 py-5">
-				<div class="col-10 col-sm-8 col-lg-6" data-aos="zoom-in-up">
-					<img src="assets/img/libs/google-fonts.png" class="d-block mx-lg-auto img-fluid" alt="Logo de Google Fonts" width="350" height="350" loading="lazy" />
-				</div>
-				<div class="col-lg-6" data-aos="fade-up-right">
-					<h1 class="display-5 fw-bold lh-1 mb-3">Google Fonts</h1>
-					<p class="lead"><b>Google Fonts</b> nous permet d'utiliser de belles polices d'écritures sur notre site. En l'occurence, ici, nous utilisons la police <i>Poppins</i>.</p>
-					<a href="https://fonts.google.com/" target="_blank" rel="noopener" class="btn btn-lg bd-btn-lg btn-primary d-flex align-items-center justify-content-center fw-semibold">Utiliser Google Fonts</a>
-				</div>
-			</div>
-		</div>
-	</section>
+    <section data-aos="fade-up">
+        <div class="container col-xxl-8 px-4 py-5">
+            <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
+                <div class="col-10 col-sm-8 col-lg-6" data-aos="zoom-in-up">
+                    <img src="assets/img/libs/google-fonts.png" class="d-block mx-lg-auto img-fluid" alt="Logo de Google Fonts" width="350" height="350" loading="lazy" />
+                </div>
+                <div class="col-lg-6" data-aos="fade-up-right">
+                    <h1 class="display-5 fw-bold lh-1 mb-3">Google Fonts</h1>
+                    <p class="lead"><b>Google Fonts</b> nous permet d'utiliser de belles polices d'écritures sur notre site. En l'occurence, ici, nous utilisons la police <i>Poppins</i>.</p>
+                    <a href="https://fonts.google.com/" target="_blank" rel="noopener" class="btn btn-lg bd-btn-lg btn-primary d-flex align-items-center justify-content-center fw-semibold">Utiliser Google Fonts</a>
+                </div>
+            </div>
+        </div>
+    </section>
 
-	<section data-aos="fade-up">
-		<div class="container col-xxl-8 px-4 py-5">
-			<div class="row flex-lg-row-reverse align-items-center g-5 py-5">
-				<div class="col-lg-6" data-aos="fade-up-right">
-					<h1 class="display-5 fw-bold lh-1 mb-3">JQuery</h1>
-					<p class="lead"><b>JQuery</b> est une extension du langage JavaScript qui permet de faciliter le développement JavaScript du site.</p>
-					<a href="https://jquery.com/" target="_blank" rel="noopener" class="btn btn-lg bd-btn-lg btn-primary d-flex align-items-center justify-content-center fw-semibold">Utiliser JQuery</a>
-				</div>
-				<div class="col-10 col-sm-8 col-lg-6" data-aos="zoom-in-up">
-					<img src="assets/img/libs/jquery.png" class="d-block mx-lg-auto img-fluid" alt="Logo de JQuery" width="350" height="350" loading="lazy" />
-				</div>
-			</div>
-		</div>
-	</section>
+    <section data-aos="fade-up">
+        <div class="container col-xxl-8 px-4 py-5">
+            <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
+                <div class="col-lg-6" data-aos="fade-up-right">
+                    <h1 class="display-5 fw-bold lh-1 mb-3">JQuery</h1>
+                    <p class="lead"><b>JQuery</b> est une extension du langage JavaScript qui permet de faciliter le développement JavaScript du site.</p>
+                    <a href="https://jquery.com/" target="_blank" rel="noopener" class="btn btn-lg bd-btn-lg btn-primary d-flex align-items-center justify-content-center fw-semibold">Utiliser JQuery</a>
+                </div>
+                <div class="col-10 col-sm-8 col-lg-6" data-aos="zoom-in-up">
+                    <img src="assets/img/libs/jquery.png" class="d-block mx-lg-auto img-fluid" alt="Logo de JQuery" width="350" height="350" loading="lazy" />
+                </div>
+            </div>
+        </div>
+    </section>
 
-	<section data-aos="fade-up">
-		<div class="container col-xxl-8 px-4 py-5">
-			<div class="row flex-lg-row-reverse align-items-center g-5 py-5">
-				<div class="col-10 col-sm-8 col-lg-6" data-aos="zoom-in-up">
-					<img src="https://avatars.githubusercontent.com/u/4093559?v=4" class="d-block mx-lg-auto img-fluid rounded-circle" alt="Profil du créateur d'AOS" width="350" height="350" loading="lazy" />
-				</div>
-				<div class="col-lg-6" data-aos="fade-up-right">
-					<h1 class="display-5 fw-bold lh-1 mb-3">AOS</h1>
-					<p class="lead"><b>AOS</b> nous permet d'avoir de belles transitions et animations au défilement de la page.</p>
-					<a href="https://github.com/michalsnik/aos" target="_blank" rel="noopener" class="btn btn-lg bd-btn-lg btn-primary d-flex align-items-center justify-content-center fw-semibold">Utiliser AOS</a>
-				</div>
-			</div>
-		</div>
-	</section>
+    <section data-aos="fade-up">
+        <div class="container col-xxl-8 px-4 py-5">
+            <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
+                <div class="col-10 col-sm-8 col-lg-6" data-aos="zoom-in-up">
+                    <img src="https://avatars.githubusercontent.com/u/4093559?v=4" class="d-block mx-lg-auto img-fluid rounded-circle" alt="Profil du créateur d'AOS" width="350" height="350" loading="lazy" />
+                </div>
+                <div class="col-lg-6" data-aos="fade-up-right">
+                    <h1 class="display-5 fw-bold lh-1 mb-3">AOS</h1>
+                    <p class="lead"><b>AOS</b> nous permet d'avoir de belles transitions et animations au défilement de la page.</p>
+                    <a href="https://github.com/michalsnik/aos" target="_blank" rel="noopener" class="btn btn-lg bd-btn-lg btn-primary d-flex align-items-center justify-content-center fw-semibold">Utiliser AOS</a>
+                </div>
+            </div>
+        </div>
+    </section>
 
-	<section data-aos="fade-up">
-		<div class="container col-xxl-8 px-4 py-5">
-			<div class="row flex-lg-row-reverse align-items-center g-5 py-5">
-				<div class="col-lg-6" data-aos="fade-up-right">
-					<h1 class="display-5 fw-bold lh-1 mb-3">ApexCharts</h1>
-					<p class="lead"><b>ApexCharts</b> est une bibliothèque JavaScript qui nous permet de vous proposer des graphiques sur notre site.</p>
-					<a href="https://apexcharts.com/" target="_blank" rel="noopener" class="btn btn-lg bd-btn-lg btn-primary d-flex align-items-center justify-content-center fw-semibold">Utiliser ApexCharts</a>
-				</div>
-				<div class="col-10 col-sm-8 col-lg-6" data-aos="zoom-in-up">
-					<img src="assets/img/libs/apexcharts.png" class="d-block mx-lg-auto img-fluid" alt="Logo de JQuery" width="350" height="350" loading="lazy" />
-				</div>
-			</div>
-		</div>
-	</section>
+    <section data-aos="fade-up">
+        <div class="container col-xxl-8 px-4 py-5">
+            <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
+                <div class="col-lg-6" data-aos="fade-up-right">
+                    <h1 class="display-5 fw-bold lh-1 mb-3">ApexCharts</h1>
+                    <p class="lead"><b>ApexCharts</b> est une bibliothèque JavaScript qui nous permet de vous proposer des graphiques sur notre site.</p>
+                    <a href="https://apexcharts.com/" target="_blank" rel="noopener" class="btn btn-lg bd-btn-lg btn-primary d-flex align-items-center justify-content-center fw-semibold">Utiliser ApexCharts</a>
+                </div>
+                <div class="col-10 col-sm-8 col-lg-6" data-aos="zoom-in-up">
+                    <img src="assets/img/libs/apexcharts.png" class="d-block mx-lg-auto img-fluid" alt="Logo de JQuery" width="350" height="350" loading="lazy" />
+                </div>
+            </div>
+        </div>
+    </section>
 
-	<div class="container">
-		<footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
-			<p class="col-md-4 mb-0 text-muted">
-				©
-				<script>
-					document.write(new Date().getFullYear());
-				</script>
-				PCDesc, Tous droits réservés
-			</p>
+    <div class="container">
+        <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
+            <p class="col-md-4 mb-0 text-muted">
+                ©
+                <script>
+                    document.write(new Date().getFullYear());
+                </script>
+                PCDesc, Tous droits réservés
+            </p>
 
-			<ul class="nav col-md-4 justify-content-end">
-				<li class="nav-item">
-					<a href="https://github.com/FuryCraft/webpage-as-homework" target="_blank" class="nav-link px-2 text-muted"><i class="fa-brands fa-github"></i> GitHub</a>
-				</li>
-				<li class="nav-item">
-					<a href="https://beeshosting.eu.org" target="_blank" class="nav-link px-2 text-muted"><i class="fa-solid fa-rectangle-ad"></i> Bees Hosting</a>
-				</li>
-			</ul>
-		</footer>
-	</div>
+            <ul class="nav col-md-4 justify-content-end">
+                <li class="nav-item">
+                    <a href="https://github.com/FuryCraft/webpage-as-homework" target="_blank" class="nav-link px-2 text-muted"><i class="fa-brands fa-github"></i> GitHub</a>
+                </li>
+                <li class="nav-item">
+                    <a href="https://beeshosting.eu.org" target="_blank" class="nav-link px-2 text-muted"><i class="fa-solid fa-rectangle-ad"></i> Bees Hosting</a>
+                </li>
+            </ul>
+        </footer>
+    </div>
 
-	<a id="back-to-top" href="#" class="btn btn-warning btn-lg back-to-top" role="button"><i class="fas fa-chevron-up"></i></a>
-	<script src="assets/js/bootstrap.bundle.js"></script>
-	<script src="assets/js/jquery-3.6.1.min.js"></script>
-	<script src="assets/js/main.js"></script>
-	<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-	<script>
-		AOS.init();
-	</script>
+    <a id="back-to-top" href="#" class="btn btn-warning btn-lg back-to-top" role="button"><i class="fas fa-chevron-up"></i></a>
+    <script src="assets/js/bootstrap.bundle.js"></script>
+    <script src="assets/js/jquery-3.6.1.min.js"></script>
+    <script src="assets/js/main.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+    <!-- PWA service worker-->
+    <script>
+        if (typeof navigator.serviceWorker !== 'undefined') {
+            navigator.serviceWorker.register('sw.js');
+        }
+    </script>
 </body>

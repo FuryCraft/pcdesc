@@ -2,717 +2,718 @@
 
 <!-- On définit la langue de notre site et on évite qu'un traducteur essaye de la traduire -->
 <head lang="fr" xml:lang="fr" xmlns="http://www.w3.org/1999/xhtml" translate="no">
-	<meta charset="utf-8" />
+    <meta charset="utf-8" />
 
-	<!-- On évite les problèmes d'affichages -->
-	<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
-	<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <!-- On évite les problèmes d'affichages -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
 
-	<!-- On indique que la page est optimisé pour les affichages portrait (mobiles, tablettes)-->
-	<meta name="HandheldFriendly" content="True" />
-	<meta name="MobileOptimized" content="320" />
+    <!-- On indique que la page est optimisé pour les affichages portrait (mobiles, tablettes)-->
+    <meta name="HandheldFriendly" content="True" />
+    <meta name="MobileOptimized" content="320" />
 
-	<!-- On indique tout ce qui est SEO (titre, favicon, description)-->
-	<title>Processeur - PCDesc</title>
-	<meta property="og:title" content="PCDesc - Savoir informatique" />
-	<meta name="description" content="Découvrez en plus sur les processeurs | PCDesc" />
-	<meta property="og:description" content="Découvrez en plus sur les processeurs | PCDesc" />
-	<link rel="icon" type="image/png" href="assets/img/favicon.png" />
-	<link rel="apple-touch-icon image_src" href="assets/img/pwa/ios/192.png" />
-	<meta name="theme-color" content="#ffc107" />
+    <!-- On indique tout ce qui est SEO (titre, favicon, description)-->
+    <title>Processeur - PCDesc</title>
+    <meta property="og:title" content="PCDesc - Savoir informatique" />
+    <meta name="description" content="Découvrez en plus sur les processeurs | PCDesc" />
+    <meta property="og:description" content="Découvrez en plus sur les processeurs | PCDesc" />
+    <link rel="icon" type="image/png" href="assets/img/favicon.png" />
+    <link rel="apple-touch-icon image_src" href="assets/img/pwa/ios/192.png" />
+    <meta name="theme-color" content="#ffc107" />
 
-	<!--Canonical-->
-	<link rel="canonical" href="https://furycraft.github.io/webpage-as-homework/processeur.html" />
-	<meta property="og:url" content="https://furycraft.github.io/webpage-as-homework/processeur.html" />
+    <!--Canonical-->
+    <link rel="canonical" href="https://furycraft.github.io/webpage-as-homework/processeur.html" />
+    <meta property="og:url" content="https://furycraft.github.io/webpage-as-homework/processeur.html" />
 
-	<!--Robots-->
-	<meta name="robots" content="index, follow, all" />
-	<meta name="googlebot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
-	<meta name="bingbot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+    <!--Robots-->
+    <meta name="robots" content="index, follow, all" />
+    <meta name="googlebot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+    <meta name="bingbot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
 
-	<!-- On désactive la traduction du site -->
-	<meta name="google" value="notranslate" />
+    <!-- On désactive la traduction du site -->
+    <meta name="google" value="notranslate" />
 
-	<!-- On importe le css et les librairies -->
-	<!-- Notre design CSS -->
-	<link rel="stylesheet" href="assets/css/style.css" />
-	<link id="dark-theme-style" rel="stylesheet" />
-	<!-- On importe Bootstrap pour un design responsive-->
-	<link rel="stylesheet" href="assets/css/bootstrap.min.css" />
-	<!-- On importe FontAwesome pour les icônes -->
-	<link rel="stylesheet" href="assets/css/all.min.css" />
-	<!-- On importe AOS pour les animations-->
-	<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
-	<!-- Permet de monétiser son site et d'accélérer son chargement -->
-	<script async src="https://arc.io/widget.min.js#7Psp1cwH"></script>
+    <!-- On importe le css et les librairies -->
+    <!-- Notre design CSS -->
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <link id="dark-theme-style" rel="stylesheet" />
+    <!-- On importe Bootstrap pour un design responsive-->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
+    <!-- On importe FontAwesome pour les icônes -->
+    <link rel="stylesheet" href="assets/css/all.min.css" />
+    <!-- On importe AOS pour les animations-->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <!-- Permet de monétiser son site et d'accélérer son chargement -->
+    <script async src="https://arc.io/widget.min.js#7Psp1cwH"></script>
 
-	<!-- Progressive Web App -->
-	<link rel="manifest" href="manifest.json" />
-	<script type="module">
-		import 'https://cdn.jsdelivr.net/npm/@pwabuilder/pwaupdate';
-		const el = document.createElement('pwa-update');
-		document.body.appendChild(el);
-	</script>
+    <!-- Progressive Web App -->
+    <link rel="manifest" href="manifest.json" />
 </head>
 <body class="flex-grow-1 d-flex flex-column notLoaded">
-	<!-- On ajoute un preloader -->
-	<div class="preloader-wrapper">
-		<div class="spinner-border text-primary" style="width: 3rem; height: 3rem">
-			<span class="visually-hidden">Chargement...</span>
-		</div>
-	</div>
-	<!-- On crée la barre de naviagtion  -->
-	<nav class="navbar sticky-top navbar-expand-lg navbar-expand-md shadow">
-		<!-- On précise que celle-ci est toujours affichée -->
-		<div class="container">
-			<!-- On met notre logo -->
-			<img class="navbar-brand" src="assets/img/logo.png" alt="Logo de notre PCDesc" height="36" />
-			<!-- On crée un bouton qui s'affiche uniquement quand la navbar est en collapse (affichage mobile)-->
-			<button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#navbar-content">
-				<div class="hamburger-toggle">
-					<div class="hamburger">
-						<!-- Représente les 3 barres sur un affichage réduit comme les mobiles-->
-						<span></span>
-						<span></span>
-						<span></span>
-					</div>
-				</div>
-			</button>
-			<!-- On crée les liens de notre navbar-->
-			<div class="collapse navbar-collapse" id="navbar-content">
-				<!-- On dit de prendre 100 de width-->
-				<ul class="navbar-nav w-100">
-					<li class="nav-item">
-						<a href="index.html" class="nav-link nav-link-anim"><i class="fa-solid fa-house"></i></a>
-					</li>
-					<!-- On crée un dropdown (catégorie)-->
-					<li class="nav-item dropdown">
-						<!-- On crée le lien qui va ouvrir le dropdown-->
-						<a id="menudrop" class="nav-link nav-link-anim dropdown-toggle active" href="#" data-bs-toggle="dropdown" data-bs-auto-close="outside"><i class="fa-solid fa-boxes-stacked"></i> Composants</a>
-						<ul class="dropdown-menu shadow">
-							<!-- On crée les liens du dropdown -->
-							<li>
-								<a class="dropdown-item" href="carte-mere.html"><i class="fa-solid fa-chess-board"></i> Carte mère</a>
-							</li>
-							<li>
-								<a class="dropdown-item" href="processeur.html"><i class="fa-solid fa-microchip"></i> Processeur</a>
-							</li>
-							<li>
-								<a class="dropdown-item" href="carte-graphique.html"><i class="fa-solid fa-rug"></i> Carte graphique</a>
-							</li>
-							<li>
-								<a class="dropdown-item" href="ram.html"><i class="fa-solid fa-memory"></i> Ram</a>
-							</li>
-							<!-- On recrée un dropdown dans un dropdown-->
-							<li class="dropend">
-								<a id="drop" href="#" class="dropdown-item dropdown-toggle" data-bs-toggle="dropdown" data-bs-auto-close="outside"><i class="fa-solid fa-floppy-disk"></i> Stockage</a>
-								<ul class="dropdown-menu shadow">
-									<li>
-										<a class="dropdown-item" href="hdd.html"><i class="fa-solid fa-compact-disc"></i> HDD</a>
-									</li>
-									<li>
-										<a class="dropdown-item" href="ssd.html"><i class="fa-solid fa-hard-drive"></i> SSD</a>
-									</li>
-								</ul>
-							</li>
-							<li><hr class="dropdown-divider" /></li>
-							<li><a class="dropdown-item" href="https://www.systemrequirementslab.com/my-computer-details" target="_blank">Ceux de mon PC</a></li>
-						</ul>
-					</li>
-					<!-- On recrée un autre lien en dehors du dropdown -->
-					<li class="nav-item">
-						<a href="peripheriques.html" class="nav-link nav-link-anim"><i class="fa-brands fa-usb"></i> Périphériques</a>
-					</li>
-					<li class="nav-item">
-						<a href="a-propos.html" class="nav-link nav-link-anim"><i class="fa-solid fa-circle-info"></i> À propos</a>
-					</li>
-				</ul>
-				<!-- On crée des boutons qui s'afficheront à la fin de la navbar (tout à droite) -->
-				<div class="text-end">
-					<div class="d-md-flex">
-						<!-- On crée le bouton qui permet d'ouvrir le modal de téléchargement -->
-						<button type="button" class="btn btn-warning me-sm-3" data-bs-toggle="modal" data-bs-target="#download"><i class="fa-solid fa-download"></i></button>
-						<!-- On crée le bouton qui permet de changer de thème -->
-						<a href="javascript:void()" id="theme-toggler" onclick="toggleTheme()" class="btn btn-warning"></a>
-					</div>
-				</div>
-			</div>
-		</div>
-	</nav>
-	<!-- Modal de téléchargement -->
-	<div class="modal fade modal-blur" id="download" tabindex="-1" aria-labelledby="downloadLabel" aria-hidden="true">
-		<div class="modal-dialog modal-dialog-centered modal-lg">
-			<div class="modal-content">
-				<div class="modal-header">
-					<h1 class="modal-title fs-5" id="downloadModalLabel">Téléchargement</h1>
-					<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fermer"></button>
-				</div>
-				<div class="modal-body">
-					<div class="row">
-						<div class="col">
-							<h3><i class="fa-brands fa-android"></i> Android</h3>
-							<ul>
-								<li><b>Version:</b> 1.0</li>
-								<li><b>Date de publication:</b> prochainement</li>
-								<li><b>Taille:</b> 0,26Mo</li>
-							</ul>
-							<div class="d-grid gap-2">
-								<a id="androidapp" class="btn btn-outline-warning" data-bs-toggle="modal" data-bs-target="#thanks"><i class="fa-solid fa-download"></i> APK</a>
-							</div>
-						</div>
-						<div class="col">
-							<h3><i class="fa-brands fa-windows"></i> Windows 10/11</h3>
-							<ul>
-								<li><b>Version:</b> 1.0</li>
-								<li><b>Date de publication:</b> prochainement</li>
-								<li><b>Taille:</b> 1,07 Mo</li>
-							</ul>
-							<div class="d-grid gap-2">
-								<a id="windowsapp" class="btn btn-outline-warning" data-bs-toggle="modal" data-bs-target="#thanks"><i class="fa-solid fa-download"></i> ZIP</a>
-							</div>
-						</div>
-						<div class="col">
-							<h3><i class="fa-solid fa-code"></i> Code source</h3>
-							<ul>
-								<li><b>Version:</b> dernière</li>
-								<li><b>Date de publication:</b> aujourd'hui</li>
-								<li><b>Taille:</b> inconnue</li>
-							</ul>
-							<div class="d-grid gap-2">
-								<a id="sourcecode" class="btn btn-outline-warning" data-bs-toggle="modal" data-bs-target="#thanks"><i class="fa-solid fa-download"></i> ZIP</a>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="modal-footer">
-					<p>Ces applications ne sont pas disponibles sur les stores officiels. Vous devrez accorder certaines autorisations développeurs à votre appareil.</p>
-				</div>
-			</div>
-		</div>
-	</div>
-	<!-- Modal de commencement du téléchargement -->
-	<div class="modal fade modal-blur" id="thanks" tabindex="-1" aria-labelledby="thanksLabel" aria-hidden="true">
-		<div class="modal-dialog modal-dialog-centered">
-			<div class="modal-content">
-				<div class="modal-header">
-					<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fermer"></button>
-				</div>
-				<div class="modal-body">
-					<div class="mb-4 text-center">
-						<svg xmlns="http://www.w3.org/2000/svg" class="text-success" width="75" height="75" fill="currentColor" class="bi bi-check-circle" viewBox="0 0 16 16">
-							<path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z" />
-							<path d="M10.97 4.97a.235.235 0 0 0-.02.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-1.071-1.05z" />
-						</svg>
-					</div>
-					<div class="text-center">
-						<h1>Merci !</h1>
-						<p>Le téléchargement devrait commencer d'ici quelques secondes.</p>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-	<!-- Contenu de la page -->
-	<div class="px-4 pt-5 my-5 text-center shadow" id="hero">
-		<h1 class="display-4 fw-bold">Processeur</h1>
-		<div class="col-lg-6 mx-auto">
-			<p class="lead mb-4">Découvrez en plus sur les processeurs, le cerveau de l'ordinateur.</p>
-			<div class="d-grid gap-2 d-sm-flex justify-content-sm-center mb-5">
-				<button type="button" class="btn custom-btn custom-btn-primary custom-btn-2 btn-lg px-4 me-sm-3" data-bs-toggle="modal" data-bs-target="#video"><i class="fa-solid fa-circle-play"></i> Regarder la vidéo</button>
-			</div>
-		</div>
-		<div class="overflow-hidden" style="max-height: 30vh">
-			<div class="container px-5">
-				<img src="assets/img/favicon.png" class="img-fluid rounded-3 mb-4" alt="Icône représentant un processeur colorié en jaune" width="700" height="500" loading="lazy" />
-			</div>
-		</div>
-	</div>
-	<!-- Modal de la vidéo -->
-	<div class="modal fade modal-blur" id="video" tabindex="-1" aria-labelledby="videoLabel" aria-hidden="true">
-		<div class="modal-dialog modal-dialog-centered modal-lg">
-			<div class="modal-content">
-				<div class="modal-header">
-					<h1 class="modal-title fs-5" id="videoModalLabel">Vidéo</h1>
-					<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fermer"></button>
-				</div>
-				<div class="modal-body">
-					<!-- On dit que notre iframe a un ratio 16:9, cela met automatiquement la bonne width et la bonne height à celle-ci selon notre affichage-->
-					<div class="ratio ratio-16x9">
-						<iframe src="https://www.youtube-nocookie.com/embed/mzyE_TvKpUU" allowfullscreen></iframe>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-	<section id="contenu" data-aos="fade-up">
-		<div class="container col-xxl-8 px-4 py-5">
-			<div class="row flex-lg-row-reverse align-items-center g-5 py-5">
-				<div class="col-lg-6" data-aos="fade-up-right">
-					<h1 class="display-5 fw-bold lh-1 mb-3">Qu'est-ce qu'un processeur ?</h1>
-					<p class="lead">Un processeur, dans un ordinateur est le composant principal. C'est lui qui va <b>effectuer les opérations</b> (additions, mise mémoire, opérations logiques et autres...). Il est souvent appelé <b>CPU</b>, de l'anglais Central Processing Unit. Il est connecté à la carte mère grâce à un <b>socket</b> (support). <b>Le processeur actif peut chauffer</b> à des températures atteignant les <b>100°C</b>. C'est pour cela qu'il est accompagné d'un <b>système de refroidissement</b> comme les ventirads ou même les watercoolings (refroidissement liquide).</p>
-				</div>
-				<div class="col-10 col-sm-8 col-lg-6" data-aos="zoom-in-up">
-					<img src="assets/img/cpu.png" class="d-block mx-lg-auto img-fluid" alt="Image représentant un processeur en 3D" width="350" height="350" loading="lazy" />
-				</div>
-			</div>
-		</div>
-	</section>
+    <!-- On ajoute un preloader -->
+    <div class="preloader-wrapper">
+        <div class="spinner-border text-primary" style="width: 3rem; height: 3rem">
+            <span class="visually-hidden">Chargement...</span>
+        </div>
+    </div>
+    <!-- On crée la barre de naviagtion  -->
+    <nav class="navbar sticky-top navbar-expand-lg navbar-expand-md shadow">
+        <!-- On précise que celle-ci est toujours affichée -->
+        <div class="container">
+            <!-- On met notre logo -->
+            <img class="navbar-brand" src="assets/img/logo.png" alt="Logo de notre PCDesc" height="36" />
+            <!-- On crée un bouton qui s'affiche uniquement quand la navbar est en collapse (affichage mobile)-->
+            <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#navbar-content">
+                <div class="hamburger-toggle">
+                    <div class="hamburger">
+                        <!-- Représente les 3 barres sur un affichage réduit comme les mobiles-->
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </div>
+            </button>
+            <!-- On crée les liens de notre navbar-->
+            <div class="collapse navbar-collapse" id="navbar-content">
+                <!-- On dit de prendre 100 de width-->
+                <ul class="navbar-nav w-100">
+                    <li class="nav-item">
+                        <a href="index.html" class="nav-link nav-link-anim"><i class="fa-solid fa-house"></i></a>
+                    </li>
+                    <!-- On crée un dropdown (catégorie)-->
+                    <li class="nav-item dropdown">
+                        <!-- On crée le lien qui va ouvrir le dropdown-->
+                        <a id="menudrop" class="nav-link nav-link-anim dropdown-toggle active" href="#" data-bs-toggle="dropdown" data-bs-auto-close="outside"><i class="fa-solid fa-boxes-stacked"></i> Composants</a>
+                        <ul class="dropdown-menu shadow">
+                            <!-- On crée les liens du dropdown -->
+                            <li>
+                                <a class="dropdown-item" href="carte-mere.html"><i class="fa-solid fa-chess-board"></i> Carte mère</a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="processeur.html"><i class="fa-solid fa-microchip"></i> Processeur</a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="carte-graphique.html"><i class="fa-solid fa-rug"></i> Carte graphique</a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="ram.html"><i class="fa-solid fa-memory"></i> Ram</a>
+                            </li>
+                            <!-- On recrée un dropdown dans un dropdown-->
+                            <li class="dropend">
+                                <a id="drop" href="#" class="dropdown-item dropdown-toggle" data-bs-toggle="dropdown" data-bs-auto-close="outside"><i class="fa-solid fa-floppy-disk"></i> Stockage</a>
+                                <ul class="dropdown-menu shadow">
+                                    <li>
+                                        <a class="dropdown-item" href="hdd.html"><i class="fa-solid fa-compact-disc"></i> HDD</a>
+                                    </li>
+                                    <li>
+                                        <a class="dropdown-item" href="ssd.html"><i class="fa-solid fa-hard-drive"></i> SSD</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li><hr class="dropdown-divider" /></li>
+                            <li><a class="dropdown-item" href="https://www.systemrequirementslab.com/my-computer-details" target="_blank">Ceux de mon PC</a></li>
+                        </ul>
+                    </li>
+                    <!-- On recrée un autre lien en dehors du dropdown -->
+                    <li class="nav-item">
+                        <a href="peripheriques.html" class="nav-link nav-link-anim"><i class="fa-brands fa-usb"></i> Périphériques</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="a-propos.html" class="nav-link nav-link-anim"><i class="fa-solid fa-circle-info"></i> À propos</a>
+                    </li>
+                </ul>
+                <!-- On crée des boutons qui s'afficheront à la fin de la navbar (tout à droite) -->
+                <div class="text-end">
+                    <div class="d-md-flex">
+                        <!-- On crée le bouton qui permet d'ouvrir le modal de téléchargement -->
+                        <button type="button" class="btn btn-warning me-sm-3" data-bs-toggle="modal" data-bs-target="#download"><i class="fa-solid fa-download"></i></button>
+                        <!-- On crée le bouton qui permet de changer de thème -->
+                        <a href="javascript:void()" id="theme-toggler" onclick="toggleTheme()" class="btn btn-warning"></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <!-- Modal de téléchargement -->
+    <div class="modal fade modal-blur" id="download" tabindex="-1" aria-labelledby="downloadLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="downloadModalLabel">Téléchargement</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fermer"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col">
+                            <h3><i class="fa-brands fa-android"></i> Android</h3>
+                            <ul>
+                                <li><b>Version:</b> 1.0</li>
+                                <li><b>Date de publication:</b> prochainement</li>
+                                <li><b>Taille:</b> 0,26Mo</li>
+                            </ul>
+                            <div class="d-grid gap-2">
+                                <a id="androidapp" class="btn btn-outline-warning" data-bs-toggle="modal" data-bs-target="#thanks"><i class="fa-solid fa-download"></i> APK</a>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <h3><i class="fa-brands fa-windows"></i> Windows 10/11</h3>
+                            <ul>
+                                <li><b>Version:</b> 1.0</li>
+                                <li><b>Date de publication:</b> prochainement</li>
+                                <li><b>Taille:</b> 1,07 Mo</li>
+                            </ul>
+                            <div class="d-grid gap-2">
+                                <a id="windowsapp" class="btn btn-outline-warning" data-bs-toggle="modal" data-bs-target="#thanks"><i class="fa-solid fa-download"></i> ZIP</a>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <h3><i class="fa-solid fa-code"></i> Code source</h3>
+                            <ul>
+                                <li><b>Version:</b> dernière</li>
+                                <li><b>Date de publication:</b> aujourd'hui</li>
+                                <li><b>Taille:</b> inconnue</li>
+                            </ul>
+                            <div class="d-grid gap-2">
+                                <a id="sourcecode" class="btn btn-outline-warning" data-bs-toggle="modal" data-bs-target="#thanks"><i class="fa-solid fa-download"></i> ZIP</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <p>Ces applications ne sont pas disponibles sur les stores officiels. Vous devrez accorder certaines autorisations développeurs à votre appareil.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Modal de commencement du téléchargement -->
+    <div class="modal fade modal-blur" id="thanks" tabindex="-1" aria-labelledby="thanksLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fermer"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="mb-4 text-center">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="text-success" width="75" height="75" fill="currentColor" class="bi bi-check-circle" viewBox="0 0 16 16">
+                            <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z" />
+                            <path d="M10.97 4.97a.235.235 0 0 0-.02.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-1.071-1.05z" />
+                        </svg>
+                    </div>
+                    <div class="text-center">
+                        <h1>Merci !</h1>
+                        <p>Le téléchargement devrait commencer d'ici quelques secondes.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Contenu de la page -->
+    <div class="px-4 pt-5 my-5 text-center shadow" id="hero">
+        <h1 class="display-4 fw-bold">Processeur</h1>
+        <div class="col-lg-6 mx-auto">
+            <p class="lead mb-4">Découvrez en plus sur les processeurs, le cerveau de l'ordinateur.</p>
+            <div class="d-grid gap-2 d-sm-flex justify-content-sm-center mb-5">
+                <button type="button" class="btn custom-btn custom-btn-primary custom-btn-2 btn-lg px-4 me-sm-3" data-bs-toggle="modal" data-bs-target="#video"><i class="fa-solid fa-circle-play"></i> Regarder la vidéo</button>
+            </div>
+        </div>
+        <div class="overflow-hidden" style="max-height: 30vh">
+            <div class="container px-5">
+                <img src="assets/img/favicon.png" class="img-fluid rounded-3 mb-4" alt="Icône représentant un processeur colorié en jaune" width="700" height="500" loading="lazy" />
+            </div>
+        </div>
+    </div>
+    <!-- Modal de la vidéo -->
+    <div class="modal fade modal-blur" id="video" tabindex="-1" aria-labelledby="videoLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="videoModalLabel">Vidéo</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fermer"></button>
+                </div>
+                <div class="modal-body">
+                    <!-- On dit que notre iframe a un ratio 16:9, cela met automatiquement la bonne width et la bonne height à celle-ci selon notre affichage-->
+                    <div class="ratio ratio-16x9">
+                        <iframe src="https://www.youtube-nocookie.com/embed/mzyE_TvKpUU" allowfullscreen></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <section id="contenu" data-aos="fade-up">
+        <div class="container col-xxl-8 px-4 py-5">
+            <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
+                <div class="col-lg-6" data-aos="fade-up-right">
+                    <h1 class="display-5 fw-bold lh-1 mb-3">Qu'est-ce qu'un processeur ?</h1>
+                    <p class="lead">Un processeur, dans un ordinateur est le composant principal. C'est lui qui va <b>effectuer les opérations</b> (additions, mise mémoire, opérations logiques et autres...). Il est souvent appelé <b>CPU</b>, de l'anglais Central Processing Unit. Il est connecté à la carte mère grâce à un <b>socket</b> (support). <b>Le processeur actif peut chauffer</b> à des températures atteignant les <b>100°C</b>. C'est pour cela qu'il est accompagné d'un <b>système de refroidissement</b> comme les ventirads ou même les watercoolings (refroidissement liquide).</p>
+                </div>
+                <div class="col-10 col-sm-8 col-lg-6" data-aos="zoom-in-up">
+                    <img src="assets/img/cpu.png" class="d-block mx-lg-auto img-fluid" alt="Image représentant un processeur en 3D" width="350" height="350" loading="lazy" />
+                </div>
+            </div>
+        </div>
+    </section>
 
-	<section data-aos="fade-up">
-		<div class="container col-xxl-8 px-4 py-5">
-			<div class="row flex-lg-row-reverse align-items-center g-5 py-5">
-				<div class="col-10 col-sm-8 col-lg-6" data-aos="zoom-in-up">
-					<img src="assets/img/intel-4004.png" class="d-block mx-lg-auto img-fluid" alt="Image représentant un processeur Intel 4004" width="350" height="350" loading="lazy" />
-				</div>
-				<div class="col-lg-6" data-aos="fade-up-right">
-					<h1 class="display-5 fw-bold lh-1 mb-3">Premier processeur</h1>
-					<p class="lead">Le premier microprocesseur commercialisé, le <b>15 novembre 1971</b>, est l'<b>Intel 4004 4 bits</b>, suivi par l'Intel 8008 à 8 bits et qui servit initialement à fabriquer des contrôleurs graphiques en mode texte. Jugé trop lent par le client qui en avait demandé la conception, il devint un processeur d'usage général.</p>
-				</div>
-			</div>
-		</div>
-	</section>
+    <section data-aos="fade-up">
+        <div class="container col-xxl-8 px-4 py-5">
+            <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
+                <div class="col-10 col-sm-8 col-lg-6" data-aos="zoom-in-up">
+                    <img src="assets/img/intel-4004.png" class="d-block mx-lg-auto img-fluid" alt="Image représentant un processeur Intel 4004" width="350" height="350" loading="lazy" />
+                </div>
+                <div class="col-lg-6" data-aos="fade-up-right">
+                    <h1 class="display-5 fw-bold lh-1 mb-3">Premier processeur</h1>
+                    <p class="lead">Le premier microprocesseur commercialisé, le <b>15 novembre 1971</b>, est l'<b>Intel 4004 4 bits</b>, suivi par l'Intel 8008 à 8 bits et qui servit initialement à fabriquer des contrôleurs graphiques en mode texte. Jugé trop lent par le client qui en avait demandé la conception, il devint un processeur d'usage général.</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
-	<section data-aos="fade-up">
-		<div class="container col-xxl-8 px-4 py-5">
-			<div class="row flex-lg-row-reverse align-items-center g-5 py-5">
-				<div class="col-lg-6" data-aos="fade-up-right">
-					<h1 class="display-5 fw-bold lh-1 mb-3">La vitesse d'un processeur</h1>
-					<p class="lead">On mesure la vitesse d'un processeur par la <b>fréquence de son horloge</b> qui <b>s'exprime en Hertz</b>. Ce qui correspond au nombre d'opérations élémentaires effectuées par seconde. <b>1Hz est égal à une opération</b>. Aujourd'hui la fréquence des processeurs tourne autour des 3.5Ghz et 4GHz.</p>
-				</div>
-				<div class="col-10 col-sm-8 col-lg-6" data-aos="zoom-in-up">
-					<img src="assets/img/clock.png" class="d-block mx-lg-auto img-fluid" alt="Image représentant une horloge en 3D" width="350" height="350" loading="lazy" />
-				</div>
-			</div>
-		</div>
-	</section>
+    <section data-aos="fade-up">
+        <div class="container col-xxl-8 px-4 py-5">
+            <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
+                <div class="col-lg-6" data-aos="fade-up-right">
+                    <h1 class="display-5 fw-bold lh-1 mb-3">La vitesse d'un processeur</h1>
+                    <p class="lead">On mesure la vitesse d'un processeur par la <b>fréquence de son horloge</b> qui <b>s'exprime en Hertz</b>. Ce qui correspond au nombre d'opérations élémentaires effectuées par seconde. <b>1Hz est égal à une opération</b>. Aujourd'hui la fréquence des processeurs tourne autour des 3.5Ghz et 4GHz.</p>
+                </div>
+                <div class="col-10 col-sm-8 col-lg-6" data-aos="zoom-in-up">
+                    <img src="assets/img/clock.png" class="d-block mx-lg-auto img-fluid" alt="Image représentant une horloge en 3D" width="350" height="350" loading="lazy" />
+                </div>
+            </div>
+        </div>
+    </section>
 
-	<section data-aos="fade-up">
-		<div class="container col-xxl-8 px-4 py-5">
-			<div class="row flex-lg-row-reverse align-items-center g-5 py-5">
-				<div class="col-10 col-sm-8 col-lg-6" data-aos="zoom-in-up">
-					<img src="assets/img/multicore.png" class="d-block mx-lg-auto img-fluid" alt="Image représentant un processeur en 3D" width="200" height="200" loading="lazy" />
-				</div>
-				<div class="col-lg-6" data-aos="fade-up-right">
-					<h1 class="display-5 fw-bold lh-1 mb-3">Les processeurs multicoeurs</h1>
-					<p class="lead">Aujourd'hui, les processeurs sont devenus <b>multicoeurs</b>, c'est à dire l'idée d'<b>avoir plusieurs processeurs en un seul</b>, commes les processeurs <b>dualcore, quadcore et octocore</b></p>
-				</div>
-			</div>
-		</div>
-	</section>
+    <section data-aos="fade-up">
+        <div class="container col-xxl-8 px-4 py-5">
+            <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
+                <div class="col-10 col-sm-8 col-lg-6" data-aos="zoom-in-up">
+                    <img src="assets/img/multicore.png" class="d-block mx-lg-auto img-fluid" alt="Image représentant un processeur en 3D" width="200" height="200" loading="lazy" />
+                </div>
+                <div class="col-lg-6" data-aos="fade-up-right">
+                    <h1 class="display-5 fw-bold lh-1 mb-3">Les processeurs multicoeurs</h1>
+                    <p class="lead">Aujourd'hui, les processeurs sont devenus <b>multicoeurs</b>, c'est à dire l'idée d'<b>avoir plusieurs processeurs en un seul</b>, commes les processeurs <b>dualcore, quadcore et octocore</b></p>
+                </div>
+            </div>
+        </div>
+    </section>
 
-	<section data-aos="fade-up">
-		<div class="container col-xxl-8 px-4 py-5">
-			<div class="row flex-lg-row-reverse align-items-center g-5 py-5">
-				<div class="col-lg-6" data-aos="fade-up-right">
-					<h1 class="display-5 fw-bold lh-1 mb-3">Les mémoires volatiles d'un processeur</h1>
-					<p class="lead">Tous les processeurs disposent de deux <b>mémoires volatiles</b>: <b>le registre</b> et <b>la mémoire cache</b>.</p>
-					<ul class="lead">
-						<li>Le registre est intégré au processeur permettant un accès très rapide. Toutefois son prix important limite sa capacité. Elle est utilisée pour retenir par exemple les retenues d’une addition, les résultats d’une comparaison ou la liste des adresses mémoires nécessaires.</li>
-						<li>Les mémoires caches sont également rapides mais chères (il en existe deux : L1 et L2). Elles peuvent être intégrées ou non au processeur. Leur but est de sauvegarder des morceaux de fichiers utilisés : elles servent de cache entre le processeur et la mémoire vive.</li>
-					</ul>
-				</div>
-				<div class="col-10 col-sm-8 col-lg-6" data-aos="zoom-in-up">
-					<img src="assets/img/memory.png" class="d-block mx-lg-auto img-fluid" alt="Image représentant une carte SD en 3D" width="350" height="350" loading="lazy" />
-				</div>
-			</div>
-		</div>
-	</section>
+    <section data-aos="fade-up">
+        <div class="container col-xxl-8 px-4 py-5">
+            <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
+                <div class="col-lg-6" data-aos="fade-up-right">
+                    <h1 class="display-5 fw-bold lh-1 mb-3">Les mémoires volatiles d'un processeur</h1>
+                    <p class="lead">Tous les processeurs disposent de deux <b>mémoires volatiles</b>: <b>le registre</b> et <b>la mémoire cache</b>.</p>
+                    <ul class="lead">
+                        <li>Le registre est intégré au processeur permettant un accès très rapide. Toutefois son prix important limite sa capacité. Elle est utilisée pour retenir par exemple les retenues d’une addition, les résultats d’une comparaison ou la liste des adresses mémoires nécessaires.</li>
+                        <li>Les mémoires caches sont également rapides mais chères (il en existe deux : L1 et L2). Elles peuvent être intégrées ou non au processeur. Leur but est de sauvegarder des morceaux de fichiers utilisés : elles servent de cache entre le processeur et la mémoire vive.</li>
+                    </ul>
+                </div>
+                <div class="col-10 col-sm-8 col-lg-6" data-aos="zoom-in-up">
+                    <img src="assets/img/memory.png" class="d-block mx-lg-auto img-fluid" alt="Image représentant une carte SD en 3D" width="350" height="350" loading="lazy" />
+                </div>
+            </div>
+        </div>
+    </section>
 
-	<section data-aos="fade-up">
-		<div class="container-fluid bg-warning">
-			<div class="container col-xxl-8 px-4 py-5">
-				<div class="row flex-lg-row-reverse align-items-center g-5 py-5">
-					<div class="col-lg-6" data-aos="fade-up">
-						<h1 class="display-5 fw-bold lh-1 mb-3">Les sockets</h1>
-						<p class="lead">Il existe plusieurs types de sockets selon le constructeur de CPU, <b>AMD</b> ou <b>Intel</b> (principaux constructeurs). En effet pour se brancher sur la carte mère, le CPU doit avoir la même connectique (le socket) que la carte mère.</p>
-					</div>
-					<div class="col-10 col-sm-8 col-lg-6" data-aos="zoom-in-up">
-						<img src="assets/img/sockets.png" class="d-block mx-lg-auto img-fluid" alt="Image représentant les deux principaux sockets des processeurs" loading="lazy" />
-					</div>
-				</div>
-			</div>
-		</div>
-	</section>
+    <section data-aos="fade-up">
+        <div class="container-fluid bg-warning">
+            <div class="container col-xxl-8 px-4 py-5">
+                <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
+                    <div class="col-lg-6" data-aos="fade-up">
+                        <h1 class="display-5 fw-bold lh-1 mb-3">Les sockets</h1>
+                        <p class="lead">Il existe plusieurs types de sockets selon le constructeur de CPU, <b>AMD</b> ou <b>Intel</b> (principaux constructeurs). En effet pour se brancher sur la carte mère, le CPU doit avoir la même connectique (le socket) que la carte mère.</p>
+                    </div>
+                    <div class="col-10 col-sm-8 col-lg-6" data-aos="zoom-in-up">
+                        <img src="assets/img/sockets.png" class="d-block mx-lg-auto img-fluid" alt="Image représentant les deux principaux sockets des processeurs" loading="lazy" />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-	<section data-aos="fade-up">
-		<div class="container-fluid">
-			<div class="container col-xxl-8 px-4 py-5">
-				<div class="row flex-lg-row-reverse align-items-center g-5 py-5">
-					<div class="col-lg-6" data-aos="fade-up">
-						<h1 class="display-5 fw-bold lh-1 mb-3">Loi de Moore</h1>
-						<p class="lead">La <b>loi de Moore</b> (qui est en fait une simple extrapolation) implique que les processeurs deviennent au fil du temps plus petits et plus rapides grâce à son nombre de <b>transistors</b> qui augmente. On remarque aussi que cette progression est proportionnelle.</p>
-					</div>
-					<div class="col-10 col-sm-8 col-lg-6" data-aos="zoom-in-up">
-						<img src="assets/img/moore-law.png" class="d-block mx-lg-auto img-fluid" alt="Tableau de la loi de Moore" loading="lazy" />
-					</div>
-				</div>
-			</div>
-		</div>
-	</section>
+    <section data-aos="fade-up">
+        <div class="container-fluid">
+            <div class="container col-xxl-8 px-4 py-5">
+                <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
+                    <div class="col-lg-6" data-aos="fade-up">
+                        <h1 class="display-5 fw-bold lh-1 mb-3">Loi de Moore</h1>
+                        <p class="lead">La <b>loi de Moore</b> (qui est en fait une simple extrapolation) implique que les processeurs deviennent au fil du temps plus petits et plus rapides grâce à son nombre de <b>transistors</b> qui augmente. On remarque aussi que cette progression est proportionnelle.</p>
+                    </div>
+                    <div class="col-10 col-sm-8 col-lg-6" data-aos="zoom-in-up">
+                        <img src="assets/img/moore-law.png" class="d-block mx-lg-auto img-fluid" alt="Tableau de la loi de Moore" loading="lazy" />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-	<section data-aos="fade-up">
-		<div class="container-fluid bg-warning">
-			<div class="container col-xxl-8 px-4 py-5">
-				<div class="row flex-lg-row-reverse align-items-center g-5 py-5">
-					<div class="col-lg-6" data-aos="fade-up">
-						<h1 class="display-5 fw-bold lh-1 mb-3">Pour aller plus loin: l'architecture d'un processeur</h1>
-						<p class="lead">Aujourd'hui, les processeurs qui équipent nos machines sont basées sur <b>l'architecture de Von Neumann</b> (représenté à gauche)</p>
-					</div>
-					<div class="col-10 col-sm-8 col-lg-6" data-aos="zoom-in-up">
-						<img src="assets/img/van-neumann.jpg" class="d-block mx-lg-auto img-fluid" alt="John Von Neumann" loading="lazy" />
-					</div>
-				</div>
-			</div>
-		</div>
-	</section>
+    <section data-aos="fade-up">
+        <div class="container-fluid bg-warning">
+            <div class="container col-xxl-8 px-4 py-5">
+                <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
+                    <div class="col-lg-6" data-aos="fade-up">
+                        <h1 class="display-5 fw-bold lh-1 mb-3">Pour aller plus loin: l'architecture d'un processeur</h1>
+                        <p class="lead">Aujourd'hui, les processeurs qui équipent nos machines sont basées sur <b>l'architecture de Von Neumann</b> (représenté à gauche)</p>
+                    </div>
+                    <div class="col-10 col-sm-8 col-lg-6" data-aos="zoom-in-up">
+                        <img src="assets/img/van-neumann.jpg" class="d-block mx-lg-auto img-fluid" alt="John Von Neumann" loading="lazy" />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-	<section data-aos="fade-up">
-		<div class="container col-xxl-8 px-4 py-5">
-			<div class="row flex-lg-row-reverse align-items-center g-5 py-5">
-				<div class="col-lg-6" data-aos="fade-up-right">
-					<p class="lead">Du point de vue matériel, son idée est de séparer l'<b>unité de contrôle</b>(CU) chargée de gérer les instructions et l'<b>unité arithmétique et logique</b> (UAL ou ALU) chargée de les exécuter.</p>
-					<ul class="lead">
-						<li>l’ALU est un circuit électronique qui effectue à la fois des opérations arithmétiques et des opérations sur les bits de nombres entiers en binaire;</li>
-						<li>le CU se charge de récupérer en mémoire la prochaine instruction à exécuter, les données sur lesquelles elle doit doit opérer et les envoie à l’ALU.</li>
-					</ul>
-					<p class="lead">Du point de vue philosophique, la révolution de cette architecture est qu’elle considère les instructions comme de simples données pouvant être stockées dans la même mémoire.</p>
-				</div>
-				<div class="col-10 col-sm-8 col-lg-6" data-aos="zoom-in-up">
-					<img src="assets/img/van-neumann-law.png" class="d-block mx-lg-auto img-fluid" alt="Loi de Van Neumann" loading="lazy" />
-				</div>
-			</div>
-		</div>
-	</section>
+    <section data-aos="fade-up">
+        <div class="container col-xxl-8 px-4 py-5">
+            <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
+                <div class="col-lg-6" data-aos="fade-up-right">
+                    <p class="lead">Du point de vue matériel, son idée est de séparer l'<b>unité de contrôle</b>(CU) chargée de gérer les instructions et l'<b>unité arithmétique et logique</b> (UAL ou ALU) chargée de les exécuter.</p>
+                    <ul class="lead">
+                        <li>l’ALU est un circuit électronique qui effectue à la fois des opérations arithmétiques et des opérations sur les bits de nombres entiers en binaire;</li>
+                        <li>le CU se charge de récupérer en mémoire la prochaine instruction à exécuter, les données sur lesquelles elle doit doit opérer et les envoie à l’ALU.</li>
+                    </ul>
+                    <p class="lead">Du point de vue philosophique, la révolution de cette architecture est qu’elle considère les instructions comme de simples données pouvant être stockées dans la même mémoire.</p>
+                </div>
+                <div class="col-10 col-sm-8 col-lg-6" data-aos="zoom-in-up">
+                    <img src="assets/img/van-neumann-law.png" class="d-block mx-lg-auto img-fluid" alt="Loi de Van Neumann" loading="lazy" />
+                </div>
+            </div>
+        </div>
+    </section>
 
-	<section data-aos="fade-up">
-		<div class="container col-xxl-8 px-4 py-5">
-			<div class="row flex-lg-row-reverse align-items-center g-5 py-5">
-				<div class="col-10 col-sm-8 col-lg-6" data-aos="zoom-in-up">
-					<img src="assets/img/van-neumann-law2.png" class="d-block mx-lg-auto img-fluid" alt="Version évoluée de la Loi de Van Nuemann" loading="lazy" />
-				</div>
-				<div class="col-lg-6" data-aos="fade-up-right">
-					<p class="lead">Cette conception <b>s’oppose</b> notamment <b>aux architectures</b> dîtes <b>de Harvard</b> qui ont <b>une mémoire pour les données et une pour les intrusctions</b>, permettant au processeur d’accéder aux deux en même temps (on retrouve cette architecture sur certains microcontrôleurs). <b>L’architecture de Von Neumann est toutefois la plus utilisée</b> et n’a guère connu que deux grandes évolutions en plus de 70 ans :</p>
-					<ul class="lead">
-						<li>Depuis les années 1960, les entrées-sorties ne sont plus gérées par le processeur mais par des bus distincts;</li>
-						<li>Le nombre de processeurs s’est multiplié dans nos ordinateurs et certains sont même multicoeurs, faisant aujourd’hui de la mémoire l’élément central partagé de l’architecture.</li>
-					</ul>
-				</div>
-			</div>
-		</div>
-	</section>
+    <section data-aos="fade-up">
+        <div class="container col-xxl-8 px-4 py-5">
+            <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
+                <div class="col-10 col-sm-8 col-lg-6" data-aos="zoom-in-up">
+                    <img src="assets/img/van-neumann-law2.png" class="d-block mx-lg-auto img-fluid" alt="Version évoluée de la Loi de Van Nuemann" loading="lazy" />
+                </div>
+                <div class="col-lg-6" data-aos="fade-up-right">
+                    <p class="lead">Cette conception <b>s’oppose</b> notamment <b>aux architectures</b> dîtes <b>de Harvard</b> qui ont <b>une mémoire pour les données et une pour les intrusctions</b>, permettant au processeur d’accéder aux deux en même temps (on retrouve cette architecture sur certains microcontrôleurs). <b>L’architecture de Von Neumann est toutefois la plus utilisée</b> et n’a guère connu que deux grandes évolutions en plus de 70 ans :</p>
+                    <ul class="lead">
+                        <li>Depuis les années 1960, les entrées-sorties ne sont plus gérées par le processeur mais par des bus distincts;</li>
+                        <li>Le nombre de processeurs s’est multiplié dans nos ordinateurs et certains sont même multicoeurs, faisant aujourd’hui de la mémoire l’élément central partagé de l’architecture.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
 
-	<section data-aos="fade-up">
-		<div class="container col-xxl-8 px-4 py-5">
-			<div class="row flex-lg-row-reverse align-items-center g-5 py-5">
-				<div class="col-lg-6" data-aos="fade-up-right">
-					<h1 class="display-5 fw-bold lh-1 mb-3">L'unité de contrôle</h1>
-					<p class="lead">Cette unité est essentiellement composée de trois sous-composants :</p>
-					<ol class="lead">
-						<li>Le <b>registre d’instructions</b>, dénommé <b>IR</b> (Instruction register) qui contient l’instruction courante à décoder et à exécuter;</li>
-						<li>Un second registre, le <b>pointeur d’instruction</b>, dénommé <b>IP</b> (Intruction Pointer) qui indique l’emplacement mémoire de la prochaine instruction à exécuter;</li>
-						<li>Le troisième sous-composant est appelé <b>micro-programme</b> et contrôle les mouvements de données vers l’ALU.</li>
-					</ol>
-				</div>
-				<div class="col-10 col-sm-8 col-lg-6" data-aos="zoom-in-up">
-					<img src="assets/img/control.png" class="d-block mx-lg-auto img-fluid" alt="Image représentant une interface de gestion en 3D" width="350" height="350" loading="lazy" />
-				</div>
-			</div>
-		</div>
-	</section>
+    <section data-aos="fade-up">
+        <div class="container col-xxl-8 px-4 py-5">
+            <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
+                <div class="col-lg-6" data-aos="fade-up-right">
+                    <h1 class="display-5 fw-bold lh-1 mb-3">L'unité de contrôle</h1>
+                    <p class="lead">Cette unité est essentiellement composée de trois sous-composants :</p>
+                    <ol class="lead">
+                        <li>Le <b>registre d’instructions</b>, dénommé <b>IR</b> (Instruction register) qui contient l’instruction courante à décoder et à exécuter;</li>
+                        <li>Un second registre, le <b>pointeur d’instruction</b>, dénommé <b>IP</b> (Intruction Pointer) qui indique l’emplacement mémoire de la prochaine instruction à exécuter;</li>
+                        <li>Le troisième sous-composant est appelé <b>micro-programme</b> et contrôle les mouvements de données vers l’ALU.</li>
+                    </ol>
+                </div>
+                <div class="col-10 col-sm-8 col-lg-6" data-aos="zoom-in-up">
+                    <img src="assets/img/control.png" class="d-block mx-lg-auto img-fluid" alt="Image représentant une interface de gestion en 3D" width="350" height="350" loading="lazy" />
+                </div>
+            </div>
+        </div>
+    </section>
 
-	<section data-aos="fade-up">
-		<div class="container col-xxl-8 px-4 py-5">
-			<div class="row flex-lg-row-reverse align-items-center g-5 py-5">
-				<div class="col-10 col-sm-8 col-lg-6" data-aos="zoom-in-up">
-					<img src="assets/img/calculator.png" class="d-block mx-lg-auto img-fluid" alt="Image représentant une interface de gestion en 3D" width="350" height="350" loading="lazy" />
-				</div>
-				<div class="col-lg-6" data-aos="fade-up-right">
-					<h1 class="display-5 fw-bold lh-1 mb-3">L'unité arithmétique et logique</h1>
-					<p class="lead">Cette unité est composée de plusieurs registres, dits <b>registres de données</b> et d’un registre spécial appelé <b>accumulateur</b> dans lequel vont s’effectuer tous les calculs. A ces registres s’ajoutent des circuits électroniques pourréaliser des opérations arithmétiques (additions, soustractions, ...), des opérations logiques (et, ou, ...), des comparaisons (égalité, inférieur, supérieur, ...), des opérations sur les bits (décalage, ...) ou des opérations de déplacement (copie de ou vers la mémoire).</p>
-				</div>
-			</div>
-		</div>
-	</section>
+    <section data-aos="fade-up">
+        <div class="container col-xxl-8 px-4 py-5">
+            <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
+                <div class="col-10 col-sm-8 col-lg-6" data-aos="zoom-in-up">
+                    <img src="assets/img/calculator.png" class="d-block mx-lg-auto img-fluid" alt="Image représentant une interface de gestion en 3D" width="350" height="350" loading="lazy" />
+                </div>
+                <div class="col-lg-6" data-aos="fade-up-right">
+                    <h1 class="display-5 fw-bold lh-1 mb-3">L'unité arithmétique et logique</h1>
+                    <p class="lead">Cette unité est composée de plusieurs registres, dits <b>registres de données</b> et d’un registre spécial appelé <b>accumulateur</b> dans lequel vont s’effectuer tous les calculs. A ces registres s’ajoutent des circuits électroniques pourréaliser des opérations arithmétiques (additions, soustractions, ...), des opérations logiques (et, ou, ...), des comparaisons (égalité, inférieur, supérieur, ...), des opérations sur les bits (décalage, ...) ou des opérations de déplacement (copie de ou vers la mémoire).</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
-	<div class="p-5 mb-5 bg-warning" data-aos="fade-up">
-		<div class="container-fluid py-5">
-			<div class="row align-items-md-stretch">
-				<div class="col-md-6">
-					<h1 class="display-5 fw-bold">Comment choisir son processeur ?</h1>
-					<p class="lead">C’est très facile, il suffit de suivre ces 5 règles :</p>
-					<ol class="col-md-8 fs-5">
-						<li>Le prix est important mais pas tout. Le processeur le moins cher ne sera pas toujours le meilleur, vous devez savoir ce que vous achetez.</li>
-						<li><b>Le nombre de cœurs</b> est important aussi, un processeur octocore doit être au minimum envisagé.</li>
-						<li><b>La mémoire cache</b> est à prendre en compte, plus il y en a, mieux c'est</li>
-						<li><b>La fréquence de l'horloge de votre CPU</b>, elle détermine le nombre d'opérations que celui-ci peut faire en une seconde.</li>
-						<li><b>La compatibilité du socket</b>. Il serait bête d'acheté un processeur qui ne peut être connecté à la carte mère.</li>
-					</ol>
-				</div>
-				<div class="col-md-6">
-					<h1 class="display-5 fw-bold">Notre sélection</h1>
-					<div class="list-group w-auto">
-						<div class="list-group-item list-group-item-action d-flex gap-3 py-3">
-							<img src="https://www.grosbill.com/images_produits/1a08269f-bc97-4d43-84c6-a0bb482451c4.jpg" alt="Intel Core I5-10400F" width="32" height="32" class="rounded-circle flex-shrink-0" />
-							<div class="d-flex gap-2 w-100 justify-content-between">
-								<div>
-									<h6 class="mb-0">Intel Core I5-10400F</h6>
-									<ul class="mb-0 opacity-75">
-										<li>Fréquence: 2.9 GHz</li>
-										<li>Mémoire cache: 12Mo</li>
-										<li>Socket: LGA1200</li>
-									</ul>
-									<a class="btn btn-outline-warning" href="https://www.grosbill.com/processeur/intel/47202.aspx" target="_blank" rel="noopener"><i class="fa-solid fa-cart-shopping"></i> Acheter</a>
-								</div>
-								<small class="opacity-50 text-nowrap">139.99 €</small>
-							</div>
-						</div>
-						<div class="list-group-item list-group-item-action d-flex gap-3 py-3">
-							<img src="https://www.grosbill.com/images_produits/715456bd-b7da-488f-8f8a-33347618dfd9.jpg" alt="AMD RYZEN 5 5600X" width="32" height="32" class="rounded-circle flex-shrink-0" />
-							<div class="d-flex gap-2 w-100 justify-content-between">
-								<div>
-									<h6 class="mb-0">AMD RYZEN 5 5600X</h6>
-									<ul class="mb-0 opacity-75">
-										<li>Fréquence: 4.6 GHz</li>
-										<li>Mémoire cache: 35Mo</li>
-										<li>Socket: AM4</li>
-									</ul>
-									<a class="btn btn-outline-warning" href="https://www.grosbill.com/processeur/amd/50798.aspx" target="_blank" rel="noopener"><i class="fa-solid fa-cart-shopping"></i> Acheter</a>
-								</div>
-								<small class="opacity-50 text-nowrap">229.99 €</small>
-							</div>
-						</div>
-						<div class="list-group-item list-group-item-action d-flex gap-3 py-3">
-							<img src="https://www.grosbill.com/images_produits/6d71b8ff-ea6d-4642-8d94-33dea882c0e6.jpg" alt="Intel Core I5-12400F" width="32" height="32" class="rounded-circle flex-shrink-0" />
-							<div class="d-flex gap-2 w-100 justify-content-between">
-								<div>
-									<h6 class="mb-0">Intel Core I5-12400F</h6>
-									<ul class="mb-0 opacity-75">
-										<li>Fréquence: 2.5 GHz</li>
-										<li>Mémoire cache: 18Mo</li>
-										<li>Socket: LGA1700</li>
-									</ul>
-									<a class="btn btn-outline-warning" href="https://www.grosbill.com/processeur/intel/97018.aspx" target="_blank" rel="noopener"><i class="fa-solid fa-cart-shopping"></i> Acheter</a>
-								</div>
-								<small class="opacity-50 text-nowrap">251.99 €</small>
-							</div>
-						</div>
-						<div class="list-group-item list-group-item-action d-flex gap-3 py-3">
-							<img src="https://www.grosbill.com/images_produits/40c50914-c78c-487e-b244-07a22042380f.jpg" alt="Intel Core I7-12700KF" width="32" height="32" class="rounded-circle flex-shrink-0" />
-							<div class="d-flex gap-2 w-100 justify-content-between">
-								<div>
-									<h6 class="mb-0">Intel Core I7-12700KF</h6>
-									<ul class="mb-0 opacity-75">
-										<li>Fréquence: 3.6 GHz</li>
-										<li>Mémoire cache: 25Mo</li>
-										<li>Socket: LGA1700</li>
-									</ul>
-									<a class="btn btn-outline-warning" href="https://www.grosbill.com/processeur/intel/92296.aspx" target="_blank" rel="noopener"><i class="fa-solid fa-cart-shopping"></i> Acheter</a>
-								</div>
-								<small class="opacity-50 text-nowrap">479.99 €</small>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
+    <div class="p-5 mb-5 bg-warning" data-aos="fade-up">
+        <div class="container-fluid py-5">
+            <div class="row align-items-md-stretch">
+                <div class="col-md-6">
+                    <h1 class="display-5 fw-bold">Comment choisir son processeur ?</h1>
+                    <p class="lead">C’est très facile, il suffit de suivre ces 5 règles :</p>
+                    <ol class="col-md-8 fs-5">
+                        <li>Le prix est important mais pas tout. Le processeur le moins cher ne sera pas toujours le meilleur, vous devez savoir ce que vous achetez.</li>
+                        <li><b>Le nombre de cœurs</b> est important aussi, un processeur octocore doit être au minimum envisagé.</li>
+                        <li><b>La mémoire cache</b> est à prendre en compte, plus il y en a, mieux c'est</li>
+                        <li><b>La fréquence de l'horloge de votre CPU</b>, elle détermine le nombre d'opérations que celui-ci peut faire en une seconde.</li>
+                        <li><b>La compatibilité du socket</b>. Il serait bête d'acheté un processeur qui ne peut être connecté à la carte mère.</li>
+                    </ol>
+                </div>
+                <div class="col-md-6">
+                    <h1 class="display-5 fw-bold">Notre sélection</h1>
+                    <div class="list-group w-auto">
+                        <div class="list-group-item list-group-item-action d-flex gap-3 py-3">
+                            <img src="https://www.grosbill.com/images_produits/1a08269f-bc97-4d43-84c6-a0bb482451c4.jpg" alt="Intel Core I5-10400F" width="32" height="32" class="rounded-circle flex-shrink-0" />
+                            <div class="d-flex gap-2 w-100 justify-content-between">
+                                <div>
+                                    <h6 class="mb-0">Intel Core I5-10400F</h6>
+                                    <ul class="mb-0 opacity-75">
+                                        <li>Fréquence: 2.9 GHz</li>
+                                        <li>Mémoire cache: 12Mo</li>
+                                        <li>Socket: LGA1200</li>
+                                    </ul>
+                                    <a class="btn btn-outline-warning" href="https://www.grosbill.com/processeur/intel/47202.aspx" target="_blank" rel="noopener"><i class="fa-solid fa-cart-shopping"></i> Acheter</a>
+                                </div>
+                                <small class="opacity-50 text-nowrap">139.99 €</small>
+                            </div>
+                        </div>
+                        <div class="list-group-item list-group-item-action d-flex gap-3 py-3">
+                            <img src="https://www.grosbill.com/images_produits/715456bd-b7da-488f-8f8a-33347618dfd9.jpg" alt="AMD RYZEN 5 5600X" width="32" height="32" class="rounded-circle flex-shrink-0" />
+                            <div class="d-flex gap-2 w-100 justify-content-between">
+                                <div>
+                                    <h6 class="mb-0">AMD RYZEN 5 5600X</h6>
+                                    <ul class="mb-0 opacity-75">
+                                        <li>Fréquence: 4.6 GHz</li>
+                                        <li>Mémoire cache: 35Mo</li>
+                                        <li>Socket: AM4</li>
+                                    </ul>
+                                    <a class="btn btn-outline-warning" href="https://www.grosbill.com/processeur/amd/50798.aspx" target="_blank" rel="noopener"><i class="fa-solid fa-cart-shopping"></i> Acheter</a>
+                                </div>
+                                <small class="opacity-50 text-nowrap">229.99 €</small>
+                            </div>
+                        </div>
+                        <div class="list-group-item list-group-item-action d-flex gap-3 py-3">
+                            <img src="https://www.grosbill.com/images_produits/6d71b8ff-ea6d-4642-8d94-33dea882c0e6.jpg" alt="Intel Core I5-12400F" width="32" height="32" class="rounded-circle flex-shrink-0" />
+                            <div class="d-flex gap-2 w-100 justify-content-between">
+                                <div>
+                                    <h6 class="mb-0">Intel Core I5-12400F</h6>
+                                    <ul class="mb-0 opacity-75">
+                                        <li>Fréquence: 2.5 GHz</li>
+                                        <li>Mémoire cache: 18Mo</li>
+                                        <li>Socket: LGA1700</li>
+                                    </ul>
+                                    <a class="btn btn-outline-warning" href="https://www.grosbill.com/processeur/intel/97018.aspx" target="_blank" rel="noopener"><i class="fa-solid fa-cart-shopping"></i> Acheter</a>
+                                </div>
+                                <small class="opacity-50 text-nowrap">251.99 €</small>
+                            </div>
+                        </div>
+                        <div class="list-group-item list-group-item-action d-flex gap-3 py-3">
+                            <img src="https://www.grosbill.com/images_produits/40c50914-c78c-487e-b244-07a22042380f.jpg" alt="Intel Core I7-12700KF" width="32" height="32" class="rounded-circle flex-shrink-0" />
+                            <div class="d-flex gap-2 w-100 justify-content-between">
+                                <div>
+                                    <h6 class="mb-0">Intel Core I7-12700KF</h6>
+                                    <ul class="mb-0 opacity-75">
+                                        <li>Fréquence: 3.6 GHz</li>
+                                        <li>Mémoire cache: 25Mo</li>
+                                        <li>Socket: LGA1700</li>
+                                    </ul>
+                                    <a class="btn btn-outline-warning" href="https://www.grosbill.com/processeur/intel/92296.aspx" target="_blank" rel="noopener"><i class="fa-solid fa-cart-shopping"></i> Acheter</a>
+                                </div>
+                                <small class="opacity-50 text-nowrap">479.99 €</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
-	<section data-aos="fade-up" class="mb-5">
-		<div class="container-xl">
-			<div class="row row-deck row-cards">
-				<div class="col-12">
-					<div class="card border-warning border-5">
-						<div class="card-header">
-							<h3 class="card-title"><i class="icon fa-solid fa-chart-simple"></i> Statistiques</h3>
-							<h6 class="card-subtitle mb-2 text-muted">Découvrez en plus sur les processeurs grâce à nos statistiques.</h6>
-						</div>
-						<div class="card-body">
-							<div class="row align-items-center">
-								<div class="col-xl-3 col-lg-6">
-									<div class="card mb-4 mb-xl-0">
-										<div class="card-body">
-											<div class="row">
-												<div class="col">
-													<h5 class="card-title text-uppercase text-muted mb-0">Prix moyen</h5>
-													<span class="h2 font-weight-bold mb-0">125 €</span>
-												</div>
-												<div class="col-auto">
-													<div class="bg-primary text-white avatar">
-														<i class="icon fa-solid fa-euro-sign"></i>
-													</div>
-												</div>
-											</div>
-											<p class="mt-3 mb-0 text-muted text-sm">
-												<span class="text-danger mr-2"><i class="fa fa-arrow-up"></i></span>
-												<span class="text-nowrap">En augmentation</span>
-											</p>
-										</div>
-									</div>
-								</div>
-								<div class="col-xl-3 col-lg-6">
-									<div class="card mb-4 mb-xl-0">
-										<div class="card-body">
-											<div class="row">
-												<div class="col">
-													<h5 class="card-title text-uppercase text-muted mb-0">Acheté /an</h5>
-													<span class="h2 font-weight-bold mb-0">Inconnu</span>
-												</div>
-												<div class="col-auto">
-													<div class="bg-green text-white avatar">
-														<i class="icon fa-solid fa-cart-shopping"></i>
-													</div>
-												</div>
-											</div>
-											<p class="mt-3 mb-0 text-muted text-sm">
-												<span class="text-info mr-2"><i class="fa-regular fa-circle-question"></i></span>
-												<span class="text-nowrap">Aucune statistique</span>
-											</p>
-										</div>
-									</div>
-								</div>
-								<div class="col-xl-3 col-lg-6">
-									<div class="card mb-4 mb-xl-0">
-										<div class="card-body">
-											<div class="row">
-												<div class="col">
-													<h5 class="card-title text-uppercase text-muted mb-0">Marque leader</h5>
-													<span class="h2 font-weight-bold mb-0">AMD</span>
-												</div>
-												<div class="col-auto">
-													<div class="bg-tw text-white avatar">
-														<i class="icon fa-solid fa-copyright"></i>
-													</div>
-												</div>
-											</div>
-											<p class="mt-3 mb-0 text-muted text-sm">
-												<span class="text-warning mr-2"><i class="fa-solid fa-chart-line"></i></span>
-												<span class="text-nowrap">Varie avec Intel</span>
-											</p>
-										</div>
-									</div>
-								</div>
-								<div class="col-xl-3 col-lg-6">
-									<div class="card mb-4 mb-xl-0">
-										<div class="card-body">
-											<div class="row">
-												<div class="col">
-													<h5 class="card-title text-uppercase text-muted mb-0">Origine</h5>
-													<span class="h2 font-weight-bold mb-0">États-Unis</span>
-												</div>
-												<div class="col-auto">
-													<div class="bg-fb text-white avatar">
-														<i class="icon fa-solid fa-flag"></i>
-													</div>
-												</div>
-											</div>
-											<p class="mt-3 mb-0 text-muted text-sm">
-												<span class="text-success mr-2"><i class="fa-solid fa-flag-usa"></i></span>
-												<span class="text-nowrap">Membre de l'ONU</span>
-											</p>
-										</div>
-									</div>
-								</div>
-							</div>
-							<div class="col-12 mt-3">
-								<div class="row row-cards">
-									<div class="col-lg-6 col-xl-4">
-										<div class="card mb-4 mb-xl-0">
-											<div class="card-body">
-												<div id="stats"></div>
-											</div>
-										</div>
-									</div>
-								</div>
-							</div>
-							<div class="col-lg w-100 mt-3">
-								<div class="card border-1">
-									<div class="card-header">
-										<h1>Article recommandé</h1>
-									</div>
-									<div class="card-body">
-										<div class="row align-items-center">
-											<div class="col-2">
-												<img src="assets/img/article/frandroid.png" alt="Logo de Frandroid" class="img-fluid" />
-											</div>
-											<div class="col-10">
-												<h3>Part de marché des processeurs en 2021</h3>
-												<p>Nous tenons pour source cet article de la revue numérique <b>Frandroid</b>.</p>
-												<a href="https://www.phonandroid.com/parts-de-marche-cpu-cest-officiel-amd-est-passe-devant-intel-dans-les-pc-bureau.html" target="_blank" rel="noopener" class="btn btn-primary">Consulter l'article</a>
-											</div>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</section>
-	<!-- On crée le graphique grâce à ApexCharts -->
-	<script>
-		// @formatter:off
-		document.addEventListener('DOMContentLoaded', function () {
-			window.ApexCharts &&
-				new ApexCharts(document.getElementById('stats'), {
-					chart: {
-						type: 'donut',
-						sparkline: {
-							enabled: true,
-						},
-						animations: {
-							enabled: true,
-						},
-					},
-					fill: {
-						opacity: 1,
-					},
-					series: [50.8, 49.2],
-					colors: ['#e0042c', '#046ab4'],
-					labels: ['AMD', 'Intel'],
-					tooltip: {
-						theme: 'dark',
-					},
-					legend: {
-						show: true,
-						position: 'right',
-					},
-					tooltip: {
-						fillSeriesColor: false,
-					},
-				}).render();
-		});
-		// @formatter:on
-	</script>
+    <section data-aos="fade-up" class="mb-5">
+        <div class="container-xl">
+            <div class="row row-deck row-cards">
+                <div class="col-12">
+                    <div class="card border-warning border-5">
+                        <div class="card-header">
+                            <h3 class="card-title"><i class="icon fa-solid fa-chart-simple"></i> Statistiques</h3>
+                            <h6 class="card-subtitle mb-2 text-muted">Découvrez en plus sur les processeurs grâce à nos statistiques.</h6>
+                        </div>
+                        <div class="card-body">
+                            <div class="row align-items-center">
+                                <div class="col-xl-3 col-lg-6">
+                                    <div class="card mb-4 mb-xl-0">
+                                        <div class="card-body">
+                                            <div class="row">
+                                                <div class="col">
+                                                    <h5 class="card-title text-uppercase text-muted mb-0">Prix moyen</h5>
+                                                    <span class="h2 font-weight-bold mb-0">125 €</span>
+                                                </div>
+                                                <div class="col-auto">
+                                                    <div class="bg-primary text-white avatar">
+                                                        <i class="icon fa-solid fa-euro-sign"></i>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <p class="mt-3 mb-0 text-muted text-sm">
+                                                <span class="text-danger mr-2"><i class="fa fa-arrow-up"></i></span>
+                                                <span class="text-nowrap">En augmentation</span>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xl-3 col-lg-6">
+                                    <div class="card mb-4 mb-xl-0">
+                                        <div class="card-body">
+                                            <div class="row">
+                                                <div class="col">
+                                                    <h5 class="card-title text-uppercase text-muted mb-0">Acheté /an</h5>
+                                                    <span class="h2 font-weight-bold mb-0">Inconnu</span>
+                                                </div>
+                                                <div class="col-auto">
+                                                    <div class="bg-green text-white avatar">
+                                                        <i class="icon fa-solid fa-cart-shopping"></i>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <p class="mt-3 mb-0 text-muted text-sm">
+                                                <span class="text-info mr-2"><i class="fa-regular fa-circle-question"></i></span>
+                                                <span class="text-nowrap">Aucune statistique</span>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xl-3 col-lg-6">
+                                    <div class="card mb-4 mb-xl-0">
+                                        <div class="card-body">
+                                            <div class="row">
+                                                <div class="col">
+                                                    <h5 class="card-title text-uppercase text-muted mb-0">Marque leader</h5>
+                                                    <span class="h2 font-weight-bold mb-0">AMD</span>
+                                                </div>
+                                                <div class="col-auto">
+                                                    <div class="bg-tw text-white avatar">
+                                                        <i class="icon fa-solid fa-copyright"></i>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <p class="mt-3 mb-0 text-muted text-sm">
+                                                <span class="text-warning mr-2"><i class="fa-solid fa-chart-line"></i></span>
+                                                <span class="text-nowrap">Varie avec Intel</span>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xl-3 col-lg-6">
+                                    <div class="card mb-4 mb-xl-0">
+                                        <div class="card-body">
+                                            <div class="row">
+                                                <div class="col">
+                                                    <h5 class="card-title text-uppercase text-muted mb-0">Origine</h5>
+                                                    <span class="h2 font-weight-bold mb-0">États-Unis</span>
+                                                </div>
+                                                <div class="col-auto">
+                                                    <div class="bg-fb text-white avatar">
+                                                        <i class="icon fa-solid fa-flag"></i>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <p class="mt-3 mb-0 text-muted text-sm">
+                                                <span class="text-success mr-2"><i class="fa-solid fa-flag-usa"></i></span>
+                                                <span class="text-nowrap">Membre de l'ONU</span>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 mt-3">
+                                <div class="row row-cards">
+                                    <div class="col-lg-6 col-xl-4">
+                                        <div class="card mb-4 mb-xl-0">
+                                            <div class="card-body">
+                                                <div id="stats"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg w-100 mt-3">
+                                <div class="card border-1">
+                                    <div class="card-header">
+                                        <h1>Article recommandé</h1>
+                                    </div>
+                                    <div class="card-body">
+                                        <div class="row align-items-center">
+                                            <div class="col-2">
+                                                <img src="assets/img/article/frandroid.png" alt="Logo de Frandroid" class="img-fluid" />
+                                            </div>
+                                            <div class="col-10">
+                                                <h3>Part de marché des processeurs en 2021</h3>
+                                                <p>Nous tenons pour source cet article de la revue numérique <b>Frandroid</b>.</p>
+                                                <a href="https://www.phonandroid.com/parts-de-marche-cpu-cest-officiel-amd-est-passe-devant-intel-dans-les-pc-bureau.html" target="_blank" rel="noopener" class="btn btn-primary">Consulter l'article</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- On crée le graphique grâce à ApexCharts -->
+    <script>
+        // @formatter:off
+        document.addEventListener('DOMContentLoaded', function () {
+            window.ApexCharts &&
+                new ApexCharts(document.getElementById('stats'), {
+                    chart: {
+                        type: 'donut',
+                        sparkline: {
+                            enabled: true,
+                        },
+                        animations: {
+                            enabled: true,
+                        },
+                    },
+                    fill: {
+                        opacity: 1,
+                    },
+                    series: [50.8, 49.2],
+                    colors: ['#e0042c', '#046ab4'],
+                    labels: ['AMD', 'Intel'],
+                    tooltip: {
+                        theme: 'dark',
+                    },
+                    legend: {
+                        show: true,
+                        position: 'right',
+                    },
+                    tooltip: {
+                        fillSeriesColor: false,
+                    },
+                }).render();
+        });
+        // @formatter:on
+    </script>
 
-	<div class="container">
-		<footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
-			<p class="col-md-4 mb-0 text-muted">
-				©
-				<script>
-					document.write(new Date().getFullYear());
-				</script>
-				PCDesc, Tous droits réservés
-			</p>
+    <div class="container">
+        <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
+            <p class="col-md-4 mb-0 text-muted">
+                ©
+                <script>
+                    document.write(new Date().getFullYear());
+                </script>
+                PCDesc, Tous droits réservés
+            </p>
 
-			<ul class="nav col-md-4 justify-content-end">
-				<li class="nav-item">
-					<a href="https://github.com/FuryCraft/webpage-as-homework" target="_blank" class="nav-link px-2 text-muted"><i class="fa-brands fa-github"></i> GitHub</a>
-				</li>
-				<li class="nav-item">
-					<a href="https://beeshosting.eu.org" target="_blank" class="nav-link px-2 text-muted"><i class="fa-solid fa-rectangle-ad"></i> Bees Hosting</a>
-				</li>
-			</ul>
-		</footer>
-	</div>
+            <ul class="nav col-md-4 justify-content-end">
+                <li class="nav-item">
+                    <a href="https://github.com/FuryCraft/webpage-as-homework" target="_blank" class="nav-link px-2 text-muted"><i class="fa-brands fa-github"></i> GitHub</a>
+                </li>
+                <li class="nav-item">
+                    <a href="https://beeshosting.eu.org" target="_blank" class="nav-link px-2 text-muted"><i class="fa-solid fa-rectangle-ad"></i> Bees Hosting</a>
+                </li>
+            </ul>
+        </footer>
+    </div>
 
-	<a id="back-to-top" href="#" class="btn btn-warning btn-lg back-to-top" role="button"><i class="fas fa-chevron-up"></i></a>
-	<script src="assets/js/bootstrap.bundle.js"></script>
-	<script src="assets/js/jquery-3.6.1.min.js"></script>
-	<script src="assets/js/main.js"></script>
-	<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-	<script>
-		AOS.init();
-	</script>
-	<script src="assets/libs/apexcharts/apexcharts.min.js"></script>
+    <a id="back-to-top" href="#" class="btn btn-warning btn-lg back-to-top" role="button"><i class="fas fa-chevron-up"></i></a>
+    <script src="assets/js/bootstrap.bundle.js"></script>
+    <script src="assets/js/jquery-3.6.1.min.js"></script>
+    <script src="assets/js/main.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+    <script src="assets/libs/apexcharts/apexcharts.min.js"></script>
+    <!-- PWA service worker-->
+    <script>
+        if (typeof navigator.serviceWorker !== 'undefined') {
+            navigator.serviceWorker.register('sw.js');
+        }
+    </script>
 </body>
