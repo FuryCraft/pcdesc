@@ -44,6 +44,11 @@
   opacity: .2
 }
 
+.apexcharts-legend-text {
+  padding-left: 15px;
+  margin-left: -15px;
+}
+
 .apexcharts-series-collapsed {
   opacity: 0
 }
@@ -524,6 +529,10 @@
   opacity: 0
 }
 
+.apexcharts-hidden-element-shown {
+  opacity: 1;
+  transition: 0.25s ease all;
+}
 .apexcharts-datalabel,.apexcharts-datalabel-label,.apexcharts-datalabel-value,.apexcharts-datalabels,.apexcharts-pie-label {
   cursor: default;
   pointer-events: none
